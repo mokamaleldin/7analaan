@@ -1,80 +1,163 @@
-import React from 'react';
-import { Mail, MessageSquare, Phone } from 'lucide-react';
+import { Youtube, Instagram, Twitter, Facebook, Headphones, Mic, Play, Star, TrendingUp, Users } from 'lucide-react';
 
 const JoinSection = () => {
+  const socialLinks = [
+    {
+      name: 'YouTube',
+      icon: <Youtube size={40} />,
+      url: 'https://youtube.com/@7analaan',
+      color: 'from-red-600 to-red-700',
+      shadow: 'shadow-red-500/30',
+      description: 'شاهد جميع الحلقات',
+      stats: 'الحلقات الكاملة'
+    },
+    {
+      name: 'Instagram',
+      icon: <Instagram size={40} />,
+      url: 'https://instagram.com/7analaan',
+      color: 'from-purple-600 via-pink-500 to-orange-400',
+      shadow: 'shadow-pink-500/30',
+      description: 'تابعنا للمقتطفات',
+      stats: 'مقاطع قصيرة'
+    },
+    {
+      name: 'Twitter',
+      icon: <Twitter size={40} />,
+      url: 'https://twitter.com/7analaan',
+      color: 'from-blue-500 to-blue-600',
+      shadow: 'shadow-blue-500/30',
+      description: 'آخر الأخبار والتحديثات',
+      stats: 'تغريدات يومية'
+    },
+    {
+      name: 'Facebook',
+      icon: <Facebook size={40} />,
+      url: 'https://facebook.com/7analaan',
+      color: 'from-blue-600 to-blue-800',
+      shadow: 'shadow-blue-600/30',
+      description: 'انضم لمجتمعنا',
+      stats: 'منشورات حصرية'
+    }
+  ];
+
+  const highlights = [
+    { icon: <Mic className="text-orange-400" size={24} />, text: 'حلقات أسبوعية' },
+    { icon: <Users className="text-orange-400" size={24} />, text: 'ضيوف متميزون' },
+    { icon: <TrendingUp className="text-orange-400" size={24} />, text: 'مواضيع تهمك' },
+    { icon: <Star className="text-orange-400" size={24} />, text: 'محتوى حصري' }
+  ];
+
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-900 to-black text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4">
-            <span className="text-orange-500">انضم</span> إلينا
+    <section className="py-24 bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white relative overflow-hidden">
+      {/* Animated Background Effects */}
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-orange-500/5 rounded-full blur-3xl" />
+      </div>
+
+      {/* Floating Elements */}
+      <div className="absolute top-20 right-20 text-6xl animate-bounce" style={{ animationDuration: '3s' }}>🎧</div>
+      <div className="absolute bottom-40 left-20 text-5xl animate-bounce" style={{ animationDuration: '4s', animationDelay: '1s' }}>🎙️</div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6 border border-white/10">
+            <Headphones size={18} className="text-orange-400" />
+            <span>انضم إلى مجتمعنا</span>
+          </div>
+          <h2 className="text-4xl lg:text-6xl font-bold mb-6">
+            تابعنا على <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">منصاتنا</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            نحن نرحب بمشاركاتكم وآرائكم. تواصلوا معنا لاقتراح موضوعات أو للمشاركة في الحوار
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+            كن جزءاً من الحوار واحصل على أحدث الحلقات والمحتوى الحصري
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Email */}
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 text-center hover:bg-white/20 transition-all duration-300">
-            <div className="bg-orange-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-              <Mail size={28} className="text-white" />
+        {/* Highlights Bar */}
+        <div className="flex flex-wrap justify-center gap-6 mb-16">
+          {highlights.map((item, index) => (
+            <div key={index} className="flex items-center gap-2 bg-white/5 backdrop-blur-sm px-5 py-3 rounded-full border border-white/10">
+              {item.icon}
+              <span className="text-gray-300">{item.text}</span>
             </div>
-            <h3 className="text-xl font-semibold mb-4">البريد الإلكتروني</h3>
-            <p className="text-gray-300 mb-4">
-              راسلونا لاقتراح موضوعات أو مشاركة آرائكم
-            </p>
-            <a
-              href="mailto:info@hanalaan.com"
-              className="text-orange-400 hover:text-orange-300 font-medium"
-            >
-              info@hanalaan.com
-            </a>
-          </div>
-
-          {/* WhatsApp */}
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 text-center hover:bg-white/20 transition-all duration-300">
-            <div className="bg-green-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-              <MessageSquare size={28} className="text-white" />
-            </div>
-            <h3 className="text-xl font-semibold mb-4">واتساب</h3>
-            <p className="text-gray-300 mb-4">
-              تواصلوا معنا مباشرة عبر الواتساب
-            </p>
-            <a
-              href="https://wa.me/1234567890"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-green-400 hover:text-green-300 font-medium"
-            >
-              اضغط للتواصل
-            </a>
-          </div>
-
-          {/* Contact Form */}
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 text-center hover:bg-white/20 transition-all duration-300">
-            <div className="bg-blue-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-              <Phone size={28} className="text-white" />
-            </div>
-            <h3 className="text-xl font-semibold mb-4">نموذج التواصل</h3>
-            <p className="text-gray-300 mb-4">
-              املأوا النموذج وسنتواصل معكم قريباً
-            </p>
-            <a
-              href="/contact"
-              className="text-blue-400 hover:text-blue-300 font-medium"
-            >
-              املأ النموذج
-            </a>
-          </div>
+          ))}
         </div>
 
-        <div className="text-center mt-12">
-          <div className="bg-orange-500/20 rounded-xl p-8 max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold mb-4">كن جزءاً من المحادثة</h3>
-            <p className="text-gray-300 text-lg leading-relaxed">
-              صوتكم مهم بالنسبة لنا. شاركونا أفكاركم واقتراحاتكم لنبني معاً منصة حوار هادفة تخدم مجتمعنا
-            </p>
+        {/* Social Links Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          {socialLinks.map((social, index) => (
+            <a
+              key={index}
+              href={social.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`group relative bg-gradient-to-br ${social.color} rounded-3xl p-8 text-center transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 shadow-xl ${social.shadow} hover:shadow-2xl overflow-hidden`}
+            >
+              {/* Shine Effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+
+              {/* Icon */}
+              <div className="relative flex justify-center mb-4">
+                <div className="bg-white/20 p-4 rounded-2xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                  {social.icon}
+                </div>
+              </div>
+
+              {/* Content */}
+              <h3 className="relative text-2xl font-bold mb-2">{social.name}</h3>
+              <p className="relative text-white/80 text-sm mb-3">{social.description}</p>
+
+              {/* Stats Badge */}
+              <div className="relative inline-flex items-center gap-1 bg-white/20 px-3 py-1 rounded-full text-xs font-medium">
+                <Play size={12} fill="currentColor" />
+                {social.stats}
+              </div>
+            </a>
+          ))}
+        </div>
+
+        {/* CTA Section */}
+        <div className="relative">
+          {/* Glow Effect */}
+          <div className="absolute -inset-1 bg-gradient-to-r from-orange-500 to-purple-500 rounded-3xl blur-xl opacity-30" />
+
+          <div className="relative bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-xl rounded-3xl p-8 lg:p-12 border border-white/10">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="text-center lg:text-right">
+                <h3 className="text-3xl lg:text-4xl font-bold mb-4">
+                  لا تفوت أي <span className="text-orange-400">حلقة</span> جديدة
+                </h3>
+                <p className="text-lg text-gray-400 leading-relaxed mb-8">
+                  اشترك في قناتنا على يوتيوب وفعّل جرس الإشعارات لتصلك كل الحلقات الجديدة فور نزولها
+                </p>
+                <a
+                  href="https://youtube.com/@7analaan?sub_confirmation=1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 shadow-lg shadow-red-500/30 hover:shadow-red-500/50 hover:scale-105"
+                >
+                  <Youtube size={24} />
+                  اشترك الآن
+                  <span className="bg-white/20 px-2 py-1 rounded text-sm">🔔</span>
+                </a>
+              </div>
+
+              <div className="flex justify-center lg:justify-start">
+                <div className="relative">
+                  {/* Animated rings */}
+                  <div className="absolute inset-0 rounded-full border-2 border-orange-500/30 animate-ping" style={{ animationDuration: '2s' }} />
+                  <div className="absolute inset-4 rounded-full border-2 border-orange-500/20 animate-ping" style={{ animationDuration: '2s', animationDelay: '0.5s' }} />
+
+                  <div className="relative bg-gradient-to-br from-orange-500 to-orange-600 w-48 h-48 rounded-full flex flex-col items-center justify-center shadow-2xl shadow-orange-500/30">
+                    <span className="text-6xl mb-2">🎙️</span>
+                    <p className="text-white font-bold">حان الآن</p>
+                    <p className="text-white/80 text-xs">بودكاست</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -83,3 +166,6 @@ const JoinSection = () => {
 };
 
 export default JoinSection;
+
+
+

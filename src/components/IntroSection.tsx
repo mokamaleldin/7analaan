@@ -1,53 +1,77 @@
-import React from 'react';
-import { MessageCircle, Users, Mic, Heart } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { MessageCircle, Users, Mic, Lightbulb, Sparkles, ArrowLeft } from 'lucide-react';
 
 const IntroSection = () => {
   const features = [
     {
-      icon: <MessageCircle className="text-orange-500" size={32} />,
+      icon: <MessageCircle className="text-white" size={28} />,
       title: "حوار مفتوح",
-      description: "نناقش القضايا المهمة بصراحة ووضوح دون تحفظ"
+      description: "نناقش القضايا المهمة بصراحة ووضوح دون تحفظ",
+      gradient: "from-orange-500 to-orange-600"
     },
     {
-      icon: <Users className="text-orange-500" size={32} />,
+      icon: <Users className="text-white" size={28} />,
       title: "ضيوف متميزون",
-      description: "نستضيف خبراء ومفكرين لإثراء النقاش"
+      description: "نستضيف خبراء ومفكرين لإثراء النقاش",
+      gradient: "from-blue-500 to-blue-600"
     },
     {
-      icon: <Mic className="text-orange-500" size={32} />,
+      icon: <Mic className="text-white" size={28} />,
       title: "إنتاج عالي الجودة",
-      description: "نقدم محتوى صوتي ومرئي بجودة احترافية"
+      description: "نقدم محتوى صوتي ومرئي بجودة احترافية",
+      gradient: "from-purple-500 to-purple-600"
     },
     {
-      icon: <Heart className="text-orange-500" size={32} />,
-      title: "مجتمع متفاعل",
-      description: "نبني جسور التواصل مع جمهورنا المتميز"
+      icon: <Lightbulb className="text-white" size={28} />,
+      title: "أفكار ملهمة",
+      description: "نقدم رؤى جديدة تفتح آفاق التفكير",
+      gradient: "from-green-500 to-green-600"
     }
   ];
 
+  const topics = [
+    "العلاقات الأسرية",
+    "القضايا المعاصرة",
+    "التنمية الذاتية",
+    "الهوية والثقافة",
+    "الاقتصاد والمال",
+    "التاريخ والسياسة"
+  ];
+
   return (
-    <section className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-24 bg-gray-50 relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute top-0 left-0 w-full h-full">
+        <div className="absolute top-20 right-20 w-64 h-64 bg-orange-100 rounded-full blur-3xl opacity-50" />
+        <div className="absolute bottom-20 left-20 w-96 h-96 bg-blue-100 rounded-full blur-3xl opacity-30" />
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <div className="inline-flex items-center gap-2 bg-orange-100 text-orange-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
+            <Sparkles size={16} />
+            <span>ما يميزنا</span>
+          </div>
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             لماذا <span className="text-orange-500">حان الآن</span>؟
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            نحن أكثر من مجرد بودكاست - نحن منصة للتفكير النقدي والحوار البناء. 
-            نسعى لتقديم منظور جديد حول القضايا التي تهم مجتمعنا العربي والإسلامي.
+            نحن منصة للتفكير النقدي والحوار البناء، نسعى لتقديم منظور جديد حول القضايا التي تهم مجتمعنا
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        {/* Features Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 text-center transform hover:-translate-y-2"
+              className="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 text-center transform hover:-translate-y-2 border border-gray-100"
             >
-              <div className="mb-4 flex justify-center">
+              <div className={`w-16 h-16 bg-gradient-to-br ${feature.gradient} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
                 {feature.title}
               </h3>
               <p className="text-gray-600 leading-relaxed">
@@ -57,30 +81,33 @@ const IntroSection = () => {
           ))}
         </div>
 
-        <div className="bg-white rounded-2xl shadow-lg p-8 lg:p-12">
-          <div className="text-center">
-            <h3 className="text-3xl font-bold text-gray-900 mb-6">
-              رحلتنا مع البودكاست
-            </h3>
-            <p className="text-lg text-gray-700 leading-relaxed mb-8 max-w-4xl mx-auto">
-              بدأت فكرة "حان الآن" من إيماننا العميق بأهمية الحوار الهادف في عصر تتسارع فيه الأحداث 
-              وتتضارب فيه الآراء. نحن نؤمن بأن الحق يظهر من خلال النقاش الصريح والمفتوح، 
-              وأن كل صوت له قيمة في بناء فهم أعمق للواقع الذي نعيشه.
-            </p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-              <div className="p-6">
-                <div className="text-3xl font-bold text-orange-500 mb-2">12.8K</div>
-                <div className="text-gray-600">مشترك</div>
-              </div>
-              <div className="p-6">
-                <div className="text-3xl font-bold text-orange-500 mb-2">49+</div>
-                <div className="text-gray-600">حلقة</div>
-              </div>
-              <div className="p-6">
-                <div className="text-3xl font-bold text-orange-500 mb-2">1M+</div>
-                <div className="text-gray-600">مشاهدة</div>
-              </div>
+        {/* Topics Section */}
+        <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl p-8 lg:p-12 shadow-2xl">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h3 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+                نتحدث عن مواضيع <span className="text-orange-400">تهمك</span>
+              </h3>
+              <p className="text-lg text-gray-300 leading-relaxed mb-8">
+                نناقش في حلقاتنا مختلف القضايا التي تشغل المجتمع العربي والإسلامي، من العلاقات الأسرية إلى القضايا السياسية والاقتصادية، بأسلوب هادف وبناء.
+              </p>
+              <Link
+                to="/podcast"
+                className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-orange-500/25"
+              >
+                اكتشف الحلقات
+                <ArrowLeft size={18} />
+              </Link>
+            </div>
+            <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
+              {topics.map((topic, index) => (
+                <span
+                  key={index}
+                  className="bg-white/10 backdrop-blur-sm text-white px-5 py-3 rounded-full text-sm font-medium hover:bg-orange-500 transition-colors duration-300 cursor-default"
+                >
+                  {topic}
+                </span>
+              ))}
             </div>
           </div>
         </div>

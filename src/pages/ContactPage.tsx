@@ -1,210 +1,216 @@
-import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Youtube, Instagram, Twitter, Facebook, Mail, Sparkles, MessageCircle, Heart, Users, Mic } from 'lucide-react';
 
 const ContactPage = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
+  const socialLinks = [
+    {
+      name: 'YouTube',
+      icon: <Youtube size={32} />,
+      url: 'https://youtube.com/@7analaan',
+      color: 'from-red-600 to-red-700',
+      shadow: 'shadow-red-500/30',
+      description: 'شاهد جميع الحلقات',
+      handle: '@7analaan'
+    },
+    {
+      name: 'Instagram',
+      icon: <Instagram size={32} />,
+      url: 'https://instagram.com/7analaan',
+      color: 'from-purple-600 via-pink-500 to-orange-400',
+      shadow: 'shadow-pink-500/30',
+      description: 'تابعنا للمقتطفات',
+      handle: '@7analaan'
+    },
+    {
+      name: 'Twitter',
+      icon: <Twitter size={32} />,
+      url: 'https://twitter.com/7analaan',
+      color: 'from-blue-500 to-blue-600',
+      shadow: 'shadow-blue-500/30',
+      description: 'آخر الأخبار',
+      handle: '@7analaan'
+    },
+    {
+      name: 'Facebook',
+      icon: <Facebook size={32} />,
+      url: 'https://facebook.com/7analaan',
+      color: 'from-blue-600 to-blue-800',
+      shadow: 'shadow-blue-600/30',
+      description: 'انضم لمجتمعنا',
+      handle: '7analaan'
+    }
+  ];
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      subject: '',
-      message: ''
-    });
-    alert('تم إرسال رسالتك بنجاح! سنتواصل معك قريباً.');
-  };
+  const values = [
+    { icon: <Mic className="text-orange-400" size={28} />, title: 'حوار هادف', description: 'نقدم محتوى يثري الفكر والوجدان' },
+    { icon: <Users className="text-orange-400" size={28} />, title: 'مجتمع متنامي', description: 'انضم لآلاف المتابعين' },
+    { icon: <Heart className="text-orange-400" size={28} />, title: 'شغف حقيقي', description: 'نحب ما نفعله ونفعله بإتقان' },
+    { icon: <MessageCircle className="text-orange-400" size={28} />, title: 'تواصل مستمر', description: 'نستمع لآرائكم باهتمام' }
+  ];
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Page Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            <span className="text-orange-500">تواصل</span> معنا
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            نحن نقدر آراءكم ومقترحاتكم. تواصلوا معنا ودعونا نبني معاً محتوى أفضل
-          </p>
+    <>
+      <Helmet>
+        <title>تواصل معنا | حان الآن - تابعنا على منصاتنا</title>
+        <meta name="description" content="تواصل مع فريق بودكاست حان الآن. تابعنا على يوتيوب، انستغرام، تويتر وفيسبوك للحصول على أحدث الحلقات والمحتوى الحصري." />
+        <link rel="canonical" href="https://7analaan.com/contact" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
+        {/* Animated Background Effects */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl animate-pulse" />
+          <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="absolute bottom-1/4 left-1/3 w-72 h-72 bg-blue-500/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Contact Information */}
-          <div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-8">معلومات التواصل</h2>
-            
-            <div className="space-y-6">
-              <div className="flex items-start">
-                <div className="bg-orange-500 p-3 rounded-lg ml-4 flex-shrink-0">
-                  <Mail className="text-white" size={24} />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">البريد الإلكتروني</h3>
-                  <p className="text-gray-600">info@hanalaan.com</p>
-                  <p className="text-gray-600">podcast@hanalaan.com</p>
-                </div>
-              </div>
+        {/* Floating Elements */}
+        <div className="absolute top-32 right-10 text-5xl animate-bounce opacity-20" style={{ animationDuration: '3s' }}>💬</div>
+        <div className="absolute top-1/2 left-10 text-4xl animate-bounce opacity-20" style={{ animationDuration: '4s', animationDelay: '1s' }}>🎙️</div>
+        <div className="absolute bottom-32 right-20 text-4xl animate-bounce opacity-20" style={{ animationDuration: '3.5s', animationDelay: '0.5s' }}>❤️</div>
 
-              <div className="flex items-start">
-                <div className="bg-green-500 p-3 rounded-lg ml-4 flex-shrink-0">
-                  <Phone className="text-white" size={24} />
+        <div className="relative">
+          {/* Hero Header */}
+          <div className="pt-16 pb-12">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="text-center">
+                {/* Badge */}
+                <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-orange-400 px-5 py-2 rounded-full text-sm font-medium mb-6 border border-white/10">
+                  <Sparkles size={16} />
+                  <span>نحب نسمع منكم</span>
                 </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">الهاتف</h3>
-                  <p className="text-gray-600">+966 50 123 4567</p>
-                  <a 
-                    href="https://wa.me/966501234567" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-green-600 hover:text-green-700 font-medium"
-                  >
-                    واتساب: اضغط للتواصل
-                  </a>
-                </div>
-              </div>
 
-              <div className="flex items-start">
-                <div className="bg-blue-500 p-3 rounded-lg ml-4 flex-shrink-0">
-                  <MapPin className="text-white" size={24} />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">الموقع</h3>
-                  <p className="text-gray-600">الرياض، المملكة العربية السعودية</p>
-                </div>
-              </div>
-            </div>
+                {/* Title */}
+                <h1 className="text-5xl lg:text-7xl font-bold mb-6">
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600">تواصل</span>
+                  <span className="text-white"> معنا</span>
+                </h1>
 
-            {/* Social Media */}
-            <div className="mt-12">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">تابعونا على</h3>
-              <div className="flex space-x-4 space-x-reverse">
-                <a
-                  href="https://youtube.com/@7analaan"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-red-600 hover:bg-red-700 text-white p-3 rounded-lg transition-colors"
-                >
-                  يوتيوب
-                </a>
-                <a
-                  href="https://twitter.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-blue-400 hover:bg-blue-500 text-white p-3 rounded-lg transition-colors"
-                >
-                  تويتر
-                </a>
-                <a
-                  href="https://instagram.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-pink-600 hover:bg-pink-700 text-white p-3 rounded-lg transition-colors"
-                >
-                  إنستجرام
-                </a>
+                {/* Subtitle */}
+                <p className="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
+                  نحن نقدر آراءكم ومقترحاتكم. تابعونا على منصاتنا وشاركونا أفكاركم
+                </p>
               </div>
             </div>
           </div>
 
-          {/* Contact Form */}
-          <div>
-            <div className="bg-white rounded-2xl shadow-lg p-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-8">أرسل لنا رسالة</h2>
-              
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                    الاسم الكامل
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    required
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-colors"
-                    placeholder="أدخل اسمك الكامل"
-                  />
+          {/* Values Section */}
+          <div className="pb-16">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                {values.map((value, index) => (
+                  <div
+                    key={index}
+                    className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 text-center border border-white/10 hover:border-orange-500/30 transition-all duration-300 hover:-translate-y-2"
+                  >
+                  <div className="flex justify-center mb-3">{value.icon}</div>
+                  <h3 className="text-white font-bold mb-1">{value.title}</h3>
+                  <p className="text-gray-500 text-sm">{value.description}</p>
                 </div>
+              ))}
+              </div>
+            </div>
+          </div>
 
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                    البريد الإلكتروني
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-colors"
-                    placeholder="أدخل بريدك الإلكتروني"
-                  />
-                </div>
+          {/* Social Links Section */}
+          <div className="pb-16">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              {/* Section Title */}
+              <div className="flex items-center gap-4 mb-12">
+                <div className="h-px flex-1 bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+                <div className="flex items-center gap-2 text-gray-400">
+                  <MessageCircle size={16} className="text-orange-400" />
+                  <span>تابعونا على منصاتنا</span>
+              </div>
+                <div className="h-px flex-1 bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+            </div>
 
-                <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
-                    الموضوع
-                  </label>
-                  <input
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    required
-                    value={formData.subject}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-colors"
-                    placeholder="موضوع الرسالة"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    الرسالة
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    required
-                    rows={5}
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-colors resize-none"
-                    placeholder="اكتب رسالتك هنا..."
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full bg-orange-500 hover:bg-orange-600 text-white py-4 px-6 rounded-lg font-semibold transition-colors duration-300 flex items-center justify-center"
+              {/* Social Cards */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                {socialLinks.map((social, index) => (
+                <a
+                  key={index}
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`group relative bg-gradient-to-br ${social.color} rounded-3xl p-8 text-center transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 shadow-xl ${social.shadow} hover:shadow-2xl overflow-hidden`}
                 >
-                  <Send size={20} className="ml-2" />
-                  إرسال الرسالة
-                </button>
-              </form>
+                  {/* Shine Effect */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+
+                  {/* Icon */}
+                  <div className="relative flex justify-center mb-4">
+                    <div className="bg-white/20 p-4 rounded-2xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                      {social.icon}
+                    </div>
+                  </div>
+
+                  {/* Content */}
+                  <h3 className="relative text-2xl font-bold mb-1">{social.name}</h3>
+                  <p className="relative text-white/60 text-sm mb-2">{social.handle}</p>
+                  <p className="relative text-white/80 text-sm">{social.description}</p>
+                </a>
+              ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Email Section */}
+          <div className="pb-20">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="relative">
+                {/* Glow Effect */}
+                <div className="absolute -inset-1 bg-gradient-to-r from-orange-500 to-purple-500 rounded-3xl blur-xl opacity-20" />
+              
+                <div className="relative bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-xl rounded-3xl p-8 lg:p-12 border border-white/10 text-center">
+                  <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full mb-6 shadow-xl shadow-orange-500/30">
+                    <Mail size={36} className="text-white" />
+                </div>
+
+                  <h2 className="text-3xl font-bold text-white mb-4">
+                    راسلونا عبر البريد الإلكتروني
+                  </h2>
+                  <p className="text-gray-400 mb-8 max-w-lg mx-auto">
+                    لديك سؤال أو اقتراح لموضوع جديد؟ نحب نسمع منك! راسلنا وسنرد عليك في أقرب وقت
+                  </p>
+
+                  <a
+                    href="mailto:7analaan@gmail.com"
+                    className="inline-flex items-center gap-3 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 shadow-xl shadow-orange-500/30 hover:shadow-orange-500/50 hover:scale-105"
+                  >
+                    <Mail size={24} />
+                    7analaan@gmail.com
+                  </a>
+
+                  <div className="mt-8 flex flex-wrap justify-center gap-4 text-gray-500 text-sm">
+                    <span className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                      نرد خلال 24 ساعة
+                    </span>
+                    <span>•</span>
+                    <span>نقرأ جميع الرسائل</span>
+                    <span>•</span>
+                    <span>نقدر اقتراحاتكم</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom Message */}
+          <div className="pb-16">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+              <div className="inline-block">
+                <p className="text-gray-500 text-lg">
+                  شكراً لدعمكم المستمر
+                  <span className="inline-block animate-pulse mx-2">❤️</span>
+                  أنتم سبب استمرارنا
+                </p>
             </div>
           </div>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 };
 

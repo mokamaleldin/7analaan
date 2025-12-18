@@ -1,0 +1,28 @@
+# Robots.txt for 7analaan.com
+# https://7analaan.com
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://7analaan.com/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
+
+# Block unnecessary paths
+Disallow: /api/
+Disallow: /*.json$
+
+# Allow all major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Yandex
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
