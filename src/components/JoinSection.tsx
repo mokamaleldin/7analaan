@@ -4,37 +4,29 @@ const JoinSection = () => {
   const socialLinks = [
     {
       name: 'YouTube',
-      icon: <Youtube size={40} />,
+      icon: <Youtube className="w-6 h-6 sm:w-8 sm:h-8" />,
       url: 'https://youtube.com/@7analaan',
-      color: 'from-red-600 to-red-700',
-      shadow: 'shadow-red-500/30',
       description: 'شاهد جميع الحلقات',
       stats: 'الحلقات الكاملة'
     },
     {
       name: 'Instagram',
-      icon: <Instagram size={40} />,
+      icon: <Instagram className="w-6 h-6 sm:w-8 sm:h-8" />,
       url: 'https://instagram.com/7analaan',
-      color: 'from-purple-600 via-pink-500 to-orange-400',
-      shadow: 'shadow-pink-500/30',
       description: 'تابعنا للمقتطفات',
       stats: 'مقاطع قصيرة'
     },
     {
       name: 'Twitter',
-      icon: <Twitter size={40} />,
+      icon: <Twitter className="w-6 h-6 sm:w-8 sm:h-8" />,
       url: 'https://twitter.com/7analaan',
-      color: 'from-blue-500 to-blue-600',
-      shadow: 'shadow-blue-500/30',
       description: 'آخر الأخبار والتحديثات',
       stats: 'تغريدات يومية'
     },
     {
       name: 'Facebook',
-      icon: <Facebook size={40} />,
+      icon: <Facebook className="w-6 h-6 sm:w-8 sm:h-8" />,
       url: 'https://facebook.com/7analaan',
-      color: 'from-blue-600 to-blue-800',
-      shadow: 'shadow-blue-600/30',
       description: 'انضم لمجتمعنا',
       stats: 'منشورات حصرية'
     }
@@ -52,7 +44,7 @@ const JoinSection = () => {
       {/* Animated Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-orange-500/5 rounded-full blur-3xl" />
       </div>
 
@@ -93,14 +85,14 @@ const JoinSection = () => {
               href={social.url}
               target="_blank"
               rel="noopener noreferrer"
-              className={`group relative bg-gradient-to-br ${social.color} rounded-3xl p-8 text-center transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 shadow-xl ${social.shadow} hover:shadow-2xl overflow-hidden`}
+              className="group relative bg-white/5 rounded-3xl p-7 sm:p-8 text-center transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 shadow-xl border border-white/10 hover:border-orange-500/30 overflow-hidden"
             >
               {/* Shine Effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
 
               {/* Icon */}
               <div className="relative flex justify-center mb-4">
-                <div className="bg-white/20 p-4 rounded-2xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                <div className="bg-white/10 p-2 sm:p-3 rounded-2xl group-hover:scale-110 transition-all duration-300 text-white">
                   {social.icon}
                 </div>
               </div>
@@ -110,7 +102,7 @@ const JoinSection = () => {
               <p className="relative text-white/80 text-sm mb-3">{social.description}</p>
 
               {/* Stats Badge */}
-              <div className="relative inline-flex items-center gap-1 bg-white/20 px-3 py-1 rounded-full text-xs font-medium">
+              <div className="relative inline-flex items-center gap-1 bg-white/10 px-3 py-1 rounded-full text-xs font-medium text-white/80">
                 <Play size={12} fill="currentColor" />
                 {social.stats}
               </div>
@@ -136,11 +128,10 @@ const JoinSection = () => {
                   href="https://youtube.com/@7analaan?sub_confirmation=1"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 shadow-lg shadow-red-500/30 hover:shadow-red-500/50 hover:scale-105"
+                  className="inline-flex items-center gap-3 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 shadow-lg shadow-orange-500/30 hover:shadow-orange-500/50 hover:scale-105"
                 >
                   <Youtube size={24} />
                   اشترك الآن
-                  <span className="bg-white/20 px-2 py-1 rounded text-sm">🔔</span>
                 </a>
               </div>
 

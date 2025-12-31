@@ -111,7 +111,7 @@ const PodcastPage = () => {
                   <span className="bg-white/20 px-2 py-1 rounded text-sm">→</span>
                 </a>
               </div>
-              <p className="text-gray-500 mt-4 text-sm">اشترك وفعّل الجرس ليصلك كل جديد 🔔</p>
+              <p className="text-gray-500 mt-4 text-sm">اشترك وفعّل الجرس ليصلك كل جديد</p>
             </div>
           </div>
         </div>

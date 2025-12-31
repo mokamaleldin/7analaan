@@ -54,7 +54,7 @@ const HeroSection = () => {
                 href="https://youtube.com/@7analaan"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 flex items-center shadow-lg"
+                className="group bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 flex items-center shadow-lg shadow-orange-500/20"
               >
                 <Youtube size={20} className="ml-2" />
                 اشترك في القناة

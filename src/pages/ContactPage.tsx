@@ -5,37 +5,29 @@ const ContactPage = () => {
   const socialLinks = [
     {
       name: 'YouTube',
-      icon: <Youtube size={32} />,
+      icon: <Youtube className="w-6 h-6 sm:w-7 sm:h-7" />,
       url: 'https://youtube.com/@7analaan',
-      color: 'from-red-600 to-red-700',
-      shadow: 'shadow-red-500/30',
       description: 'شاهد جميع الحلقات',
       handle: '@7analaan'
     },
     {
       name: 'Instagram',
-      icon: <Instagram size={32} />,
+      icon: <Instagram className="w-6 h-6 sm:w-7 sm:h-7" />,
       url: 'https://instagram.com/7analaan',
-      color: 'from-purple-600 via-pink-500 to-orange-400',
-      shadow: 'shadow-pink-500/30',
       description: 'تابعنا للمقتطفات',
       handle: '@7analaan'
     },
     {
       name: 'Twitter',
-      icon: <Twitter size={32} />,
+      icon: <Twitter className="w-6 h-6 sm:w-7 sm:h-7" />,
       url: 'https://twitter.com/7analaan',
-      color: 'from-blue-500 to-blue-600',
-      shadow: 'shadow-blue-500/30',
       description: 'آخر الأخبار',
       handle: '@7analaan'
     },
     {
       name: 'Facebook',
-      icon: <Facebook size={32} />,
+      icon: <Facebook className="w-6 h-6 sm:w-7 sm:h-7" />,
       url: 'https://facebook.com/7analaan',
-      color: 'from-blue-600 to-blue-800',
-      shadow: 'shadow-blue-600/30',
       description: 'انضم لمجتمعنا',
       handle: '7analaan'
     }
@@ -132,14 +124,14 @@ const ContactPage = () => {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`group relative bg-gradient-to-br ${social.color} rounded-3xl p-8 text-center transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 shadow-xl ${social.shadow} hover:shadow-2xl overflow-hidden`}
+                  className="group relative bg-white/5 backdrop-blur-sm rounded-3xl p-7 sm:p-8 text-center transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 shadow-xl border border-white/10 hover:border-orange-500/30 overflow-hidden"
                 >
                   {/* Shine Effect */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
 
                   {/* Icon */}
                   <div className="relative flex justify-center mb-4">
-                    <div className="bg-white/20 p-4 rounded-2xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                    <div className="bg-white/10 p-2 sm:p-3 rounded-2xl group-hover:scale-110 transition-all duration-300 text-white">
                       {social.icon}
                     </div>
                   </div>

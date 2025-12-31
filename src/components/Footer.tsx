@@ -1,4 +1,4 @@
-import { Youtube, Twitter, Instagram } from 'lucide-react';
+import { Youtube, Twitter, Instagram, Facebook } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -20,30 +20,38 @@ const Footer = () => {
           {/* Social Media */}
           <div>
             <h3 className="text-lg font-semibold mb-4">تابعونا على</h3>
-            <div className="flex space-x-4 space-x-reverse">
+            <div className="flex space-x-3 space-x-reverse">
               <a
                 href="https://youtube.com/@7analaan"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-red-600 hover:bg-red-700 p-3 rounded-full transition-colors"
+                className="bg-white/10 hover:bg-white/20 p-2 sm:p-3 rounded-full transition-colors text-white"
               >
-                <Youtube size={20} />
+                <Youtube className="w-5 h-5 sm:w-5 sm:h-5" />
               </a>
               <a
-                href="https://twitter.com"
+                href="https://twitter.com/7analaan"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-blue-400 hover:bg-blue-500 p-3 rounded-full transition-colors"
+                className="bg-white/10 hover:bg-white/20 p-2 sm:p-3 rounded-full transition-colors text-white"
               >
-                <Twitter size={20} />
+                <Twitter className="w-5 h-5 sm:w-5 sm:h-5" />
               </a>
               <a
-                href="https://instagram.com"
+                href="https://instagram.com/7analaan"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-pink-600 hover:bg-pink-700 p-3 rounded-full transition-colors"
+                className="bg-white/10 hover:bg-white/20 p-2 sm:p-3 rounded-full transition-colors text-white"
               >
-                <Instagram size={20} />
+                <Instagram className="w-5 h-5 sm:w-5 sm:h-5" />
+              </a>
+              <a
+                href="https://facebook.com/7analaan"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white/10 hover:bg-white/20 p-2 sm:p-3 rounded-full transition-colors text-white"
+              >
+                <Facebook className="w-5 h-5 sm:w-5 sm:h-5" />
               </a>
             </div>
           </div>
@@ -52,6 +60,17 @@ const Footer = () => {
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">
           <p className="text-gray-400">
             © {new Date().getFullYear()} حان الآن. جميع الحقوق محفوظة.
+          </p>
+          <p className="text-gray-500 text-sm mt-2">
+            site by{' '}
+            <a
+              href="https://www.mokamaleldin.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-white"
+            >
+              Mohmaed kamaleldin
+            </a>
           </p>
         </div>
       </div>

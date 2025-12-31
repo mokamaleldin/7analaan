@@ -4,28 +4,24 @@ import { MessageCircle, Users, Mic, Lightbulb, Sparkles, ArrowLeft } from 'lucid
 const IntroSection = () => {
   const features = [
     {
-      icon: <MessageCircle className="text-white" size={28} />,
+      icon: <MessageCircle className="text-white" size={26} />,
       title: "حوار مفتوح",
-      description: "نناقش القضايا المهمة بصراحة ووضوح دون تحفظ",
-      gradient: "from-orange-500 to-orange-600"
+      description: "نناقش القضايا المهمة بصراحة ووضوح دون تحفظ"
     },
     {
-      icon: <Users className="text-white" size={28} />,
+      icon: <Users className="text-white" size={26} />,
       title: "ضيوف متميزون",
-      description: "نستضيف خبراء ومفكرين لإثراء النقاش",
-      gradient: "from-blue-500 to-blue-600"
+      description: "نستضيف خبراء ومفكرين لإثراء النقاش"
     },
     {
-      icon: <Mic className="text-white" size={28} />,
+      icon: <Mic className="text-white" size={26} />,
       title: "إنتاج عالي الجودة",
-      description: "نقدم محتوى صوتي ومرئي بجودة احترافية",
-      gradient: "from-purple-500 to-purple-600"
+      description: "نقدم محتوى صوتي ومرئي بجودة احترافية"
     },
     {
-      icon: <Lightbulb className="text-white" size={28} />,
+      icon: <Lightbulb className="text-white" size={26} />,
       title: "أفكار ملهمة",
-      description: "نقدم رؤى جديدة تفتح آفاق التفكير",
-      gradient: "from-green-500 to-green-600"
+      description: "نقدم رؤى جديدة تفتح آفاق التفكير"
     }
   ];
 
@@ -68,7 +64,7 @@ const IntroSection = () => {
               key={index}
               className="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 text-center transform hover:-translate-y-2 border border-gray-100"
             >
-              <div className={`w-16 h-16 bg-gradient-to-br ${feature.gradient} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+              <div className="w-14 h-14 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                 {feature.icon}
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">
