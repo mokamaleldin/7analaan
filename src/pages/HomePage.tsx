@@ -2,6 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import HeroSection from '../components/HeroSection';
 import IntroSection from '../components/IntroSection';
 import JoinSection from '../components/JoinSection';
+import ShortsSection from '../components/ShortsSection';
 
 const HomePage = () => {
   return (
@@ -26,6 +27,7 @@ const HomePage = () => {
 
         <div className="relative">
           <HeroSection />
+          <ShortsSection />
           <IntroSection />
           <JoinSection />
         </div>

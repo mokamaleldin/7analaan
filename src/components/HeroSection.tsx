@@ -14,10 +14,10 @@ const HeroSection = () => {
       <div className="absolute top-20 left-10 w-72 h-72 bg-orange-500/10 rounded-full blur-3xl animate-pulse" />
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-orange-500/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
-          <div className="text-center lg:text-right order-2 lg:order-1">
+      <div className="relative max-w-[1600px] mx-auto px-6 lg:px-12 py-20">
+        <div className="grid lg:grid-cols-3 gap-8 lg:gap-16 items-center">
+          {/* Left Content - 1/3 */}
+          <div className="text-center lg:text-right order-2 lg:order-1 lg:col-span-1">
             {/* Badge */}
             <div className="inline-flex items-center gap-2 bg-orange-500/20 text-orange-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Headphones size={16} />
@@ -62,8 +62,8 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Right Content - Latest Episode */}
-          <div className="order-1 lg:order-2">
+          {/* Right Content - Latest Episode - 2/3 */}
+          <div className="order-1 lg:order-2 lg:col-span-2">
             <div className="relative">
               {/* Glow effect */}
               <div className="absolute -inset-4 bg-gradient-to-r from-orange-500/20 to-orange-600/20 rounded-2xl blur-xl" />

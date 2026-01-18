@@ -52,7 +52,7 @@ const JoinSection = () => {
       <div className="absolute top-20 right-20 text-6xl animate-bounce" style={{ animationDuration: '3s' }}>🎧</div>
       <div className="absolute bottom-40 left-20 text-5xl animate-bounce" style={{ animationDuration: '4s', animationDelay: '1s' }}>🎙️</div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6 border border-white/10">
