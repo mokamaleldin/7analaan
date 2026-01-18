@@ -19,6 +19,7 @@ const getVideoId = (url: string): string => {
 const EpisodeCard: React.FC<EpisodeCardProps> = ({ episode }) => {
   const [title, setTitle] = useState<string>('');
   const [loading, setLoading] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   const videoId = getVideoId(episode.youtubeUrl);
   const thumbnail = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
@@ -38,28 +39,45 @@ const EpisodeCard: React.FC<EpisodeCardProps> = ({ episode }) => {
     fetchTitle();
   }, [episode.youtubeUrl]);
 
-  const handleWatchClick = () => {
+  const handlePlayClick = () => {
+    setIsPlaying(true);
+  };
+
+  const handleWatchOnYoutube = () => {
     window.open(episode.youtubeUrl, '_blank');
   };
 
   return (
     <div className="group bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl shadow-xl hover:shadow-2xl hover:shadow-orange-500/10 transition-all duration-500 overflow-hidden transform hover:-translate-y-3 border border-white/5 hover:border-orange-500/30">
-      {/* Thumbnail */}
-      <div className="relative cursor-pointer overflow-hidden" onClick={handleWatchClick}>
-        <img
-          src={thumbnail}
-          alt={title || "Episode thumbnail"}
-          className="w-full h-52 object-cover transition-transform duration-700 group-hover:scale-110"
-        />
-        {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-60" />
-
-        {/* Play Button */}
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="bg-orange-500/90 backdrop-blur-sm rounded-full p-5 opacity-0 group-hover:opacity-100 transition-all duration-300 transform scale-50 group-hover:scale-100 shadow-xl shadow-orange-500/50">
-            <Play className="text-white" size={32} fill="currentColor" />
+      {/* Video / Thumbnail */}
+      <div className="relative overflow-hidden">
+        {isPlaying ? (
+          <div className="aspect-video">
+            <iframe
+              src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
+              className="w-full h-full"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
           </div>
-        </div>
+        ) : (
+          <div className="cursor-pointer" onClick={handlePlayClick}>
+            <img
+              src={thumbnail}
+              alt={title || "Episode thumbnail"}
+              className="w-full h-52 object-cover transition-transform duration-700 group-hover:scale-110"
+            />
+            {/* Gradient Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-60 pointer-events-none" />
+
+            {/* Play Button */}
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+              <div className="bg-orange-500/90 backdrop-blur-sm rounded-full p-5 opacity-80 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110 shadow-xl shadow-orange-500/50">
+                <Play className="text-white" size={32} fill="currentColor" />
+              </div>
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Content */}
@@ -76,9 +94,9 @@ const EpisodeCard: React.FC<EpisodeCardProps> = ({ episode }) => {
           )}
         </h3>
 
-        {/* Action Button */}
+        {/* Action Button - Opens YouTube */}
         <button
-          onClick={handleWatchClick}
+          onClick={handleWatchOnYoutube}
           className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white py-3 px-4 rounded-xl font-medium transition-all duration-300 flex items-center justify-center gap-2 shadow-lg shadow-orange-500/20 hover:shadow-orange-500/40 hover:scale-[1.02]"
         >
           <Play size={18} fill="currentColor" />
