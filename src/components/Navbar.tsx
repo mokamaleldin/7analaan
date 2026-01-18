@@ -44,6 +44,16 @@ const Navbar = () => {
                 البودكاست
               </Link>
               <Link
+                to="/soundcloud"
+                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                  isActive('/soundcloud') 
+                    ? 'text-orange-500 bg-orange-50' 
+                    : 'text-gray-700 hover:text-orange-500 hover:bg-gray-50'
+                }`}
+              >
+                ساوند كلاود
+              </Link>
+              <Link
                 to="/guests"
                 className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                   isActive('/guests') 
@@ -102,6 +112,17 @@ const Navbar = () => {
                 }`}
               >
                 البودكاست
+              </Link>
+              <Link
+                to="/soundcloud"
+                onClick={() => setIsOpen(false)}
+                className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                  isActive('/soundcloud') 
+                    ? 'text-orange-500 bg-orange-50' 
+                    : 'text-gray-700 hover:text-orange-500 hover:bg-white'
+                }`}
+              >
+                ساوند كلاود
               </Link>
               <Link
                 to="/guests"

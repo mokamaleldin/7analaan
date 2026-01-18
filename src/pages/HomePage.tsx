@@ -3,6 +3,7 @@ import HeroSection from '../components/HeroSection';
 import IntroSection from '../components/IntroSection';
 import JoinSection from '../components/JoinSection';
 import ShortsSection from '../components/ShortsSection';
+import SoundCloudSection from '../components/SoundCloudSection';
 
 const HomePage = () => {
   return (
@@ -29,6 +30,7 @@ const HomePage = () => {
           <HeroSection />
           <ShortsSection />
           <IntroSection />
+          <SoundCloudSection />
           <JoinSection />
         </div>
       </div>
