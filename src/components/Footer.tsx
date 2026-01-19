@@ -1,4 +1,5 @@
-import { Youtube, Twitter, Instagram, Facebook } from 'lucide-react';
+import { getSocialIcon } from './SocialIcons';
+import { podcastSocialLinks } from '../data/socialLinks';
 
 const Footer = () => {
   return (
@@ -21,38 +22,17 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">تابعونا على</h3>
             <div className="flex space-x-3 space-x-reverse">
-              <a
-                href="https://youtube.com/@7analaan"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-white/10 hover:bg-white/20 p-2 sm:p-3 rounded-full transition-colors text-white"
-              >
-                <Youtube className="w-5 h-5 sm:w-5 sm:h-5" />
-              </a>
-              <a
-                href="https://twitter.com/7analaan"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-white/10 hover:bg-white/20 p-2 sm:p-3 rounded-full transition-colors text-white"
-              >
-                <Twitter className="w-5 h-5 sm:w-5 sm:h-5" />
-              </a>
-              <a
-                href="https://instagram.com/7analaan"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-white/10 hover:bg-white/20 p-2 sm:p-3 rounded-full transition-colors text-white"
-              >
-                <Instagram className="w-5 h-5 sm:w-5 sm:h-5" />
-              </a>
-              <a
-                href="https://facebook.com/7analaan"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-white/10 hover:bg-white/20 p-2 sm:p-3 rounded-full transition-colors text-white"
-              >
-                <Facebook className="w-5 h-5 sm:w-5 sm:h-5" />
-              </a>
+              {podcastSocialLinks.map((social, index) => (
+                <a
+                  key={index}
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white/10 hover:bg-white/20 p-2 sm:p-3 rounded-full transition-colors text-white"
+                >
+                  {getSocialIcon(social.platform, "w-5 h-5")}
+                </a>
+              ))}
             </div>
           </div>
         </div>

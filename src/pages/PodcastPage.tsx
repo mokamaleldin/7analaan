@@ -1,6 +1,8 @@
 import { Helmet } from 'react-helmet-async';
 import { Play, Sparkles } from 'lucide-react';
 import EpisodeCard from '../components/EpisodeCard';
+import PageBackground from '../components/PageBackground';
+import SectionDivider from '../components/SectionDivider';
 
 const PodcastPage = () => {
   // Just add YouTube URLs here - everything else is automatic!
@@ -31,17 +33,7 @@ const PodcastPage = () => {
         <link rel="canonical" href="https://7analaan.com/podcast" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
-        {/* Animated Background Effects */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-0 left-1/4 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="absolute bottom-1/4 left-1/3 w-72 h-72 bg-orange-500/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
-        </div>
-
-        {/* Floating Elements */}
-        <div className="absolute top-32 right-10 text-5xl animate-bounce opacity-20" style={{ animationDuration: '3s' }}>🎧</div>
-        <div className="absolute top-1/2 left-10 text-4xl animate-bounce opacity-20" style={{ animationDuration: '4s', animationDelay: '1s' }}>🎙️</div>
-        <div className="absolute bottom-32 right-20 text-4xl animate-bounce opacity-20" style={{ animationDuration: '3.5s', animationDelay: '0.5s' }}>🎵</div>
+        <PageBackground floatingEmojis={['🎧', '🎙️', '🎵']} />
 
         {/* Hero Header */}
         <div className="relative pt-16 pb-12">
@@ -70,15 +62,7 @@ const PodcastPage = () => {
         {/* Episodes Section */}
         <div className="relative pb-20">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            {/* Section Divider */}
-            <div className="flex items-center gap-4 mb-12">
-              <div className="h-px flex-1 bg-gradient-to-r from-transparent via-white/20 to-transparent" />
-              <div className="flex items-center gap-2 text-gray-400">
-                <Play size={16} className="text-orange-400" fill="currentColor" />
-                <span>أحدث الحلقات</span>
-              </div>
-              <div className="h-px flex-1 bg-gradient-to-r from-transparent via-white/20 to-transparent" />
-            </div>
+            <SectionDivider icon={<Play size={16} fill="currentColor" />} label="أحدث الحلقات" />
 
             {/* Episodes Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

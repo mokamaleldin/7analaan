@@ -1,12 +1,19 @@
+import { Link } from 'react-router-dom';
+import { ArrowLeft } from 'lucide-react';
+
 interface GuestCardProps {
+  guestId: number;
   imageUrl: string;
   name: string;
   title: string;
 }
 
-const GuestCard: React.FC<GuestCardProps> = ({ imageUrl, name, title }) => {
+const GuestCard: React.FC<GuestCardProps> = ({ guestId, imageUrl, name, title }) => {
   return (
-    <div className="group bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl shadow-xl hover:shadow-2xl hover:shadow-orange-500/10 transition-all duration-500 overflow-hidden transform hover:-translate-y-3 border border-white/5 hover:border-orange-500/30">
+    <Link 
+      to={`/guests/${guestId}`}
+      className="group bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl shadow-xl hover:shadow-2xl hover:shadow-orange-500/10 transition-all duration-500 overflow-hidden transform hover:-translate-y-3 border border-white/5 hover:border-orange-500/30 block"
+    >
       {/* Image */}
       <div className="relative overflow-hidden">
         <img
@@ -19,10 +26,14 @@ const GuestCard: React.FC<GuestCardProps> = ({ imageUrl, name, title }) => {
 
       {/* Content */}
       <div className="p-6">
-        <h3 className="text-2xl font-bold text-white mb-2">{name}</h3>
-        <p className="text-gray-400">{title}</p>
+        <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-orange-400 transition-colors">{name}</h3>
+        <p className="text-gray-400 mb-4">{title}</p>
+        <div className="flex items-center gap-2 text-orange-400 text-sm font-medium">
+          <span>عرض الملف الشخصي</span>
+          <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
+        </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

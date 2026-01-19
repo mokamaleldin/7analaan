@@ -6,6 +6,7 @@ import HomePage from './pages/HomePage';
 import PodcastPage from './pages/PodcastPage';
 import ContactPage from './pages/ContactPage';
 import GuestsPage from './pages/GuestsPage';
+import GuestDetailPage from './pages/GuestDetailPage';
 import SoundCloudPage from './pages/SoundCloudPage';
 
 function ScrollToTop() {
@@ -30,6 +31,7 @@ function App() {
             <Route path="/podcast" element={<PodcastPage />} />
             <Route path="/soundcloud" element={<SoundCloudPage />} />
             <Route path="/guests" element={<GuestsPage />} />
+            <Route path="/guests/:guestId" element={<GuestDetailPage />} />
             <Route path="/contact" element={<ContactPage />} />
           </Routes>
         </main>

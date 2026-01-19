@@ -1,36 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Headphones, ArrowLeft } from 'lucide-react';
-
-// SoundCloud track URLs
-const soundcloudTracks = [
-  'https://soundcloud.com/7analaan/b4e0c51e-5f89-475e-8470-b1b1ec440be4',
-  'https://soundcloud.com/7analaan/1f6728dc-28b0-4a7e-b913-04fe95f666b6',
-  'https://soundcloud.com/7analaan/d0137357-e467-4789-9acc-a0c6b571e7bc',
-];
-
-interface SoundCloudPlayerProps {
-  url: string;
-}
-
-const SoundCloudPlayer: React.FC<SoundCloudPlayerProps> = ({ url }) => {
-  // Encode the URL for the embed - use visual=false for waveform style
-  const encodedUrl = encodeURIComponent(url);
-  const embedUrl = `https://w.soundcloud.com/player/?url=${encodedUrl}&color=%23f97316&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=true&visual=false`;
-
-  return (
-    <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl hover:shadow-orange-500/10 transition-all duration-500 border border-white/5 hover:border-orange-500/30">
-      <iframe
-        width="100%"
-        height="166"
-        scrolling="no"
-        frameBorder="no"
-        allow="autoplay"
-        src={embedUrl}
-        className="w-full"
-      />
-    </div>
-  );
-};
+import SoundCloudPlayer from './SoundCloudPlayer';
+import { homepageSoundcloudTracks } from '../data/soundcloudTracks';
 
 const SoundCloudSection = () => {
   return (
@@ -58,7 +29,7 @@ const SoundCloudSection = () => {
 
         {/* SoundCloud Players Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {soundcloudTracks.map((track, index) => (
+          {homepageSoundcloudTracks.map((track, index) => (
             <SoundCloudPlayer key={index} url={track} />
           ))}
         </div>
