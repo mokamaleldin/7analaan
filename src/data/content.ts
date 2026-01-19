@@ -88,141 +88,32 @@ export const guestsInput: GuestInput[] = [
     socialLinks: [
       { platform: 'youtube', url: 'https://www.youtube.com/@7analaan' },
     ],
+    // ✨ فقط ضع روابط يوتيوب! العنوان والصورة يتم جلبها تلقائياً
     episodes: [
-      {
-        title: 'حوار مع د. خالد حمدي حول شؤون الأسرة',
-        thumbnail: 'https://img.youtube.com/vi/_zejgocD4i8/maxresdefault.jpg',
-        youtubeUrl: 'https://www.youtube.com/watch?v=_zejgocD4i8',
-      },
+      'https://www.youtube.com/watch?v=_zejgocD4i8',
     ],
   },
-  {
-    name: 'ضيف سابق',
-    title: 'كاتب وباحث',
-    specialty: 'الكتابة والبحث العلمي',
-    imageUrl: 'https://via.placeholder.com/800x800.png?text=%D8%B6%D9%8A%D9%81+%D8%B3%D8%A7%D8%A8%D9%82',
-    bio: 'نبذة عن الضيف وإنجازاته ومسيرته المهنية.',
-    socialLinks: [
-      { platform: 'twitter', url: 'https://twitter.com/example' },
-      { platform: 'instagram', url: 'https://instagram.com/example' },
-    ],
-    episodes: [
-      {
-        title: 'عنوان الحلقة الأولى',
-        thumbnail: 'https://via.placeholder.com/400x225.png?text=Episode+1',
-        youtubeUrl: 'https://youtube.com/watch?v=example1',
-      },
-    ],
-  },
-  {
-    name: 'ضيف سابق',
-    title: 'كاتب وباحث',
-    specialty: 'الكتابة والبحث العلمي',
-    imageUrl: 'https://via.placeholder.com/800x800.png?text=%D8%B6%D9%8A%D9%81+%D8%B3%D8%A7%D8%A8%D9%82',
-    bio: 'نبذة عن الضيف وإنجازاته ومسيرته المهنية.',
-    socialLinks: [
-      { platform: 'twitter', url: 'https://twitter.com/example' },
-      { platform: 'instagram', url: 'https://instagram.com/example' },
-    ],
-    episodes: [
-      {
-        title: 'عنوان الحلقة الأولى',
-        thumbnail: 'https://via.placeholder.com/400x225.png?text=Episode+1',
-        youtubeUrl: 'https://youtube.com/watch?v=example1',
-      },
-    ],
-  },
-  {
-    name: 'ضيف سابق',
-    title: 'كاتب وباحث',
-    specialty: 'الكتابة والبحث العلمي',
-    imageUrl: 'https://via.placeholder.com/800x800.png?text=%D8%B6%D9%8A%D9%81+%D8%B3%D8%A7%D8%A8%D9%82',
-    bio: 'نبذة عن الضيف وإنجازاته ومسيرته المهنية.',
-    socialLinks: [
-      { platform: 'twitter', url: 'https://twitter.com/example' },
-      { platform: 'instagram', url: 'https://instagram.com/example' },
-    ],
-    episodes: [
-      {
-        title: 'عنوان الحلقة الأولى',
-        thumbnail: 'https://via.placeholder.com/400x225.png?text=Episode+1',
-        youtubeUrl: 'https://youtube.com/watch?v=example1',
-      },
-    ],
-  },
-  {
-    name: 'ضيف سابق',
-    title: 'كاتب وباحث',
-    specialty: 'الكتابة والبحث العلمي',
-    imageUrl: 'https://via.placeholder.com/800x800.png?text=%D8%B6%D9%8A%D9%81+%D8%B3%D8%A7%D8%A8%D9%82',
-    bio: 'نبذة عن الضيف وإنجازاته ومسيرته المهنية.',
-    socialLinks: [
-      { platform: 'twitter', url: 'https://twitter.com/example' },
-      { platform: 'instagram', url: 'https://instagram.com/example' },
-    ],
-    episodes: [
-      {
-        title: 'عنوان الحلقة الأولى',
-        thumbnail: 'https://via.placeholder.com/400x225.png?text=Episode+1',
-        youtubeUrl: 'https://youtube.com/watch?v=example1',
-      },
-    ],
-  },
-  {
-    name: 'ضيف سابق',
-    title: 'كاتب وباحث',
-    specialty: 'الكتابة والبحث العلمي',
-    imageUrl: 'https://via.placeholder.com/800x800.png?text=%D8%B6%D9%8A%D9%81+%D8%B3%D8%A7%D8%A8%D9%82',
-    bio: 'نبذة عن الضيف وإنجازاته ومسيرته المهنية.',
-    socialLinks: [
-      { platform: 'twitter', url: 'https://twitter.com/example' },
-      { platform: 'instagram', url: 'https://instagram.com/example' },
-    ],
-    episodes: [
-      {
-        title: 'عنوان الحلقة الأولى',
-        thumbnail: 'https://via.placeholder.com/400x225.png?text=Episode+1',
-        youtubeUrl: 'https://youtube.com/watch?v=example1',
-      },
-    ],
-  },
-  {
-    name: 'ضيف سابق',
-    title: 'كاتب وباحث',
-    specialty: 'الكتابة والبحث العلمي',
-    imageUrl: 'https://via.placeholder.com/800x800.png?text=%D8%B6%D9%8A%D9%81+%D8%B3%D8%A7%D8%A8%D9%82',
-    bio: 'نبذة عن الضيف وإنجازاته ومسيرته المهنية.',
-    socialLinks: [
-      { platform: 'twitter', url: 'https://twitter.com/example' },
-      { platform: 'instagram', url: 'https://instagram.com/example' },
-    ],
-    episodes: [
-      {
-        title: 'عنوان الحلقة الأولى',
-        thumbnail: 'https://via.placeholder.com/400x225.png?text=Episode+1',
-        youtubeUrl: 'https://youtube.com/watch?v=example1',
-      },
-    ],
-  },
-  {
-    name: 'ضيف سابق',
-    title: 'كاتب وباحث',
-    specialty: 'الكتابة والبحث العلمي',
-    imageUrl: 'https://via.placeholder.com/800x800.png?text=%D8%B6%D9%8A%D9%81+%D8%B3%D8%A7%D8%A8%D9%82',
-    bio: 'نبذة عن الضيف وإنجازاته ومسيرته المهنية.',
-    socialLinks: [
-      { platform: 'twitter', url: 'https://twitter.com/example' },
-      { platform: 'instagram', url: 'https://instagram.com/example' },
-    ],
-    episodes: [
-      {
-        title: 'عنوان الحلقة الأولى',
-        thumbnail: 'https://via.placeholder.com/400x225.png?text=Episode+1',
-        youtubeUrl: 'https://youtube.com/watch?v=example1',
-      },
-    ],
-  },
+  // مثال على إضافة ضيف جديد:
+  // {
+  //   name: 'اسم الضيف',
+  //   title: 'المسمى الوظيفي',
+  //   specialty: 'التخصص',
+  //   imageUrl: '/guests/guest-image.png',
+  //   bio: 'نبذة عن الضيف...',
+  //   socialLinks: [
+  //     { platform: 'youtube', url: 'https://youtube.com/@example' },
+  //     { platform: 'twitter', url: 'https://twitter.com/example' },
+  //   ],
+  //   episodes: [
+  //     'https://www.youtube.com/watch?v=VIDEO_ID_1',
+  //     'https://www.youtube.com/watch?v=VIDEO_ID_2',
+  //   ],
+  // },
 ];
+
+
+
+
 
 // ═══════════════════════════════════════════════════════════════════════════
 // 🌐 روابط السوشيال ميديا للبودكاست

@@ -1,6 +1,7 @@
 import { useParams, Link } from 'react-router-dom';
 import { ArrowRight, Sparkles, Play } from 'lucide-react';
 import { PageBackground, getSocialIcon, getSocialLabel, getSocialColor, SEO, createBreadcrumbSchema, createPersonSchema } from '../../components/common';
+import { GuestEpisodeCard } from '../../components/Guests';
 import { guestsData } from '../../data/types/guests';
 
 const GuestDetailPage = () => {
@@ -142,37 +143,7 @@ const GuestDetailPage = () => {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 {guest.episodes.map((episode) => (
-                  <a
-                    key={episode.id}
-                    href={episode.youtubeUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl shadow-xl hover:shadow-2xl hover:shadow-orange-500/10 transition-all duration-500 overflow-hidden transform hover:-translate-y-3 border border-white/5 hover:border-orange-500/30"
-                  >
-                    {/* Thumbnail */}
-                    <div className="relative overflow-hidden aspect-video">
-                      <img
-                        src={episode.thumbnail}
-                        alt={episode.title}
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-60" />
-                      
-                      {/* Play Button */}
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="bg-orange-500/90 backdrop-blur-sm rounded-full p-4 opacity-80 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110 shadow-xl shadow-orange-500/50">
-                          <Play className="text-white" size={24} fill="currentColor" />
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Content */}
-                    <div className="p-5">
-                      <h3 className="text-lg font-bold text-white group-hover:text-orange-400 transition-colors line-clamp-2">
-                        {episode.title}
-                      </h3>
-                    </div>
-                  </a>
+                  <GuestEpisodeCard key={episode.id} episode={episode} />
                 ))}
               </div>
             </div>
