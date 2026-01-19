@@ -11,7 +11,6 @@ interface SEOProps {
   structuredData?: object;
 }
 
-const SITE_URL = 'https://7analaan.com';
 const DEFAULT_OG_IMAGE = '/og-image.jpg';
 const BRAND_NAME = 'حان الآن - 7analaan';
 
@@ -38,8 +37,8 @@ const SEO: React.FC<SEOProps> = ({
   noIndex = false,
   structuredData
 }) => {
-  const canonicalUrl = `${SITE_URL}${canonicalPath}`;
-  const fullOgImage = ogImage.startsWith('http') ? ogImage : `${SITE_URL}${ogImage}`;
+  const canonicalUrl = canonicalPath;
+  const fullOgImage = ogImage;
   const allKeywords = [...BRAND_KEYWORDS, ...keywords].join(', ');
 
   return (
@@ -103,7 +102,7 @@ export const createBreadcrumbSchema = (items: { name: string; url: string }[]) =
     '@type': 'ListItem',
     position: index + 1,
     name: item.name,
-    item: `${SITE_URL}${item.url}`
+    item: item.url
   }))
 });
 
@@ -121,10 +120,9 @@ export const createPersonSchema = (person: {
   description: person.description,
   image: person.image,
   jobTitle: person.jobTitle,
-  url: `${SITE_URL}${person.url}`,
+  url: person.url,
   memberOf: {
     '@type': 'Organization',
-    name: 'حان الآن - 7analaan',
-    url: SITE_URL
+    name: 'حان الآن - 7analaan'
   }
 });
