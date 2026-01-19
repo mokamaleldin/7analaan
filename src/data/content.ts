@@ -16,7 +16,9 @@ import type { GuestInput, SocialLink } from './types/types';
 // ═══════════════════════════════════════════════════════════════════════════
 
 export const youtubeEpisodes = [
-  "https://youtu.be/NhhzZfWA9fA",
+    "https://youtu.be/OnR06Uc8dgE?si=27iGZ0mB6mm5IopF",
+  "https://youtu.be/_zejgocD4i8?si=6K-uc54FN_znqkJT",
+    "https://youtu.be/NhhzZfWA9fA",
   "https://youtu.be/4q4X-xGjioI",
   "https://youtu.be/ADEkLdkAMro",
   "https://youtu.be/FLZk4la6xtU",
@@ -83,32 +85,125 @@ export const guestsInput: GuestInput[] = [
     name: 'د. خالد حمدي',
     title: 'مستشار أسري وتربوي',
     specialty: 'شؤون الأسرة والتربية',
-    imageUrl: '/guests/haled-hamdi.png',
+    imageUrl: '/guests/خالد حمدي.jpg',
     bio: 'الدكتور خالد حمدي هو مستشار أسري وتربوي متخصص في شؤون الأسرة والعلاقات الزوجية. يمتلك خبرة واسعة في مجال الإرشاد الأسري والتربوي، وقد ساهم في حل العديد من المشكلات الأسرية والاجتماعية. يقدم الدكتور خالد محتوى تثقيفي هادف يساعد الأسر على بناء علاقات صحية ومتينة، ويعمل على نشر الوعي بأهمية التربية السليمة والتواصل الفعال بين أفراد الأسرة.',
     socialLinks: [
       { platform: 'youtube', url: 'https://www.youtube.com/@7analaan' },
     ],
-    // ✨ فقط ضع روابط يوتيوب! العنوان والصورة يتم جلبها تلقائياً
     episodes: [
       'https://www.youtube.com/watch?v=_zejgocD4i8',
     ],
   },
-  // مثال على إضافة ضيف جديد:
-  // {
-  //   name: 'اسم الضيف',
-  //   title: 'المسمى الوظيفي',
-  //   specialty: 'التخصص',
-  //   imageUrl: '/guests/guest-image.png',
-  //   bio: 'نبذة عن الضيف...',
-  //   socialLinks: [
-  //     { platform: 'youtube', url: 'https://youtube.com/@example' },
-  //     { platform: 'twitter', url: 'https://twitter.com/example' },
-  //   ],
-  //   episodes: [
-  //     'https://www.youtube.com/watch?v=VIDEO_ID_1',
-  //     'https://www.youtube.com/watch?v=VIDEO_ID_2',
-  //   ],
-  // },
+  {
+    name: 'أحمد إبراهيم',
+    title: 'ضيف بودكاست حان الsatisfied',
+    specialty: 'متحدث ومؤثر',
+    imageUrl: '/guests/أحمد إبراهيم.jpg',
+    bio: 'أحمد إبراهيم ضيف مميز في بودكاست حان الآن، شارك في حوار ثري حول مواضيع متنوعة تهم المجتمع العربي.',
+    socialLinks: [
+      { platform: 'youtube', url: 'https://www.youtube.com/@7analaan' },
+    ],
+    episodes: [],
+  },
+  {
+    name: 'أحمد الجندي',
+    title: 'ضيف بودكاست حان الآن',
+    specialty: 'متحدث ومؤثر',
+    imageUrl: '/guests/ahmed_elgendy.jpg',
+    bio: 'أحمد الجندي ضيف مميز في بودكاست حان الآن، شارك في حوار ثري حول مواضيع متنوعة تهم المجتمع العربي.',
+    socialLinks: [
+      { platform: 'youtube', url: 'https://www.youtube.com/@7analaan' },
+    ],
+    episodes: [],
+  },
+  {
+    name: 'أيمن نور',
+    title: 'ضيف بودكاست حان الآن',
+    specialty: 'متحدث ومؤثر',
+    imageUrl: '/guests/ayman_nour.jpg',
+    bio: 'أيمن نور ضيف مميز في بودكاست حان الآن، شارك في حوار ثري حول مواضيع متنوعة تهم المجتمع العربي.',
+    socialLinks: [
+      { platform: 'youtube', url: 'https://www.youtube.com/@7analaan' },
+    ],
+    episodes: [],
+  },
+  {
+    name: 'حسام عبدالكريم',
+    title: 'ضيف بودكاست حان الآن',
+    specialty: 'متحدث ومؤثر',
+    imageUrl: '/guests/حسام عبدالكريم.jpg',
+    bio: 'حسام عبدالكريم ضيف مميز في بودكاست حان الآن، شارك في حوار ثري حول مواضيع متنوعة تهم المجتمع العربي.',
+    socialLinks: [
+      { platform: 'youtube', url: 'https://www.youtube.com/@7analaan' },
+    ],
+    episodes: [],
+  },
+  {
+    name: 'د. خالد الحداد',
+    title: 'ضيف بودكاست حان الآن',
+    specialty: 'متحدث ومؤثر',
+    imageUrl: '/guests/خالد الحداد 2.jpg',
+    bio: 'الدكتور خالد الحداد ضيف مميز في بودكاست حان الآن، شارك في حوار ثري حول مواضيع متنوعة تهم المجتمع العربي.',
+    socialLinks: [
+      { platform: 'youtube', url: 'https://www.youtube.com/@7analaan' },
+    ],
+    episodes: [],
+  },
+  {
+    name: 'طه عامر',
+    title: 'ضيف بودكاست حان الآن',
+    specialty: 'متحدث ومؤثر',
+    imageUrl: '/guests/طه عامر.jpg',
+    bio: 'طه عامر ضيف مميز في بودكاست حان الآن، شارك في حوار ثري حول مواضيع متنوعة تهم المجتمع العربي.',
+    socialLinks: [
+      { platform: 'youtube', url: 'https://www.youtube.com/@7analaan' },
+    ],
+    episodes: [],
+  },
+  {
+    name: 'عمار فايد',
+    title: 'ضيف بودكاست حان الآن',
+    specialty: 'متحدث ومؤثر',
+    imageUrl: '/guests/عمار فايد.jpg',
+    bio: 'عمار فايد ضيف مميز في بودكاست حان الآن، شارك في حوار ثري حول مواضيع متنوعة تهم المجتمع العربي.',
+    socialLinks: [
+      { platform: 'youtube', url: 'https://www.youtube.com/@7analaan' },
+    ],
+    episodes: [],
+  },
+  {
+    name: 'محمد عفان',
+    title: 'ضيف بودكاست حان الآن',
+    specialty: 'متحدث ومؤثر',
+    imageUrl: '/guests/محمد عفان.jpg',
+    bio: 'محمد عفان ضيف مميز في بودكاست حان الآن، شارك في حوار ثري حول مواضيع متنوعة تهم المجتمع العربي.',
+    socialLinks: [
+      { platform: 'youtube', url: 'https://www.youtube.com/@7analaan' },
+    ],
+    episodes: [],
+  },
+  {
+    name: 'محمد غباشي',
+    title: 'ضيف بودكاست حان الآن',
+    specialty: 'متحدث ومؤثر',
+    imageUrl: '/guests/محمد غباشي.jpg',
+    bio: 'محمد غباشي ضيف مميز في بودكاست حان الآن، شارك في حوار ثري حول مواضيع متنوعة تهم المجتمع العربي.',
+    socialLinks: [
+      { platform: 'youtube', url: 'https://www.youtube.com/@7analaan' },
+    ],
+    episodes: [],
+  },
+  {
+    name: 'مصطفى شاهين',
+    title: 'ضيف بودكاست حان الآن',
+    specialty: 'متحدث ومؤثر',
+    imageUrl: '/guests/مصطفى شاهين.jpg',
+    bio: 'مصطفى شاهين ضيف مميز في بودكاست حان الآن، شارك في حوار ثري حول مواضيع متنوعة تهم المجتمع العربي.',
+    socialLinks: [
+      { platform: 'youtube', url: 'https://www.youtube.com/@7analaan' },
+    ],
+    episodes: [],
+  },
 ];
 
 
