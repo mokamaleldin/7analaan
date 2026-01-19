@@ -30,9 +30,9 @@ const HeroSection = () => {
             </div>
 
             {/* Subtitle */}
-            <h1 className="text-2xl lg:text-3xl font-bold mb-6 text-gray-100 leading-tight">
+            <p className="text-2xl lg:text-3xl font-bold mb-6 text-gray-100 leading-tight">
               حوار صريح عن قضايا الأمة والإنسان
-            </h1>
+            </p>
 
             {/* Description */}
             <p className="text-lg text-gray-400 mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed">
