@@ -143,3 +143,29 @@ export const getSocialColor = (platform: SocialPlatform): string => {
       return 'hover:bg-gray-600 hover:text-white';
   }
 };
+
+// Helper function to get brand text color for icons
+export const getSocialBrandTextColor = (platform: SocialPlatform): string => {
+  switch (platform) {
+    case 'twitter':
+      return 'text-white';
+    case 'instagram':
+      return 'text-pink-500';
+    case 'youtube':
+      return 'text-red-500';
+    case 'linkedin':
+      return 'text-blue-500';
+    case 'tiktok':
+      return 'text-white';
+    case 'snapchat':
+      return 'text-yellow-400';
+    case 'facebook':
+      return 'text-blue-500';
+    case 'soundcloud':
+      return 'text-orange-500';
+    case 'website':
+      return 'text-orange-500';
+    default:
+      return 'text-white';
+  }
+};

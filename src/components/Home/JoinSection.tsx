@@ -49,7 +49,7 @@ const JoinSection = () => {
         </div>
 
         {/* Social Links Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4 mb-16">
           {podcastSocialLinks.map((social, index) => (
             <SocialMediaCard
               key={index}
@@ -58,6 +58,7 @@ const JoinSection = () => {
               url={social.url}
               description={social.description}
               stats={social.stats}
+              iconSize="w-5 h-5 sm:w-6 sm:h-6"
             />
           ))}
         </div>
