@@ -10,7 +10,6 @@ interface EpisodeCardProps {
   episode: Episode;
 }
 
-// Extract video ID from YouTube URL
 const getVideoId = (url: string): string => {
   const match = url.match(/(?:youtu\.be\/|youtube\.com\/watch\?v=|youtube\.com\/embed\/)([^&?/]+)/);
   return match ? match[1] : '';

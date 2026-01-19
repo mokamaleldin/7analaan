@@ -2,27 +2,11 @@ import { Helmet } from 'react-helmet-async';
 import { Play, Sparkles } from 'lucide-react';
 import { EpisodeCard } from '../../components/Podcast';
 import { PageBackground, SectionDivider } from '../../components/common';
+import { youtubeEpisodes, getEpisodeObjects } from '../../data/youtubeEpisodes';
 
 const PodcastPage = () => {
-  // Just add YouTube URLs here - everything else is automatic!
-  const youtubeUrls = [
-    "https://youtu.be/NhhzZfWA9fA",
-    "https://youtu.be/4q4X-xGjioI",
-    "https://youtu.be/ADEkLdkAMro",
-    "https://youtu.be/FLZk4la6xtU",
-    "https://youtu.be/y0vnEBlSKBE",
-    "https://youtu.be/DM_8VWC13ME",
-    "https://youtu.be/GahNBf0JLTI",
-    "https://youtu.be/3AEtcsZeMwY",
-    "https://youtu.be/AdeaOEhj-dY",
-    "https://youtu.be/X-H4PLqdGiE"
-  ];
-
   // Convert URLs to episode objects
-  const episodes = youtubeUrls.map((url, index) => ({
-    id: index + 1,
-    youtubeUrl: url
-  }));
+  const episodes = getEpisodeObjects(youtubeEpisodes);
 
   return (
     <>

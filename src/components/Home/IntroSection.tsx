@@ -1,14 +1,11 @@
 import { Link } from 'react-router-dom';
 import { MessageCircle, Users, Mic, Lightbulb, Sparkles, ArrowLeft, Play, Star } from 'lucide-react';
 import EpisodeCard from '../Podcast/EpisodeCard';
+import { featuredEpisodes, getEpisodeObjects } from '../../data/youtubeEpisodes';
 
 const IntroSection = () => {
-  // Featured episodes - 3 highlighted podcasts
-  const featuredEpisodes = [
-    { id: 1, youtubeUrl: "https://youtu.be/NhhzZfWA9fA" },
-    { id: 2, youtubeUrl: "https://youtu.be/4q4X-xGjioI" },
-    { id: 3, youtubeUrl: "https://youtu.be/ADEkLdkAMro" },
-  ];
+  // Featured episodes - 3 highlighted podcasts from data
+  const episodes = getEpisodeObjects(featuredEpisodes);
 
   const features = [
     {
@@ -101,7 +98,7 @@ const IntroSection = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredEpisodes.map((episode) => (
+            {episodes.map((episode) => (
               <EpisodeCard key={episode.id} episode={episode} />
             ))}
           </div>
