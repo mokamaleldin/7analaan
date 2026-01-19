@@ -27,25 +27,7 @@ const BRAND_KEYWORDS = [
   'podcast 7analaan'
 ];
 
-/**
- * Reusable SEO Component for 7analaan
- * 
- * Provides comprehensive meta tags including:
- * - Basic meta (title, description, keywords)
- * - Open Graph (Facebook, LinkedIn, etc.)
- * - Twitter Cards
- * - Canonical URL
- * - Optional structured data (JSON-LD)
- * 
- * @example
- * <SEO
- *   title="حلقات البودكاست | حان الآن"
- *   description="شاهد جميع حلقات بودكاست حان الآن..."
- *   keywords={['حلقات', 'يوتيوب']}
- *   canonicalPath="/podcast"
- *   pageType="website"
- * />
- */
+
 const SEO: React.FC<SEOProps> = ({
   title,
   description,
