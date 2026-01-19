@@ -9,7 +9,7 @@ const Footer = () => {
           {/* Logo and Description */}
           <div className="col-span-1 md:col-span-2">
             <div className="mb-4">
-              <img src="/Logo.svg" alt="حان الآن" className="h-12 w-auto" />
+              <img src="/logo.svg" alt="حان الآن" className="h-12 w-auto" />
             </div>
             <p className="text-gray-300 text-lg leading-relaxed mb-6">
               بودكاست حان الآن - منصة للحوار الصريح والمفتوح حول قضايا الأمة والإنسان. 
