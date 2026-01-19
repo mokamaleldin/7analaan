@@ -20,6 +20,22 @@ export const podcastSocialLinks: SocialLink[] = [
     stats: 'الحلقات الكاملة'
   },
   {
+    platform: 'tiktok',
+    name: 'TikTok',
+    url: 'https://www.tiktok.com/@7analaan',
+    handle: '@7analaan',
+    description: 'مقاطع قصيرة وممتعة',
+    stats: 'فيديوهات يومية'
+  },
+  {
+    platform: 'soundcloud',
+    name: 'SoundCloud',
+    url: 'https://soundcloud.com/7analaan',
+    handle: '7analaan',
+    description: 'استمع للحلقات الصوتية',
+    stats: 'بودكاست صوتي'
+  },
+  {
     platform: 'instagram',
     name: 'Instagram',
     url: 'https://instagram.com/7analaan',
@@ -29,11 +45,11 @@ export const podcastSocialLinks: SocialLink[] = [
   },
   {
     platform: 'twitter',
-    name: 'Twitter',
+    name: 'X',
     url: 'https://twitter.com/7analaan',
     handle: '@7analaan',
     description: 'آخر الأخبار والتحديثات',
-    stats: 'تغريدات يومية'
+    stats: 'منشورات يومية'
   },
   {
     platform: 'facebook',

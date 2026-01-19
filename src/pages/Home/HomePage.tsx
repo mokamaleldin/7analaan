@@ -4,7 +4,8 @@ import {
   IntroSection, 
   ShortsSection, 
   SoundCloudSection, 
-  JoinSection 
+  JoinSection,
+  GuestsSection
 } from '../../components/Home';
 
 const HomePage = () => {
@@ -32,6 +33,7 @@ const HomePage = () => {
           <HeroSection />
           <ShortsSection />
           <IntroSection />
+          <GuestsSection />
           <SoundCloudSection />
           <JoinSection />
         </div>

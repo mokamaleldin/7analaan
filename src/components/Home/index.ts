@@ -4,3 +4,4 @@ export { default as IntroSection } from './IntroSection';
 export { default as ShortsSection } from './ShortsSection';
 export { default as SoundCloudSection } from './SoundCloudSection';
 export { default as JoinSection } from './JoinSection';
+export { default as GuestsSection } from './GuestsSection';

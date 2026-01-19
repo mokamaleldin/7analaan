@@ -49,6 +49,13 @@ export const FacebookIcon = ({ className = "w-5 h-5" }: { className?: string }) 
   </svg>
 );
 
+// SoundCloud Icon
+export const SoundCloudIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
+  <svg className={className} fill="currentColor" viewBox="0 0 24 24">
+    <path d="M7 17.939h-1v-8.068c.308-.231.639-.429 1-.566v8.634zm-2 0h-1v-6.07c.33-.03.669-.03 1 0v6.07zm-2 0h-1v-4.07c.33-.03.669-.03 1 0v4.07zm-2 0h-1v-2.07c.33-.03.669-.03 1 0v2.07zm17.852-6.833c-.381-2.607-2.616-4.606-5.352-4.606-1.217 0-2.341.404-3.248 1.084-.173.13-.252.306-.252.492v9.818c0 .2.166.382.378.399h8.474c2.016 0 3.648-1.598 3.648-3.593s-1.632-3.594-3.648-3.594z"/>
+  </svg>
+);
+
 // Website Icon
 export const WebsiteIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -57,7 +64,7 @@ export const WebsiteIcon = ({ className = "w-5 h-5" }: { className?: string }) =
 );
 
 // Types
-export type SocialPlatform = 'twitter' | 'instagram' | 'youtube' | 'linkedin' | 'tiktok' | 'snapchat' | 'facebook' | 'website';
+export type SocialPlatform = 'twitter' | 'instagram' | 'youtube' | 'linkedin' | 'tiktok' | 'snapchat' | 'facebook' | 'soundcloud' | 'website';
 
 // Helper function to get icon by platform
 export const getSocialIcon = (platform: SocialPlatform, className?: string) => {
@@ -76,6 +83,8 @@ export const getSocialIcon = (platform: SocialPlatform, className?: string) => {
       return <SnapchatIcon className={className} />;
     case 'facebook':
       return <FacebookIcon className={className} />;
+    case 'soundcloud':
+      return <SoundCloudIcon className={className} />;
     case 'website':
       return <WebsiteIcon className={className} />;
     default:
@@ -87,7 +96,7 @@ export const getSocialIcon = (platform: SocialPlatform, className?: string) => {
 export const getSocialLabel = (platform: SocialPlatform): string => {
   switch (platform) {
     case 'twitter':
-      return 'تويتر';
+      return 'إكس';
     case 'instagram':
       return 'انستقرام';
     case 'youtube':
@@ -100,6 +109,8 @@ export const getSocialLabel = (platform: SocialPlatform): string => {
       return 'سناب شات';
     case 'facebook':
       return 'فيسبوك';
+    case 'soundcloud':
+      return 'ساوند كلاود';
     case 'website':
       return 'الموقع';
     default:
@@ -124,6 +135,8 @@ export const getSocialColor = (platform: SocialPlatform): string => {
       return 'hover:bg-yellow-400 hover:text-black';
     case 'facebook':
       return 'hover:bg-blue-600 hover:text-white';
+    case 'soundcloud':
+      return 'hover:bg-orange-500 hover:text-white';
     case 'website':
       return 'hover:bg-orange-500 hover:text-white';
     default:
