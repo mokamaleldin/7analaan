@@ -7,7 +7,7 @@ import SoundCloudPage from './pages/SoundCloud';
 import GuestsPage from './pages/Guests';
 import GuestDetailPage from './pages/GuestDetail';
 import ContactPage from './pages/Contact';
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/react"
 
 function ScrollToTop() {
   const location = useLocation();
