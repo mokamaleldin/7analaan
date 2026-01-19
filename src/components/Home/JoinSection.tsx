@@ -1,6 +1,6 @@
 import { Youtube, Headphones, Mic, Star, TrendingUp, Users } from 'lucide-react';
 import { SocialMediaCard } from '../common';
-import { podcastSocialLinks, youtubeSubscribeUrl } from '../../data/socialLinks';
+import { podcastSocialLinks, youtubeSubscribeUrl } from '../../data/types/socialLinks';
 
 const JoinSection = () => {
   const highlights = [

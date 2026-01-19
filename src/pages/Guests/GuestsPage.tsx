@@ -1,7 +1,7 @@
 import { Users, Sparkles } from 'lucide-react';
 import { GuestCard } from '../../components/Guests';
 import { PageBackground, SectionDivider, SEO, createBreadcrumbSchema } from '../../components/common';
-import { guestsData } from '../../data/guests';
+import { guestsData } from '../../data/types/guests';
 
 const GuestsPage = () => {
   const guests = guestsData;

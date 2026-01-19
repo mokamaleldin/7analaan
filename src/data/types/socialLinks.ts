@@ -3,4 +3,4 @@
 // ═══════════════════════════════════════════════════════════════
 
 export type { SocialLink, SocialPlatform } from './types';
-export { podcastSocialLinks, contactEmail, youtubeSubscribeUrl } from './content';
+export { podcastSocialLinks, contactEmail, youtubeSubscribeUrl } from '../content';

@@ -1,7 +1,7 @@
 import { useParams, Link } from 'react-router-dom';
 import { ArrowRight, Sparkles, Play } from 'lucide-react';
 import { PageBackground, getSocialIcon, getSocialLabel, getSocialColor, SEO, createBreadcrumbSchema, createPersonSchema } from '../../components/common';
-import { guestsData } from '../../data/guests';
+import { guestsData } from '../../data/types/guests';
 
 const GuestDetailPage = () => {
   const { guestId } = useParams<{ guestId: string }>();

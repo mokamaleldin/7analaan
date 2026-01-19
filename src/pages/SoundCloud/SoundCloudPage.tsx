@@ -1,6 +1,6 @@
 import { Headphones } from 'lucide-react';
 import { SoundCloudPlayer, PageBackground, SectionDivider, SEO, createBreadcrumbSchema } from '../../components/common';
-import { soundcloudTracks } from '../../data/soundcloudTracks';
+import { soundcloudTracks } from '../../data/types/soundcloudTracks';
 
 const SoundCloudPage = () => {
   const soundcloudStructuredData = createBreadcrumbSchema([

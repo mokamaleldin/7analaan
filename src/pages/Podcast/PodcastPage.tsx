@@ -1,7 +1,7 @@
 import { Play, Sparkles } from 'lucide-react';
 import { EpisodeCard } from '../../components/Podcast';
 import { PageBackground, SectionDivider, SEO, createBreadcrumbSchema } from '../../components/common';
-import { youtubeEpisodes, getEpisodeObjects } from '../../data/youtubeEpisodes';
+import { youtubeEpisodes, getEpisodeObjects } from '../../data/types/youtubeEpisodes';
 
 const PodcastPage = () => {
   // Convert URLs to episode objects

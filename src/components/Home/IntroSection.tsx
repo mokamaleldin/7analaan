@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { MessageCircle, Users, Mic, Lightbulb, Sparkles, ArrowLeft, Play, Star } from 'lucide-react';
 import EpisodeCard from '../Podcast/EpisodeCard';
-import { featuredEpisodes, getEpisodeObjects } from '../../data/youtubeEpisodes';
+import { featuredEpisodes, getEpisodeObjects } from '../../data/types/youtubeEpisodes';
 
 const IntroSection = () => {
   // Featured episodes - 3 highlighted podcasts from data

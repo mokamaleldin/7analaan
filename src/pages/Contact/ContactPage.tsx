@@ -1,6 +1,6 @@
 import { Mail, Sparkles, MessageCircle, Heart, Users, Mic } from 'lucide-react';
 import { PageBackground, SectionDivider, SocialMediaCard, SEO, createBreadcrumbSchema } from '../../components/common';
-import { podcastSocialLinks, contactEmail } from '../../data/socialLinks';
+import { podcastSocialLinks, contactEmail } from '../../data/types/socialLinks';
 
 const ContactPage = () => {
   const values = [

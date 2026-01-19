@@ -3,8 +3,8 @@
 // ═══════════════════════════════════════════════════════════════
 
 // استيراد النوع من المكون الأصلي
-import type { SocialPlatform } from '../components/common/SocialIcons';
-export type { SocialPlatform } from '../components/common/SocialIcons';
+import type { SocialPlatform } from '../../components/common/SocialIcons';
+export type { SocialPlatform } from '../../components/common/SocialIcons';
 
 export interface GuestSocialLink {
   platform: SocialPlatform;

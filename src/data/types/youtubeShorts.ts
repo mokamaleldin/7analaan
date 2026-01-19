@@ -2,13 +2,19 @@
 // ⚠️ لا تعدل هذا الملف - عدّل ملف content.ts بدلاً منه
 // ═══════════════════════════════════════════════════════════════
 
-import { guestsInput } from './content';
-import type { Guest } from './types';
+import { shortsUrls } from '../content';
+export { shortsUrls } from '../content';
+export type { Short } from './types';
 
-export type { Guest, GuestInput, GuestSocialLink, GuestEpisode } from './types';
+// استخراج معرف الفيديو من رابط الشورت
+export const getShortVideoId = (url: string): string => {
+  const match = url.match(/youtube\.com\/shorts\/([^?&]+)/);
+  return match ? match[1] : '';
+};
 
-// إنشاء الـ id تلقائياً
-export const guestsData: Guest[] = guestsInput.map((guest, index) => ({
-  ...guest,
+// تحويل الروابط إلى كائنات
+export const shorts = shortsUrls.map((url, index) => ({
   id: index + 1,
+  url,
+  videoId: getShortVideoId(url),
 }));

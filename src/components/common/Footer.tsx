@@ -1,5 +1,5 @@
 import { getSocialIcon } from './SocialIcons';
-import { podcastSocialLinks } from '../../data/socialLinks';
+import { podcastSocialLinks } from '../../data/types/socialLinks';
 
 const Footer = () => {
   return (

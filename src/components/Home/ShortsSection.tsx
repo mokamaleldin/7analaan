@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react';
 import { Play, ChevronLeft, ChevronRight } from 'lucide-react';
-import { shorts, type Short } from '../../data/youtubeShorts';
+import { shorts, type Short } from '../../data/types/youtubeShorts';
 
 interface ShortCardProps {
   short: Short;

@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronLeft, ChevronRight, ArrowLeft, Users } from 'lucide-react';
-import { guestsData } from '../../data/guests';
+import { guestsData } from '../../data/types/guests';
 
 interface GuestCardProps {
   guestId: number;

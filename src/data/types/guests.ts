@@ -2,14 +2,13 @@
 // ⚠️ لا تعدل هذا الملف - عدّل ملف content.ts بدلاً منه
 // ═══════════════════════════════════════════════════════════════
 
-import { youtubeEpisodes } from './content';
-export { youtubeEpisodes } from './content';
+import { guestsInput } from '../content';
+import type { Guest } from './types';
 
-// الحلقات المميزة للصفحة الرئيسية (أول 3)
-export const featuredEpisodes = youtubeEpisodes.slice(0, 3);
+export type { Guest, GuestInput, GuestSocialLink, GuestEpisode } from './types';
 
-export const getEpisodeObjects = (urls: string[]) => 
-  urls.map((url, index) => ({
-    id: index + 1,
-    youtubeUrl: url
-  }));
+// إنشاء الـ id تلقائياً
+export const guestsData: Guest[] = guestsInput.map((guest, index) => ({
+  ...guest,
+  id: index + 1,
+}));
