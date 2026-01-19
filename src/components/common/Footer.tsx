@@ -8,9 +8,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Logo and Description */}
           <div className="col-span-1 md:col-span-2">
-            <div className="text-2xl font-bold mb-4">
-              <span className="text-orange-500">حان</span>{' '}
-              <span className="text-white">الآن</span>
+            <div className="mb-4">
+              <img src="/Logo.svg" alt="حان الآن" className="h-12 w-auto" />
             </div>
             <p className="text-gray-300 text-lg leading-relaxed mb-6">
               بودكاست حان الآن - منصة للحوار الصريح والمفتوح حول قضايا الأمة والإنسان. 
