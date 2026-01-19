@@ -7,6 +7,7 @@ import SoundCloudPage from './pages/SoundCloud';
 import GuestsPage from './pages/Guests';
 import GuestDetailPage from './pages/GuestDetail';
 import ContactPage from './pages/Contact';
+import { Analytics } from "@vercel/analytics/next"
 
 function ScrollToTop() {
   const location = useLocation();
@@ -21,6 +22,7 @@ function ScrollToTop() {
 function App() {
   return (
     <Router>
+      <Analytics />
       <ScrollToTop />
       <div className="min-h-screen bg-white" dir="rtl">
         <Navbar />
