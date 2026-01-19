@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { MessageCircle, Users, Mic, Lightbulb, Sparkles, ArrowLeft, Play, Star } from 'lucide-react';
-import EpisodeCard from './EpisodeCard';
+import EpisodeCard from '../Podcast/EpisodeCard';
 
 const IntroSection = () => {
   // Featured episodes - 3 highlighted podcasts

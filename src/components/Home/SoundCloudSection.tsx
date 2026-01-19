@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Headphones, ArrowLeft } from 'lucide-react';
-import SoundCloudPlayer from './SoundCloudPlayer';
-import { homepageSoundcloudTracks } from '../data/soundcloudTracks';
+import { SoundCloudPlayer } from '../common';
+import { homepageSoundcloudTracks } from '../../data/soundcloudTracks';
 
 const SoundCloudSection = () => {
   return (

@@ -1,8 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { Play, Sparkles } from 'lucide-react';
-import EpisodeCard from '../components/EpisodeCard';
-import PageBackground from '../components/PageBackground';
-import SectionDivider from '../components/SectionDivider';
+import { EpisodeCard } from '../../components/Podcast';
+import { PageBackground, SectionDivider } from '../../components/common';
 
 const PodcastPage = () => {
   // Just add YouTube URLs here - everything else is automatic!

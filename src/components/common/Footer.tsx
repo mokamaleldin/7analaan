@@ -1,5 +1,5 @@
 import { getSocialIcon } from './SocialIcons';
-import { podcastSocialLinks } from '../data/socialLinks';
+import { podcastSocialLinks } from '../../data/socialLinks';
 
 const Footer = () => {
   return (
@@ -49,7 +49,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="underline hover:text-white"
             >
-              Mohmaed kamaleldin
+              Mohamed Kamaleldin
             </a>
           </p>
         </div>

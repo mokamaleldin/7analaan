@@ -1,12 +1,9 @@
 import { Helmet } from 'react-helmet-async';
 import { Mail, Sparkles, MessageCircle, Heart, Users, Mic } from 'lucide-react';
-import PageBackground from '../components/PageBackground';
-import SectionDivider from '../components/SectionDivider';
-import SocialMediaCard from '../components/SocialMediaCard';
-import { podcastSocialLinks, contactEmail } from '../data/socialLinks';
+import { PageBackground, SectionDivider, SocialMediaCard } from '../../components/common';
+import { podcastSocialLinks, contactEmail } from '../../data/socialLinks';
 
 const ContactPage = () => {
-
   const values = [
     { icon: <Mic className="text-orange-400" size={28} />, title: 'حوار هادف', description: 'نقدم محتوى يثري الفكر والوجدان' },
     { icon: <Users className="text-orange-400" size={28} />, title: 'مجتمع متنامي', description: 'انضم لآلاف المتابعين' },
@@ -58,11 +55,11 @@ const ContactPage = () => {
                     key={index}
                     className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 text-center border border-white/10 hover:border-orange-500/30 transition-all duration-300 hover:-translate-y-2"
                   >
-                  <div className="flex justify-center mb-3">{value.icon}</div>
-                  <h3 className="text-white font-bold mb-1">{value.title}</h3>
-                  <p className="text-gray-500 text-sm">{value.description}</p>
-                </div>
-              ))}
+                    <div className="flex justify-center mb-3">{value.icon}</div>
+                    <h3 className="text-white font-bold mb-1">{value.title}</h3>
+                    <p className="text-gray-500 text-sm">{value.description}</p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -139,10 +136,12 @@ const ContactPage = () => {
                   <span className="inline-block animate-pulse mx-2">❤️</span>
                   أنتم سبب استمرارنا
                 </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+
+        
       </div>
     </>
   );

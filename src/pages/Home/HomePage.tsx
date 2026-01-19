@@ -1,9 +1,11 @@
 import { Helmet } from 'react-helmet-async';
-import HeroSection from '../components/HeroSection';
-import IntroSection from '../components/IntroSection';
-import JoinSection from '../components/JoinSection';
-import ShortsSection from '../components/ShortsSection';
-import SoundCloudSection from '../components/SoundCloudSection';
+import { 
+  HeroSection, 
+  IntroSection, 
+  ShortsSection, 
+  SoundCloudSection, 
+  JoinSection 
+} from '../../components/Home';
 
 const HomePage = () => {
   return (

@@ -1,4 +1,4 @@
-import type { SocialPlatform } from '../components/SocialIcons';
+import type { SocialPlatform } from '../components/common/SocialIcons';
 
 export interface GuestSocialLink {
   platform: SocialPlatform;

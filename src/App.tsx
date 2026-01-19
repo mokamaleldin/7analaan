@@ -1,13 +1,12 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import HomePage from './pages/HomePage';
-import PodcastPage from './pages/PodcastPage';
-import ContactPage from './pages/ContactPage';
-import GuestsPage from './pages/GuestsPage';
-import GuestDetailPage from './pages/GuestDetailPage';
-import SoundCloudPage from './pages/SoundCloudPage';
+import { Navbar, Footer } from './components/common';
+import HomePage from './pages/Home';
+import PodcastPage from './pages/Podcast';
+import SoundCloudPage from './pages/SoundCloud';
+import GuestsPage from './pages/Guests';
+import GuestDetailPage from './pages/GuestDetail';
+import ContactPage from './pages/Contact';
 
 function ScrollToTop() {
   const location = useLocation();

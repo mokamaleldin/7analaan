@@ -1,9 +1,8 @@
 import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Sparkles, Play } from 'lucide-react';
-import PageBackground from '../components/PageBackground';
-import { getSocialIcon, getSocialLabel, getSocialColor } from '../components/SocialIcons';
-import { guestsData } from '../data/guests';
+import { PageBackground, getSocialIcon, getSocialLabel, getSocialColor } from '../../components/common';
+import { guestsData } from '../../data/guests';
 
 const GuestDetailPage = () => {
   const { guestId } = useParams<{ guestId: string }>();

@@ -3,7 +3,6 @@ interface SoundCloudPlayerProps {
 }
 
 const SoundCloudPlayer: React.FC<SoundCloudPlayerProps> = ({ url }) => {
-  // Encode the URL for the embed - use visual=false for waveform style
   const encodedUrl = encodeURIComponent(url);
   const embedUrl = `https://w.soundcloud.com/player/?url=${encodedUrl}&color=%23f97316&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=true&visual=false`;
 

@@ -1,9 +1,8 @@
 import { Helmet } from 'react-helmet-async';
 import { Users, Sparkles } from 'lucide-react';
-import GuestCard from '../components/GuestCard';
-import PageBackground from '../components/PageBackground';
-import SectionDivider from '../components/SectionDivider';
-import { guestsData } from '../data/guests';
+import { GuestCard } from '../../components/Guests';
+import { PageBackground, SectionDivider } from '../../components/common';
+import { guestsData } from '../../data/guests';
 
 const GuestsPage = () => {
   const guests = guestsData;

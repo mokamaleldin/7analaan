@@ -1,9 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { Headphones } from 'lucide-react';
-import SoundCloudPlayer from '../components/SoundCloudPlayer';
-import PageBackground from '../components/PageBackground';
-import SectionDivider from '../components/SectionDivider';
-import { soundcloudTracks } from '../data/soundcloudTracks';
+import { SoundCloudPlayer, PageBackground, SectionDivider } from '../../components/common';
+import { soundcloudTracks } from '../../data/soundcloudTracks';
 
 const SoundCloudPage = () => {
   return (
@@ -39,8 +37,6 @@ const SoundCloudPage = () => {
             </div>
           </div>
         </div>
-
-
 
         {/* Individual Tracks Section */}
         <div className="relative pb-20">

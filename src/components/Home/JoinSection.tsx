@@ -1,9 +1,8 @@
 import { Youtube, Headphones, Mic, Star, TrendingUp, Users } from 'lucide-react';
-import SocialMediaCard from './SocialMediaCard';
-import { podcastSocialLinks, youtubeSubscribeUrl } from '../data/socialLinks';
+import { SocialMediaCard } from '../common';
+import { podcastSocialLinks, youtubeSubscribeUrl } from '../../data/socialLinks';
 
 const JoinSection = () => {
-
   const highlights = [
     { icon: <Mic className="text-orange-400" size={24} />, text: 'حلقات أسبوعية' },
     { icon: <Users className="text-orange-400" size={24} />, text: 'ضيوف متميزون' },
@@ -110,6 +109,3 @@ const JoinSection = () => {
 };
 
 export default JoinSection;
-
-
-
