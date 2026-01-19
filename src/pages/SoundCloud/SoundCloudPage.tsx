@@ -1,16 +1,33 @@
-import { Helmet } from 'react-helmet-async';
 import { Headphones } from 'lucide-react';
-import { SoundCloudPlayer, PageBackground, SectionDivider } from '../../components/common';
+import { SoundCloudPlayer, PageBackground, SectionDivider, SEO, createBreadcrumbSchema } from '../../components/common';
 import { soundcloudTracks } from '../../data/soundcloudTracks';
 
 const SoundCloudPage = () => {
+  const soundcloudStructuredData = createBreadcrumbSchema([
+    { name: 'الرئيسية', url: '/' },
+    { name: 'البودكاست الصوتي', url: '/soundcloud' }
+  ]);
+
   return (
     <>
-      <Helmet>
-        <title>البودكاست الصوتي | حان الآن - استمع على ساوند كلاود</title>
-        <meta name="description" content="استمع لجميع حلقات بودكاست حان الآن على ساوند كلاود. استمع أثناء التنقل في أي وقت وأي مكان." />
-        <link rel="canonical" href="https://7analaan.com/soundcloud" />
-      </Helmet>
+      <SEO
+        title="استمع لبودكاست حان الآن - 7analaan | النسخة الصوتية على ساوند كلاود"
+        description="استمع لجميع حلقات بودكاست حان الآن (7analaan) بالصوت فقط على ساوند كلاود. مثالي للاستماع أثناء القيادة أو العمل أو التمرين. جودة صوت عالية وتجربة استماع سلسة في أي وقت وأي مكان."
+        keywords={[
+          'بودكاست صوتي',
+          'ساوند كلاود عربي',
+          'استمع بودكاست',
+          'بودكاست للسيارة',
+          'SoundCloud Arabic',
+          '7analaan audio',
+          'بودكاست mp3',
+          'audio podcast Arabic',
+          'حلقات صوتية'
+        ]}
+        canonicalPath="/soundcloud"
+        pageType="website"
+        structuredData={soundcloudStructuredData}
+      />
       <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
         <PageBackground floatingEmojis={['🎧', '🎵', '🎶']} />
 

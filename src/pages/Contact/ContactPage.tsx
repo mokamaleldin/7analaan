@@ -1,6 +1,5 @@
-import { Helmet } from 'react-helmet-async';
 import { Mail, Sparkles, MessageCircle, Heart, Users, Mic } from 'lucide-react';
-import { PageBackground, SectionDivider, SocialMediaCard } from '../../components/common';
+import { PageBackground, SectionDivider, SocialMediaCard, SEO, createBreadcrumbSchema } from '../../components/common';
 import { podcastSocialLinks, contactEmail } from '../../data/socialLinks';
 
 const ContactPage = () => {
@@ -11,13 +10,31 @@ const ContactPage = () => {
     { icon: <MessageCircle className="text-orange-400" size={28} />, title: 'تواصل مستمر', description: 'نستمع لآرائكم باهتمام' }
   ];
 
+  const contactStructuredData = createBreadcrumbSchema([
+    { name: 'الرئيسية', url: '/' },
+    { name: 'تواصل معنا', url: '/contact' }
+  ]);
+
   return (
     <>
-      <Helmet>
-        <title>تواصل معنا | حان الآن - تابعنا على منصاتنا</title>
-        <meta name="description" content="تواصل مع فريق بودكاست حان الآن. تابعنا على يوتيوب، انستغرام، تويتر وفيسبوك للحصول على أحدث الحلقات والمحتوى الحصري." />
-        <link rel="canonical" href="https://7analaan.com/contact" />
-      </Helmet>
+      <SEO
+        title="تواصل مع بودكاست حان الآن - 7analaan | تابعنا على جميع المنصات"
+        description="تواصل مع فريق بودكاست حان الآن (7analaan) وتابعنا على يوتيوب، تيك توك، ساوند كلاود، انستقرام، إكس وفيسبوك. احصل على أحدث الحلقات والمحتوى الحصري وشاركنا آراءك واقتراحاتك."
+        keywords={[
+          'تواصل معنا',
+          'حسابات حان الآن',
+          'سوشيال ميديا',
+          '7analaan social media',
+          'تابع بودكاست',
+          'يوتيوب حان الآن',
+          'انستقرام حان الآن',
+          'contact 7analaan',
+          'follow podcast'
+        ]}
+        canonicalPath="/contact"
+        pageType="website"
+        structuredData={contactStructuredData}
+      />
       <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
         <PageBackground floatingEmojis={['💬', '🎙️', '❤️']} />
 
@@ -141,7 +158,7 @@ const ContactPage = () => {
           </div>
         </div>
 
-        
+
       </div>
     </>
   );

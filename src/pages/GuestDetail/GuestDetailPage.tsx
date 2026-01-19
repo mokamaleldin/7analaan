@@ -1,7 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Sparkles, Play } from 'lucide-react';
-import { PageBackground, getSocialIcon, getSocialLabel, getSocialColor } from '../../components/common';
+import { PageBackground, getSocialIcon, getSocialLabel, getSocialColor, SEO, createBreadcrumbSchema, createPersonSchema } from '../../components/common';
 import { guestsData } from '../../data/guests';
 
 const GuestDetailPage = () => {
@@ -25,13 +24,44 @@ const GuestDetailPage = () => {
     );
   }
 
+  const guestBreadcrumb = createBreadcrumbSchema([
+    { name: 'الرئيسية', url: '/' },
+    { name: 'ضيوف الحلقات', url: '/guests' },
+    { name: guest.name, url: `/guests/${guest.id}` }
+  ]);
+
+  const guestPersonSchema = createPersonSchema({
+    name: guest.name,
+    description: guest.bio,
+    image: guest.imageUrl,
+    jobTitle: guest.title,
+    url: `/guests/${guest.id}`
+  });
+
+  // Combine both schemas
+  const combinedStructuredData = [guestBreadcrumb, guestPersonSchema];
+
   return (
     <>
-      <Helmet>
-        <title>{guest.name} | حان الآن - ضيف الحلقات</title>
-        <meta name="description" content={`تعرف على ${guest.name} - ${guest.title}. ${guest.bio}`} />
-        <link rel="canonical" href={`https://7analaan.com/guests/${guest.id}`} />
-      </Helmet>
+      <SEO
+        title={`${guest.name} | ضيف بودكاست حان الآن - 7analaan`}
+        description={`تعرف على ${guest.name} - ${guest.title}. ${guest.specialty}. ${guest.bio.substring(0, 120)}... شاهد جميع حلقاته في بودكاست حان الآن.`}
+        keywords={[
+          guest.name,
+          guest.title,
+          guest.specialty,
+          'ضيف بودكاست',
+          'مقابلة حصرية',
+          `${guest.name} حان الآن`,
+          `${guest.name} 7analaan`,
+          'حوار مع',
+          'لقاء خاص'
+        ]}
+        canonicalPath={`/guests/${guest.id}`}
+        pageType="profile"
+        ogImage={guest.imageUrl}
+        structuredData={combinedStructuredData}
+      />
 
       <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
         <PageBackground floatingEmojis={['🧑🏻‍💼', '⭐', '🎙️']} />

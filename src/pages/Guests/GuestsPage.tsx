@@ -1,19 +1,36 @@
-import { Helmet } from 'react-helmet-async';
 import { Users, Sparkles } from 'lucide-react';
 import { GuestCard } from '../../components/Guests';
-import { PageBackground, SectionDivider } from '../../components/common';
+import { PageBackground, SectionDivider, SEO, createBreadcrumbSchema } from '../../components/common';
 import { guestsData } from '../../data/guests';
 
 const GuestsPage = () => {
   const guests = guestsData;
 
+  const guestsStructuredData = createBreadcrumbSchema([
+    { name: 'الرئيسية', url: '/' },
+    { name: 'ضيوف الحلقات', url: '/guests' }
+  ]);
+
   return (
     <>
-      <Helmet>
-        <title>ضيوف الحلقات | حان الآن - ضيوف الحلقات السابقة</title>
-        <meta name="description" content="تعرف على الضيوف الذين شاركوا في حلقات بودكاست حان الآن." />
-        <link rel="canonical" href="https://7analaan.com/guests" />
-      </Helmet>
+      <SEO
+        title="ضيوف بودكاست حان الآن - 7analaan | مفكرون ومتخصصون ومؤثرون"
+        description="تعرف على نخبة الضيوف الذين شاركوا في حلقات بودكاست حان الآن (7analaan). علماء ومفكرون ومتخصصون وخبراء في مختلف المجالات. اكتشف قصصهم وحلقاتهم وتواصل معهم."
+        keywords={[
+          'ضيوف بودكاست',
+          'متحدثون عرب',
+          'مفكرون عرب',
+          'خبراء ومتخصصون',
+          '7analaan guests',
+          'podcast guests',
+          'ضيوف حان الآن',
+          'شخصيات مؤثرة',
+          'مقابلات شخصية'
+        ]}
+        canonicalPath="/guests"
+        pageType="website"
+        structuredData={guestsStructuredData}
+      />
 
       <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
         <PageBackground floatingEmojis={['🧑🏻‍💼', '⭐', '🎙️']} />

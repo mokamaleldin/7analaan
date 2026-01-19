@@ -1,20 +1,37 @@
-import { Helmet } from 'react-helmet-async';
 import { Play, Sparkles } from 'lucide-react';
 import { EpisodeCard } from '../../components/Podcast';
-import { PageBackground, SectionDivider } from '../../components/common';
+import { PageBackground, SectionDivider, SEO, createBreadcrumbSchema } from '../../components/common';
 import { youtubeEpisodes, getEpisodeObjects } from '../../data/youtubeEpisodes';
 
 const PodcastPage = () => {
   // Convert URLs to episode objects
   const episodes = getEpisodeObjects(youtubeEpisodes);
 
+  const podcastStructuredData = createBreadcrumbSchema([
+    { name: 'الرئيسية', url: '/' },
+    { name: 'حلقات البودكاست', url: '/podcast' }
+  ]);
+
   return (
     <>
-      <Helmet>
-        <title>حلقات البودكاست | حان الآن - شاهد جميع الحلقات</title>
-        <meta name="description" content="شاهد جميع حلقات بودكاست حان الآن. نقاشات معمقة حول الدين، التطوير الشخصي، القضايا الاجتماعية. استمع الآن!" />
-        <link rel="canonical" href="https://7analaan.com/podcast" />
-      </Helmet>
+      <SEO
+        title="حلقات بودكاست حان الآن - 7analaan | شاهد جميع الحلقات على يوتيوب"
+        description="شاهد جميع حلقات بودكاست حان الآن (7analaan) على يوتيوب. حوارات معمقة مع ضيوف متميزين حول الدين والفكر والتطوير الشخصي والقضايا الاجتماعية المعاصرة. اشترك الآن ولا تفوت أي حلقة جديدة."
+        keywords={[
+          'حلقات بودكاست',
+          'فيديوهات بودكاست',
+          'يوتيوب بودكاست عربي',
+          'حلقات حان الآن',
+          '7analaan episodes',
+          'بودكاست فيديو',
+          'مقابلات عربية',
+          'podcast episodes',
+          'YouTube Arabic podcast'
+        ]}
+        canonicalPath="/podcast"
+        pageType="website"
+        structuredData={podcastStructuredData}
+      />
       <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
         <PageBackground floatingEmojis={['🎧', '🎙️', '🎵']} />
 

@@ -5,4 +5,5 @@ export { default as PageBackground } from './PageBackground';
 export { default as SectionDivider } from './SectionDivider';
 export { default as SocialMediaCard } from './SocialMediaCard';
 export { default as SoundCloudPlayer } from './SoundCloudPlayer';
+export { default as SEO, createBreadcrumbSchema, createPersonSchema } from './SEO';
 export * from './SocialIcons';
