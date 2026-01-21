@@ -37,15 +37,93 @@ export const youtubeEpisodes = [
 // ═══════════════════════════════════════════════════════════════════════════
 
 export const shortsUrls = [
-  'https://youtube.com/shorts/kO0rxiKzYWw',
-  'https://youtube.com/shorts/F7obt044_P8',
-  'https://youtube.com/shorts/dwGL2Bq9TOE',
-  'https://youtube.com/shorts/tQgP4SVc4kw',
-  'https://youtube.com/shorts/AuUi1OmeHv0',
+  // د. خالد حمدي
+  'https://youtube.com/shorts/YsTnha03RAk',
+  'https://youtube.com/shorts/dHPi1WbImOE',
+  'https://youtube.com/shorts/1UX6L26GM_A',
+  // أيمن نور
+  'https://youtube.com/shorts/7uS3AfOKTAY',
   'https://youtube.com/shorts/8Jc3ftF-QIc',
   'https://youtube.com/shorts/SV6F8x-GYxs',
-  'https://youtube.com/shorts/dHPi1WbImOE',
+  'https://youtube.com/shorts/K_Es8odQtRg',
+  // حسام عبدالكريم
+  'https://youtube.com/shorts/y7o3PCX4N50',
   'https://youtube.com/shorts/MX-mLbIIuOY',
+  'https://youtube.com/shorts/jlavR7u4P5U',
+  // خالد الحداد
+  'https://youtube.com/shorts/-G-ng6k-lXo',
+  'https://youtube.com/shorts/sitzd_y6CmM',
+  'https://youtube.com/shorts/Y72Zu3ieph0',
+  'https://youtube.com/shorts/JOrCoGLAiuk',
+  'https://youtube.com/shorts/F7obt044_P8',
+  'https://youtube.com/shorts/AV4dl9Qt1k0',
+  'https://youtube.com/shorts/RYyqr3MYz5g',
+  'https://youtube.com/shorts/eve7QrTImYc',
+  'https://youtube.com/shorts/202m7wLaH70',
+  'https://youtube.com/shorts/40R0WGHEcq8',
+  'https://youtube.com/shorts/FG74i0NtcGw',
+  'https://youtube.com/shorts/g9TnoUSlT2I',
+  'https://youtube.com/shorts/1Z-fPoOSLAU',
+  'https://youtube.com/shorts/CrDcjsyXJ5Y',
+  'https://youtube.com/shorts/V1lMfj76nrU',
+  'https://youtube.com/shorts/uGH-E-9Rf9I',
+  'https://youtube.com/shorts/zJbPNM1u9R4',
+  // محمد غباشي
+  'https://youtube.com/shorts/s5JqY5YhWQ0',
+  'https://youtube.com/shorts/17vrgc-x8pY',
+  'https://youtube.com/shorts/lU42PoP9pXQ',
+  'https://youtube.com/shorts/Pw4_T6jMLL0',
+  'https://youtube.com/shorts/ndfAQKm5c4k',
+  'https://youtube.com/shorts/Hdjv2L1kdxo',
+  // أحمد الجندي
+  'https://youtube.com/shorts/vw_3SmRG3YY',
+  'https://youtube.com/shorts/BfFO-PwxjcU',
+  'https://youtube.com/shorts/ixi-F1Ydt94',
+  'https://youtube.com/shorts/AuUi1OmeHv0',
+  'https://youtube.com/shorts/y_S3XtPlB48',
+  'https://youtube.com/shorts/t0_W8HSsBnc',
+  // أحمد إبراهيم
+  'https://youtube.com/shorts/27iACJwT3ng',
+  'https://youtube.com/shorts/kO0rxiKzYWw',
+  'https://youtube.com/shorts/4nqC1ouzyew',
+  'https://youtube.com/shorts/MkEdeKfxXxU',
+  'https://youtube.com/shorts/5kSEGlWI9nU',
+  'https://youtube.com/shorts/tzT9b8yNYVQ',
+  'https://youtube.com/shorts/pDebFSDyGtE',
+  'https://youtube.com/shorts/texVRMlWNws',
+  // محمد عفان
+  'https://youtube.com/shorts/7qtgeOa_PnM',
+  'https://youtube.com/shorts/fWqTFh2a-70',
+  'https://youtube.com/shorts/ybMfwiElDZU',
+  'https://youtube.com/shorts/4ZE0Ar5r_Mk',
+  'https://youtube.com/shorts/BVz_x_7NiCM',
+  'https://youtube.com/shorts/mZur4KsP1X4',
+  'https://youtube.com/shorts/mI0fMMa9PYk',
+  // مصطفى شاهين
+  'https://youtube.com/shorts/yKOAuNhbPMA',
+  'https://youtube.com/shorts/ofpzi7THDNM',
+  'https://youtube.com/shorts/WGaaj305p9I',
+  'https://youtube.com/shorts/fNd31iBg-r4',
+  'https://youtube.com/shorts/Le5PC00qXGE',
+  'https://youtube.com/shorts/m3Qa2XgArqI',
+  // سليمان عامر
+  'https://youtube.com/shorts/15twQ0Ga4-A',
+  'https://youtube.com/shorts/NOuLQ87iv_w',
+  'https://youtube.com/shorts/86s-Yv0aNkI',
+  'https://youtube.com/shorts/-H8ZpbN65gI',
+  'https://youtube.com/shorts/dwGL2Bq9TOE',
+  'https://youtube.com/shorts/_lGa2Fz7K1s',
+  'https://youtube.com/shorts/f67w1z4FGBA',
+  // عمار فايد
+  'https://youtube.com/shorts/yS9MAqmRGCU',
+  'https://youtube.com/shorts/AMl7IGkG-kM',
+  'https://youtube.com/shorts/q57Q4Byps7I',
+  'https://youtube.com/shorts/jE0Aqszz_Sw',
+  'https://youtube.com/shorts/s_npj7DFPEs',
+  'https://youtube.com/shorts/qZU8SwS-ZlM',
+  'https://youtube.com/shorts/NXAB20vwUlI',
+  'https://youtube.com/shorts/7yfY2w98U84',
+  'https://youtube.com/shorts/jA2qFX-lCY4',
 ];
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -93,17 +171,34 @@ export const guestsInput: GuestInput[] = [
     episodes: [
       'https://www.youtube.com/watch?v=_zejgocD4i8',
     ],
+    shorts: [
+      'https://youtube.com/shorts/YsTnha03RAk',
+      'https://youtube.com/shorts/dHPi1WbImOE',
+      'https://youtube.com/shorts/1UX6L26GM_A',
+    ],
   },
   {
     name: 'أحمد إبراهيم',
-    title: 'ضيف بودكاست حان الsatisfied',
+    title: 'ضيف بودكاست حان الآن',
     specialty: 'متحدث ومؤثر',
     imageUrl: '/guests/أحمد إبراهيم.jpg',
     bio: 'أحمد إبراهيم ضيف مميز في بودكاست حان الآن، شارك في حوار ثري حول مواضيع متنوعة تهم المجتمع العربي.',
     socialLinks: [
       { platform: 'youtube', url: 'https://www.youtube.com/@7analaan' },
     ],
-    episodes: [],
+    episodes: [
+      'https://youtu.be/GahNBf0JLTI',
+    ],
+    shorts: [
+      'https://youtube.com/shorts/27iACJwT3ng',
+      'https://youtube.com/shorts/kO0rxiKzYWw',
+      'https://youtube.com/shorts/4nqC1ouzyew',
+      'https://youtube.com/shorts/MkEdeKfxXxU',
+      'https://youtube.com/shorts/5kSEGlWI9nU',
+      'https://youtube.com/shorts/tzT9b8yNYVQ',
+      'https://youtube.com/shorts/pDebFSDyGtE',
+      'https://youtube.com/shorts/texVRMlWNws',
+    ],
   },
   {
     name: 'أحمد الجندي',
@@ -114,7 +209,17 @@ export const guestsInput: GuestInput[] = [
     socialLinks: [
       { platform: 'youtube', url: 'https://www.youtube.com/@7analaan' },
     ],
-    episodes: [],
+    episodes: [
+      'https://youtu.be/ADEkLdkAMro',
+    ],
+    shorts: [
+      'https://youtube.com/shorts/vw_3SmRG3YY',
+      'https://youtube.com/shorts/BfFO-PwxjcU',
+      'https://youtube.com/shorts/ixi-F1Ydt94',
+      'https://youtube.com/shorts/AuUi1OmeHv0',
+      'https://youtube.com/shorts/y_S3XtPlB48',
+      'https://youtube.com/shorts/t0_W8HSsBnc',
+    ],
   },
   {
     name: 'أيمن نور',
@@ -125,7 +230,15 @@ export const guestsInput: GuestInput[] = [
     socialLinks: [
       { platform: 'youtube', url: 'https://www.youtube.com/@7analaan' },
     ],
-    episodes: [],
+    episodes: [
+      'https://youtu.be/OnR06Uc8dgE',
+    ],
+    shorts: [
+      'https://youtube.com/shorts/7uS3AfOKTAY',
+      'https://youtube.com/shorts/8Jc3ftF-QIc',
+      'https://youtube.com/shorts/SV6F8x-GYxs',
+      'https://youtube.com/shorts/K_Es8odQtRg',
+    ],
   },
   {
     name: 'حسام عبدالكريم',
@@ -136,7 +249,14 @@ export const guestsInput: GuestInput[] = [
     socialLinks: [
       { platform: 'youtube', url: 'https://www.youtube.com/@7analaan' },
     ],
-    episodes: [],
+    episodes: [
+      'https://youtu.be/NhhzZfWA9fA',
+    ],
+    shorts: [
+      'https://youtube.com/shorts/y7o3PCX4N50',
+      'https://youtube.com/shorts/MX-mLbIIuOY',
+      'https://youtube.com/shorts/jlavR7u4P5U',
+    ],
   },
   {
     name: 'د. خالد الحداد',
@@ -147,18 +267,51 @@ export const guestsInput: GuestInput[] = [
     socialLinks: [
       { platform: 'youtube', url: 'https://www.youtube.com/@7analaan' },
     ],
-    episodes: [],
+    episodes: [
+      'https://youtu.be/DM_8VWC13ME',
+      'https://youtu.be/X-H4PLqdGiE',
+    ],
+    shorts: [
+      'https://youtube.com/shorts/-G-ng6k-lXo',
+      'https://youtube.com/shorts/sitzd_y6CmM',
+      'https://youtube.com/shorts/Y72Zu3ieph0',
+      'https://youtube.com/shorts/JOrCoGLAiuk',
+      'https://youtube.com/shorts/F7obt044_P8',
+      'https://youtube.com/shorts/AV4dl9Qt1k0',
+      'https://youtube.com/shorts/RYyqr3MYz5g',
+      'https://youtube.com/shorts/eve7QrTImYc',
+      'https://youtube.com/shorts/202m7wLaH70',
+      'https://youtube.com/shorts/40R0WGHEcq8',
+      'https://youtube.com/shorts/FG74i0NtcGw',
+      'https://youtube.com/shorts/g9TnoUSlT2I',
+      'https://youtube.com/shorts/1Z-fPoOSLAU',
+      'https://youtube.com/shorts/CrDcjsyXJ5Y',
+      'https://youtube.com/shorts/V1lMfj76nrU',
+      'https://youtube.com/shorts/uGH-E-9Rf9I',
+      'https://youtube.com/shorts/zJbPNM1u9R4',
+    ],
   },
   {
-    name: 'طه عامر',
+    name: 'سليمان عامر',
     title: 'ضيف بودكاست حان الآن',
     specialty: 'متحدث ومؤثر',
     imageUrl: '/guests/طه عامر.jpg',
-    bio: 'طه عامر ضيف مميز في بودكاست حان الآن، شارك في حوار ثري حول مواضيع متنوعة تهم المجتمع العربي.',
+    bio: 'سليمان عامر ضيف مميز في بودكاست حان الآن، شارك في حوار ثري حول مواضيع متنوعة تهم المجتمع العربي.',
     socialLinks: [
       { platform: 'youtube', url: 'https://www.youtube.com/@7analaan' },
     ],
-    episodes: [],
+    episodes: [
+      'https://youtu.be/3AEtcsZeMwY',
+    ],
+    shorts: [
+      'https://youtube.com/shorts/15twQ0Ga4-A',
+      'https://youtube.com/shorts/NOuLQ87iv_w',
+      'https://youtube.com/shorts/86s-Yv0aNkI',
+      'https://youtube.com/shorts/-H8ZpbN65gI',
+      'https://youtube.com/shorts/dwGL2Bq9TOE',
+      'https://youtube.com/shorts/_lGa2Fz7K1s',
+      'https://youtube.com/shorts/f67w1z4FGBA',
+    ],
   },
   {
     name: 'عمار فايد',
@@ -169,7 +322,20 @@ export const guestsInput: GuestInput[] = [
     socialLinks: [
       { platform: 'youtube', url: 'https://www.youtube.com/@7analaan' },
     ],
-    episodes: [],
+    episodes: [
+      'https://youtu.be/AdeaOEhj-dY',
+    ],
+    shorts: [
+      'https://youtube.com/shorts/yS9MAqmRGCU',
+      'https://youtube.com/shorts/AMl7IGkG-kM',
+      'https://youtube.com/shorts/q57Q4Byps7I',
+      'https://youtube.com/shorts/jE0Aqszz_Sw',
+      'https://youtube.com/shorts/s_npj7DFPEs',
+      'https://youtube.com/shorts/qZU8SwS-ZlM',
+      'https://youtube.com/shorts/NXAB20vwUlI',
+      'https://youtube.com/shorts/7yfY2w98U84',
+      'https://youtube.com/shorts/jA2qFX-lCY4',
+    ],
   },
   {
     name: 'محمد عفان',
@@ -180,7 +346,18 @@ export const guestsInput: GuestInput[] = [
     socialLinks: [
       { platform: 'youtube', url: 'https://www.youtube.com/@7analaan' },
     ],
-    episodes: [],
+    episodes: [
+      'https://youtu.be/FLZk4la6xtU',
+    ],
+    shorts: [
+      'https://youtube.com/shorts/7qtgeOa_PnM',
+      'https://youtube.com/shorts/fWqTFh2a-70',
+      'https://youtube.com/shorts/ybMfwiElDZU',
+      'https://youtube.com/shorts/4ZE0Ar5r_Mk',
+      'https://youtube.com/shorts/BVz_x_7NiCM',
+      'https://youtube.com/shorts/mZur4KsP1X4',
+      'https://youtube.com/shorts/mI0fMMa9PYk',
+    ],
   },
   {
     name: 'محمد غباشي',
@@ -191,7 +368,17 @@ export const guestsInput: GuestInput[] = [
     socialLinks: [
       { platform: 'youtube', url: 'https://www.youtube.com/@7analaan' },
     ],
-    episodes: [],
+    episodes: [
+      'https://youtu.be/4q4X-xGjioI',
+    ],
+    shorts: [
+      'https://youtube.com/shorts/s5JqY5YhWQ0',
+      'https://youtube.com/shorts/17vrgc-x8pY',
+      'https://youtube.com/shorts/lU42PoP9pXQ',
+      'https://youtube.com/shorts/Pw4_T6jMLL0',
+      'https://youtube.com/shorts/ndfAQKm5c4k',
+      'https://youtube.com/shorts/Hdjv2L1kdxo',
+    ],
   },
   {
     name: 'مصطفى شاهين',
@@ -202,7 +389,17 @@ export const guestsInput: GuestInput[] = [
     socialLinks: [
       { platform: 'youtube', url: 'https://www.youtube.com/@7analaan' },
     ],
-    episodes: [],
+    episodes: [
+      'https://youtu.be/y0vnEBlSKBE',
+    ],
+    shorts: [
+      'https://youtube.com/shorts/yKOAuNhbPMA',
+      'https://youtube.com/shorts/ofpzi7THDNM',
+      'https://youtube.com/shorts/WGaaj305p9I',
+      'https://youtube.com/shorts/fNd31iBg-r4',
+      'https://youtube.com/shorts/Le5PC00qXGE',
+      'https://youtube.com/shorts/m3Qa2XgArqI',
+    ],
   },
 ];
 

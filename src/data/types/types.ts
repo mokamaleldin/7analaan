@@ -18,6 +18,12 @@ export interface GuestEpisode {
   youtubeUrl: string;
 }
 
+export interface GuestShort {
+  id: number;
+  url: string;
+  videoId: string;
+}
+
 // Input type - just paste YouTube URLs!
 export interface GuestInput {
   name: string;
@@ -27,6 +33,7 @@ export interface GuestInput {
   bio: string;
   socialLinks: GuestSocialLink[];
   episodes: string[]; // Just paste YouTube URLs here!
+  shorts?: string[]; // Just paste YouTube Shorts URLs here!
 }
 
 export interface Guest extends GuestInput {

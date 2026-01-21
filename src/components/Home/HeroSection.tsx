@@ -1,7 +1,17 @@
 import { Link } from 'react-router-dom';
 import { Play, ArrowLeft, Youtube, Headphones } from 'lucide-react';
+import { youtubeEpisodes } from '../../data/content';
+
+// Helper: Extract video ID from YouTube URL
+const getVideoId = (url: string): string => {
+  const match = url.match(/(?:youtu\.be\/|youtube\.com\/watch\?v=|youtube\.com\/embed\/)([^&?/]+)/);
+  return match ? match[1] : '';
+};
 
 const HeroSection = () => {
+  // Get the first (latest) episode
+  const latestEpisodeUrl = youtubeEpisodes[0];
+  const latestVideoId = getVideoId(latestEpisodeUrl);
   return (
     <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white min-h-screen flex items-center overflow-hidden">
       {/* Animated Background */}
@@ -71,7 +81,7 @@ const HeroSection = () => {
               <div className="relative bg-gray-800 rounded-2xl overflow-hidden shadow-2xl">
                 <div className="aspect-video">
                   <iframe
-                    src="https://www.youtube.com/embed/NhhzZfWA9fA"
+                    src={`https://www.youtube.com/embed/${latestVideoId}`}
                     title="Latest Episode"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen

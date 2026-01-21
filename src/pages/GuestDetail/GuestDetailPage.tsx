@@ -1,7 +1,7 @@
 import { useParams, Link } from 'react-router-dom';
 import { ArrowRight, Sparkles, Play } from 'lucide-react';
 import { PageBackground, getSocialIcon, getSocialLabel, getSocialColor, SEO, createBreadcrumbSchema, createPersonSchema } from '../../components/common';
-import { GuestEpisodeCard } from '../../components/Guests';
+import { GuestEpisodeCard, GuestShortsSection } from '../../components/Guests';
 import { guestsData } from '../../data/types/guests';
 
 const GuestDetailPage = () => {
@@ -148,6 +148,11 @@ const GuestDetailPage = () => {
               </div>
             </div>
           </div>
+        )}
+
+        {/* Shorts Section */}
+        {guest.shorts && guest.shorts.length > 0 && (
+          <GuestShortsSection shorts={guest.shorts} guestName={guest.name} />
         )}
 
         {/* No Episodes */}

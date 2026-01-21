@@ -3,13 +3,19 @@
 // ═══════════════════════════════════════════════════════════════
 
 import { guestsInput } from '../content';
-import type { GuestEpisode } from './types';
+import type { GuestEpisode, GuestShort } from './types';
 
-export type { Guest, GuestInput, GuestSocialLink, GuestEpisode } from './types';
+export type { Guest, GuestInput, GuestSocialLink, GuestEpisode, GuestShort } from './types';
 
 // Helper: Extract video ID from YouTube URL
 const getVideoId = (url: string): string => {
   const match = url.match(/(?:youtu\.be\/|youtube\.com\/watch\?v=|youtube\.com\/embed\/)([^&?/]+)/);
+  return match ? match[1] : '';
+};
+
+// Helper: Extract video ID from YouTube Shorts URL
+const getShortVideoId = (url: string): string => {
+  const match = url.match(/youtube\.com\/shorts\/([^?&]+)/);
   return match ? match[1] : '';
 };
 
@@ -26,6 +32,15 @@ const processEpisodes = (urls: string[]): GuestEpisode[] => {
   });
 };
 
+// Helper: Convert YouTube Shorts URLs to short objects
+const processShorts = (urls: string[] = []): GuestShort[] => {
+  return urls.map((url, index) => ({
+    id: index + 1,
+    url,
+    videoId: getShortVideoId(url),
+  }));
+};
+
 // Guest data with processed episodes
 export interface GuestWithEpisodes {
   id: number;
@@ -36,6 +51,7 @@ export interface GuestWithEpisodes {
   bio: string;
   socialLinks: { platform: string; url: string }[];
   episodes: GuestEpisode[];
+  shorts: GuestShort[];
 }
 
 // إنشاء الـ id تلقائياً ومعالجة الحلقات
@@ -43,4 +59,5 @@ export const guestsData: GuestWithEpisodes[] = guestsInput.map((guest, index) =>
   ...guest,
   id: index + 1,
   episodes: processEpisodes(guest.episodes),
+  shorts: processShorts(guest.shorts),
 }));
