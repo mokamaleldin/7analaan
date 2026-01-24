@@ -36,7 +36,7 @@ const HeroSection = () => {
 
             {/* Main Logo */}
             <div className="mb-6">
-              <img src="/logo.svg" alt="حان الآن" className="h-24 lg:h-32 w-auto mx-auto lg:mx-0 lg:mr-0" />
+              <img src="/logo.svg" alt="حان الآن" className="h-32 lg:h-52 w-auto mx-auto lg:mx-0 lg:mr-0" />
             </div>
 
             {/* Subtitle */}
@@ -55,9 +55,9 @@ const HeroSection = () => {
                 to="/podcast"
                 className="group bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full text-lg font-semibold font-arabic transition-all duration-300 flex items-center shadow-lg hover:shadow-orange-500/25 hover:shadow-2xl transform hover:-translate-y-1"
               >
-                <Play size={20} className="ml-2" fill="currentColor" />
+                <Play size={32} className="ml-2" fill="currentColor" />
                 شاهد الحلقات
-                <ArrowLeft size={20} className="mr-2 group-hover:-translate-x-1 transition-transform" />
+                <ArrowLeft size={32} className="mr-2 group-hover:-translate-x-1 transition-transform" />
               </Link>
               <a
                 href="https://youtube.com/@7analaan"
@@ -65,7 +65,7 @@ const HeroSection = () => {
                 rel="noopener noreferrer"
                 className="group bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-4 rounded-full text-lg font-semibold font-arabic transition-all duration-300 flex items-center shadow-lg shadow-orange-500/20"
               >
-                <Youtube size={20} className="ml-2" />
+                <Youtube size={32} className="ml-2" />
                 اشترك في القناة
               </a>
             </div>
