@@ -26,11 +26,11 @@ const JoinSection = () => {
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6 border border-white/10">
+          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium font-arabic mb-6 border border-white/10">
             <Headphones size={18} className="text-orange-400" />
             <span>انضم إلى مجتمعنا</span>
           </div>
-          <h2 className="text-4xl lg:text-6xl font-bold mb-6">
+          <h2 className="text-4xl lg:text-6xl font-bold font-primary mb-6">
             تابعنا على <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">منصاتنا</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">

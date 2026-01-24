@@ -54,7 +54,7 @@ const GuestEpisodeCard: React.FC<GuestEpisodeCardProps> = ({ episode }) => {
 
       {/* Content */}
       <div className="p-5">
-        <h3 className="text-lg font-bold text-white group-hover:text-orange-400 transition-colors line-clamp-2 min-h-[56px]">
+        <h3 className="text-lg font-bold font-primary text-white group-hover:text-orange-400 transition-colors line-clamp-2 min-h-[56px]">
           {loading ? (
             <div className="space-y-2">
               <span className="bg-gray-700 animate-pulse rounded block h-5 w-full"></span>

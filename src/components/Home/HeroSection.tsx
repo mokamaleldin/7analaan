@@ -29,7 +29,7 @@ const HeroSection = () => {
           {/* Left Content - 1/3 */}
           <div className="text-center lg:text-right order-2 lg:order-1 lg:col-span-1">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 bg-orange-500/20 text-orange-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
+            <div className="inline-flex items-center gap-2 bg-orange-500/20 text-orange-400 px-4 py-2 rounded-full text-sm font-medium font-arabic mb-6">
               <Headphones size={16} />
               <span>بودكاست عربي متميز</span>
             </div>
@@ -40,7 +40,7 @@ const HeroSection = () => {
             </div>
 
             {/* Subtitle */}
-            <p className="text-2xl lg:text-3xl font-bold mb-6 text-gray-100 leading-tight">
+            <p className="text-2xl lg:text-3xl font-bold font-primary mb-6 text-gray-100 leading-tight">
               حوار صريح عن قضايا الأمة والإنسان
             </p>
 
@@ -53,7 +53,7 @@ const HeroSection = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
               <Link
                 to="/podcast"
-                className="group bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 flex items-center shadow-lg hover:shadow-orange-500/25 hover:shadow-2xl transform hover:-translate-y-1"
+                className="group bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full text-lg font-semibold font-arabic transition-all duration-300 flex items-center shadow-lg hover:shadow-orange-500/25 hover:shadow-2xl transform hover:-translate-y-1"
               >
                 <Play size={20} className="ml-2" fill="currentColor" />
                 شاهد الحلقات
@@ -63,7 +63,7 @@ const HeroSection = () => {
                 href="https://youtube.com/@7analaan"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 flex items-center shadow-lg shadow-orange-500/20"
+                className="group bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-4 rounded-full text-lg font-semibold font-arabic transition-all duration-300 flex items-center shadow-lg shadow-orange-500/20"
               >
                 <Youtube size={20} className="ml-2" />
                 اشترك في القناة
@@ -90,7 +90,7 @@ const HeroSection = () => {
                 </div>
                 <div className="p-4 bg-gradient-to-t from-gray-900 to-gray-800">
                   <p className="text-orange-400 text-sm font-medium mb-1">أحدث حلقة</p>
-                  <p className="text-white font-semibold">شاهد آخر حلقاتنا الآن</p>
+                  <p className="text-white font-semibold font-primary">شاهد آخر حلقاتنا الآن</p>
                 </div>
               </div>
             </div>

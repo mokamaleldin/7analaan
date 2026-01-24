@@ -44,13 +44,13 @@ const ContactPage = () => {
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
               <div className="text-center">
                 {/* Badge */}
-                <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-orange-400 px-5 py-2 rounded-full text-sm font-medium mb-6 border border-white/10">
+                <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-orange-400 px-5 py-2 rounded-full text-sm font-medium font-arabic mb-6 border border-white/10">
                   <Sparkles size={16} />
                   <span>نحب نسمع منكم</span>
                 </div>
 
                 {/* Title */}
-                <h1 className="text-5xl lg:text-7xl font-bold mb-6">
+                <h1 className="text-5xl lg:text-7xl font-bold font-primary mb-6">
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600">تواصل</span>
                   <span className="text-white"> معنا</span>
                 </h1>
@@ -73,7 +73,7 @@ const ContactPage = () => {
                     className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 text-center border border-white/10 hover:border-orange-500/30 transition-all duration-300 hover:-translate-y-2"
                   >
                     <div className="flex justify-center mb-3">{value.icon}</div>
-                    <h3 className="text-white font-bold mb-1">{value.title}</h3>
+                    <h3 className="text-white font-bold font-primary mb-1">{value.title}</h3>
                     <p className="text-gray-500 text-sm">{value.description}</p>
                   </div>
                 ))}
@@ -114,7 +114,7 @@ const ContactPage = () => {
                     <Mail size={36} className="text-white" />
                   </div>
 
-                  <h2 className="text-3xl font-bold text-white mb-4">
+                  <h2 className="text-3xl font-bold font-primary text-white mb-4">
                     راسلونا عبر البريد الإلكتروني
                   </h2>
                   <p className="text-gray-400 mb-8 max-w-lg mx-auto">
@@ -123,7 +123,7 @@ const ContactPage = () => {
 
                   <a
                     href={`mailto:${contactEmail}`}
-                    className="inline-flex items-center gap-3 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 shadow-xl shadow-orange-500/30 hover:shadow-orange-500/50 hover:scale-105"
+                    className="inline-flex items-center gap-3 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-4 rounded-full font-bold font-arabic text-lg transition-all duration-300 shadow-xl shadow-orange-500/30 hover:shadow-orange-500/50 hover:scale-105"
                   >
                     <Mail size={24} />
                     {contactEmail}

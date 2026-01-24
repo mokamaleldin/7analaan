@@ -37,7 +37,7 @@ const Navbar = () => {
                 <Link
                   key={link.path}
                   to={link.path}
-                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                  className={`px-3 py-2 rounded-md text-sm font-medium font-arabic transition-colors ${
                     isActive(link.path)
                       ? 'text-orange-500 bg-orange-50'
                       : 'text-gray-700 hover:text-orange-500 hover:bg-gray-50'
@@ -71,7 +71,7 @@ const Navbar = () => {
                 key={link.path}
                 to={link.path}
                 onClick={() => setIsOpen(false)}
-                className={`block px-4 py-3 rounded-lg text-base font-medium transition-colors ${
+                className={`block px-4 py-3 rounded-lg text-base font-medium font-arabic transition-colors ${
                   isActive(link.path)
                     ? 'text-orange-500 bg-orange-50'
                     : 'text-gray-700 hover:text-orange-500 hover:bg-gray-50'

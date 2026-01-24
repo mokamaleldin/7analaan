@@ -72,7 +72,7 @@ const IntroSection = () => {
               <div className="w-14 h-14 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
+              <h3 className="text-xl font-bold font-primary text-gray-900 mb-3">
                 {feature.title}
               </h3>
               <p className="text-gray-600 leading-relaxed">
@@ -85,11 +85,11 @@ const IntroSection = () => {
         {/* Featured Episodes Section */}
         <div className="mb-20">
           <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 bg-orange-100 text-orange-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
+            <div className="inline-flex items-center gap-2 bg-orange-100 text-orange-600 px-4 py-2 rounded-full text-sm font-medium font-arabic mb-4">
               <Star size={16} />
               <span>حلقات مميزة</span>
             </div>
-            <h3 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            <h3 className="text-3xl lg:text-4xl font-bold font-primary text-gray-900 mb-4">
               أبرز <span className="text-orange-500">الحلقات</span>
             </h3>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -127,7 +127,7 @@ const IntroSection = () => {
               </p>
               <Link
                 to="/podcast"
-                className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-orange-500/25"
+                className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full font-semibold font-arabic transition-all duration-300 shadow-lg hover:shadow-orange-500/25"
               >
                 اكتشف الحلقات
                 <ArrowLeft size={18} />
@@ -137,7 +137,7 @@ const IntroSection = () => {
               {topics.map((topic, index) => (
                 <span
                   key={index}
-                  className="bg-white/10 backdrop-blur-sm text-white px-5 py-3 rounded-full text-sm font-medium hover:bg-orange-500 transition-colors duration-300 cursor-default"
+                  className="bg-white/10 backdrop-blur-sm text-white px-5 py-3 rounded-full text-sm font-medium font-arabic hover:bg-orange-500 transition-colors duration-300 cursor-default"
                 >
                   {topic}
                 </span>

@@ -82,7 +82,7 @@ const EpisodeCard: React.FC<EpisodeCardProps> = ({ episode }) => {
       {/* Content */}
       <div className="p-5">
         {/* Title */}
-        <h3 className="text-sm font-semibold text-white mb-4 leading-relaxed line-clamp-2 min-h-[40px]">
+        <h3 className="text-sm font-semibold font-primary text-white mb-4 leading-relaxed line-clamp-2 min-h-[40px]">
           {loading ? (
             <div className="space-y-2">
               <span className="bg-gray-700 animate-pulse rounded block h-4 w-full"></span>

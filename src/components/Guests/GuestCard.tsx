@@ -26,9 +26,9 @@ const GuestCard: React.FC<GuestCardProps> = ({ guestId, imageUrl, name, title })
 
       {/* Content */}
       <div className="p-6">
-        <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-orange-400 transition-colors">{name}</h3>
+        <h3 className="text-2xl font-bold font-primary text-white mb-2 group-hover:text-orange-400 transition-colors">{name}</h3>
         <p className="text-gray-400 mb-4">{title}</p>
-        <div className="flex items-center gap-2 text-orange-400 text-sm font-medium">
+        <div className="flex items-center gap-2 text-orange-400 text-sm font-medium font-arabic">
           <span>عرض الملف الشخصي</span>
           <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
         </div>

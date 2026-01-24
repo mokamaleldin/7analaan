@@ -40,13 +40,13 @@ const PodcastPage = () => {
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div className="text-center">
               {/* Badge */}
-              <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-orange-400 px-5 py-2 rounded-full text-sm font-medium mb-6 border border-white/10">
+              <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-orange-400 px-5 py-2 rounded-full text-sm font-medium font-arabic mb-6 border border-white/10">
                 <Sparkles size={16} />
                 <span>جميع الحلقات</span>
               </div>
 
               {/* Title */}
-              <h1 className="text-5xl lg:text-7xl font-bold mb-6">
+              <h1 className="text-5xl lg:text-7xl font-bold font-primary mb-6">
                 <span className="text-white">حلقات </span>
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600">البودكاست</span>
               </h1>
@@ -89,7 +89,7 @@ const PodcastPage = () => {
                   href="https://youtube.com/@7analaan?sub_confirmation=1"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="relative inline-flex items-center gap-3 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 shadow-xl shadow-orange-500/30 hover:shadow-orange-500/50 hover:scale-105"
+                  className="relative inline-flex items-center gap-3 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-4 rounded-full font-bold font-arabic text-lg transition-all duration-300 shadow-xl shadow-orange-500/30 hover:shadow-orange-500/50 hover:scale-105"
                 >
                   شاهد المزيد على يوتيوب
                   <span className="bg-white/20 px-2 py-1 rounded text-sm">→</span>

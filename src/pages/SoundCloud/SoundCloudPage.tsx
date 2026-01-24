@@ -36,13 +36,13 @@ const SoundCloudPage = () => {
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div className="text-center">
               {/* Badge */}
-              <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-orange-400 px-5 py-2 rounded-full text-sm font-medium mb-6 border border-white/10">
+              <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-orange-400 px-5 py-2 rounded-full text-sm font-medium font-arabic mb-6 border border-white/10">
                 <Headphones size={16} />
                 <span>ساوند كلاود</span>
               </div>
 
               {/* Title */}
-              <h1 className="text-5xl lg:text-7xl font-bold mb-6">
+              <h1 className="text-5xl lg:text-7xl font-bold font-primary mb-6">
                 <span className="text-white">البودكاست </span>
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600">الصوتي</span>
               </h1>

@@ -12,7 +12,7 @@ const GuestDetailPage = () => {
     return (
       <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-4">الضيف غير موجود</h1>
+          <h1 className="text-4xl font-bold font-primary text-white mb-4">الضيف غير موجود</h1>
           <Link
             to="/guests"
             className="inline-flex items-center gap-2 text-orange-400 hover:text-orange-300 transition-colors"
@@ -96,12 +96,12 @@ const GuestDetailPage = () => {
 
               {/* Guest Info */}
               <div className="flex-1 text-center lg:text-right">
-                <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-orange-400 px-5 py-2 rounded-full text-sm font-medium mb-6 border border-white/10">
+                <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-orange-400 px-5 py-2 rounded-full text-sm font-medium font-arabic mb-6 border border-white/10">
                   <Sparkles size={16} />
                   <span>ضيف الحلقات</span>
                 </div>
 
-                <h1 className="text-4xl lg:text-6xl font-bold text-white mb-4">{guest.name}</h1>
+                <h1 className="text-4xl lg:text-6xl font-bold font-primary text-white mb-4">{guest.name}</h1>
                 <p className="text-xl text-orange-400 mb-2">{guest.title}</p>
                 <p className="text-lg text-gray-400 mb-6">{guest.specialty}</p>
                 <p className="text-gray-300 max-w-2xl leading-relaxed mb-8">{guest.bio}</p>
@@ -118,7 +118,7 @@ const GuestDetailPage = () => {
                         className={`flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-3 rounded-xl text-gray-300 transition-all duration-300 border border-white/10 ${getSocialColor(link.platform)}`}
                       >
                         {getSocialIcon(link.platform)}
-                        <span className="text-sm font-medium">{getSocialLabel(link.platform)}</span>
+                        <span className="text-sm font-medium font-arabic">{getSocialLabel(link.platform)}</span>
                       </a>
                     ))}
                   </div>
