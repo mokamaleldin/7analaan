@@ -36,7 +36,7 @@ const HeroSection = () => {
 
             {/* Main Logo */}
             <div className="mb-6">
-              <img src="/logo.svg" alt="حان الآن" className="h-32 lg:h-52 w-auto mx-auto lg:mx-0 lg:mr-0" />
+              <img src="/logo.svg" alt="حان الآن" className="h-32 lg:h-64 w-auto mx-auto lg:mx-0 lg:mr-0" />
             </div>
 
             {/* Subtitle */}
