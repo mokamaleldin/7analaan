@@ -57,17 +57,17 @@ const HeroSection = () => {
               >
                 <Play size={32} className="ml-2" fill="currentColor" />
                 شاهد الحلقات
-                <ArrowLeft size={32} className="mr-2 group-hover:-translate-x-1 transition-transform" />
+                {/* <ArrowLeft size={32} className="mr-2 group-hover:-translate-x-1 transition-transform" /> */}
               </Link>
-              <a
-                href="https://youtube.com/@7analaan"
+              <Link
+                to="https://youtube.com/@7analaan"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-4 rounded-full text-lg font-semibold font-arabic transition-all duration-300 flex items-center shadow-lg shadow-orange-500/20"
               >
                 <Youtube size={32} className="ml-2" />
                 اشترك في القناة
-              </a>
+              </Link>
             </div>
           </div>
 
