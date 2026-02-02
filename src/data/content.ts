@@ -138,6 +138,9 @@ export const shortsUrls = [
 // ═══════════════════════════════════════════════════════════════════════════
 
 export const soundcloudTracks = [
+  'https://soundcloud.com/7analaan/1a1?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing',
+  'https://soundcloud.com/7analaan/1a1?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing',
+  'https://soundcloud.com/7analaan/khaledhamdy?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing',
   'https://soundcloud.com/7analaan/b4e0c51e-5f89-475e-8470-b1b1ec440be4',
   'https://soundcloud.com/7analaan/1f6728dc-28b0-4a7e-b913-04fe95f666b6',
   'https://soundcloud.com/7analaan/d0137357-e467-4789-9acc-a0c6b571e7bc',
