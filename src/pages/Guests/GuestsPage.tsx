@@ -1,10 +1,25 @@
-import { Users, Sparkles } from 'lucide-react';
+import { Users, Sparkles, Filter } from 'lucide-react';
+import { useState, useMemo } from 'react';
 import { GuestCard } from '../../components/Guests';
 import { PageBackground, SectionDivider, SEO, createBreadcrumbSchema } from '../../components/common';
 import { guestsData } from '../../data/types/guests';
 
+type SortType = 'latest' | 'alphabetical';
+
 const GuestsPage = () => {
-  const guests = guestsData;
+  const [sortType, setSortType] = useState<SortType>('latest');
+
+  const guests = useMemo(() => {
+    const guestsArray = [...guestsData];
+    
+    switch (sortType) {
+      case 'alphabetical':
+        return guestsArray.sort((a, b) => a.name.localeCompare(b.name, 'ar'));
+      case 'latest':
+      default:
+        return guestsArray; // Original order (latest first)
+    }
+  }, [sortType]);
 
   const guestsStructuredData = createBreadcrumbSchema([
     { name: 'الرئيسية', url: '/' },
@@ -60,6 +75,33 @@ const GuestsPage = () => {
         <div className="relative pb-20">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <SectionDivider icon={<Users size={16} />} label="الضيوف" />
+
+            {/* Filter Controls */}
+            <div className="mb-8 flex justify-center">
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-2 flex items-center gap-2">
+                <Filter size={16} className="text-orange-400 mr-2" />
+                <button
+                  onClick={() => setSortType('latest')}
+                  className={`px-4 py-2 rounded-xl transition-all duration-300 font-arabic text-sm ${
+                    sortType === 'latest'
+                      ? 'bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-lg shadow-orange-500/25'
+                      : 'text-gray-400 hover:text-white hover:bg-white/10'
+                  }`}
+                >
+                  الأحدث المضافة
+                </button>
+                <button
+                  onClick={() => setSortType('alphabetical')}
+                  className={`px-4 py-2 rounded-xl transition-all duration-300 font-arabic text-sm ${
+                    sortType === 'alphabetical'
+                      ? 'bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-lg shadow-orange-500/25'
+                      : 'text-gray-400 hover:text-white hover:bg-white/10'
+                  }`}
+                >
+                  الترتيب الأبجدي
+                </button>
+              </div>
+            </div>
 
             {guests.length === 0 ? (
               <div className="text-center text-gray-400">لا يوجد ضيوف مضافون بعد</div>
