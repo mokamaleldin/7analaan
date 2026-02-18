@@ -44,6 +44,22 @@ export const soundcloudTracks = [
 export const guestsInput: GuestInput[] = [
   // ✨ ضيف جديد - د. حسام الحملاوي (أضف المحتوى الجديد هنا!)
   {
+    name: 'أ. بسام صلاح ',
+    title: 'خبير في التربية',
+    specialty: 'التعليم والتطوير المهني',
+    imageUrl: '/guests/بسام صلاح.jpg',
+    bio: 'أ. بسام صلاح خبير في التربية، ومتخصص في تطوير المناهج الدراسية وتحسين جودة التعليم. يساهم في تطوير برامج التدريب المهني والتعليمي، ويُعد من المختصين في مجال التعلم المستمر والتطوير المهني.',
+    socialLinks: [
+    ],
+    episodes: [
+      'https://youtu.be/GLt3KxGDOIQ?si=ODb1ma3uoSc-7Ixb', // 🎬 أضف حلقات جديدة هنا
+    ],
+    shorts: [
+      'https://youtube.com/shorts/P_hgaoPoLQ4?si=6K8ol4eT-IE79DLp', // 📱 أضف شورتس جديدة هنا
+ 
+    ],
+  },
+  {
     name: 'د. حسام الحملاوي',
     title: 'صحفي وباحث أكاديمي وناشط اشتراكي',
     specialty: 'الصحافة والبحث الأكاديمي والنضال الاجتماعي',
@@ -60,6 +76,7 @@ export const guestsInput: GuestInput[] = [
       'https://youtube.com/shorts/fKwJ-u63QG8',
     ],
   },
+
   {
     name: 'أيمن نور',
     title: 'سياسي وإعلامي',
