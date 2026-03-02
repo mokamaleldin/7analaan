@@ -280,6 +280,7 @@ export const guestsInput: GuestInput[] = [
       { platform: 'facebook', url: 'https://www.facebook.com/share/1JdedJX2mm/' },
     ],
     episodes: [
+      'https://www.youtube.com/watch?v=JlYl1q-cDSQ',
       'https://youtu.be/DM_8VWC13ME',
       'https://youtu.be/X-H4PLqdGiE',
     ],
@@ -326,9 +327,15 @@ export const guestsInput: GuestInput[] = [
 // ═══════════════════════════════════════════════════════════════════════════
 
 // 🎬 توليد قائمة حلقات اليوتيوب تلقائياً (الأحدث أولاً)
-export const youtubeEpisodes = guestsInput
-  .flatMap(guest => guest.episodes || [])
-  .filter(Boolean);
+export const youtubeEpisodes = [
+  // أحدث حلقة من د. خالد الحداد في المقدمة
+  'https://www.youtube.com/watch?v=JlYl1q-cDSQ',
+  // باقي الحلقات
+  ...guestsInput
+    .flatMap(guest => guest.episodes || [])
+    .filter(Boolean)
+    .filter(episode => episode !== 'https://www.youtube.com/watch?v=JlYl1q-cDSQ') // تجنب التكرار
+];
 
 // 📱 توليد قائمة الشورتس تلقائياً (الأحدث أولاً)  
 export const shortsUrls = guestsInput
