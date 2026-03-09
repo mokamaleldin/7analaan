@@ -1,5 +1,5 @@
 import { Mail, Sparkles, MessageCircle, Heart, Users, Mic } from 'lucide-react';
-import { PageBackground, SectionDivider, SocialMediaCard, SEO, createBreadcrumbSchema } from '../../components/common';
+import { SectionDivider, SocialMediaCard, SEO, createBreadcrumbSchema } from '../../components/common';
 import { podcastSocialLinks, contactEmail } from '../../data/types/socialLinks';
 
 const ContactPage = () => {
@@ -36,8 +36,6 @@ const ContactPage = () => {
         structuredData={contactStructuredData}
       />
       <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
-        <PageBackground floatingEmojis={['💬', '🎙️', '❤️']} />
-
         <div className="relative">
           {/* Hero Header */}
           <div className="pt-16 pb-12">

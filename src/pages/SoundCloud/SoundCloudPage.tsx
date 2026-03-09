@@ -1,5 +1,5 @@
 import { Headphones } from 'lucide-react';
-import { SoundCloudPlayer, PageBackground, SectionDivider, SEO, createBreadcrumbSchema } from '../../components/common';
+import { SoundCloudPlayer, SectionDivider, SEO, createBreadcrumbSchema } from '../../components/common';
 import { soundcloudTracks } from '../../data/types/soundcloudTracks';
 
 const SoundCloudPage = () => {
@@ -29,8 +29,6 @@ const SoundCloudPage = () => {
         structuredData={soundcloudStructuredData}
       />
       <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
-        <PageBackground floatingEmojis={['🎧', '🎵', '🎶']} />
-
         {/* Hero Header */}
         <div className="relative pt-16 pb-12">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">

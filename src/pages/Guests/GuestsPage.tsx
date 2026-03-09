@@ -1,7 +1,7 @@
 import { Users, Sparkles, Filter } from 'lucide-react';
 import { useState, useMemo } from 'react';
 import { GuestCard } from '../../components/Guests';
-import { PageBackground, SectionDivider, SEO, createBreadcrumbSchema } from '../../components/common';
+import { SectionDivider, SEO, createBreadcrumbSchema } from '../../components/common';
 import { guestsData } from '../../data/types/guests';
 
 type SortType = 'latest' | 'alphabetical';
@@ -48,8 +48,6 @@ const GuestsPage = () => {
       />
 
       <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
-        <PageBackground floatingEmojis={['🧑🏻‍💼', '⭐', '🎙️']} />
-
         {/* Header */}
         <div className="relative pt-16 pb-12">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">

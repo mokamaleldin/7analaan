@@ -1,6 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
 import { ArrowRight, Sparkles, Play } from 'lucide-react';
-import { PageBackground, getSocialIcon, getSocialLabel, getSocialColor, SEO, createBreadcrumbSchema, createPersonSchema } from '../../components/common';
+import { getSocialIcon, getSocialLabel, getSocialColor, SEO, createBreadcrumbSchema, createPersonSchema } from '../../components/common';
 import { GuestEpisodeCard, GuestShortsSection } from '../../components/Guests';
 import { guestsData } from '../../data/types/guests';
 
@@ -65,8 +65,6 @@ const GuestDetailPage = () => {
       />
 
       <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
-        <PageBackground floatingEmojis={['🧑🏻‍💼', '⭐', '🎙️']} />
-
         {/* Back Button */}
         <div className="relative pt-8 px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -102,8 +100,7 @@ const GuestDetailPage = () => {
                 </div>
 
                 <h1 className="text-4xl lg:text-6xl font-bold font-primary text-white mb-4">{guest.name}</h1>
-                <p className="text-xl text-orange-400 mb-2">{guest.title}</p>
-                <p className="text-lg text-gray-400 mb-6">{guest.specialty}</p>
+                <p className="text-xl text-orange-400 mb-6">{guest.title}</p>
                 <p className="text-gray-300 max-w-2xl leading-relaxed mb-8">{guest.bio}</p>
 
                 {/* Social Links */}
@@ -115,10 +112,10 @@ const GuestDetailPage = () => {
                         href={link.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-3 rounded-xl text-gray-300 transition-all duration-300 border border-white/10 ${getSocialColor(link.platform)}`}
+                        className={`flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-3 rounded-xl text-gray-300 transition-all duration-300 border border-white/10 ${getSocialColor(link.platform as any)}`}
                       >
-                        {getSocialIcon(link.platform)}
-                        <span className="text-sm font-medium font-arabic">{getSocialLabel(link.platform)}</span>
+                        {getSocialIcon(link.platform as any)}
+                        <span className="text-sm font-medium font-arabic">{getSocialLabel(link.platform as any)}</span>
                       </a>
                     ))}
                   </div>

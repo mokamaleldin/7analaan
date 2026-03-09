@@ -52,18 +52,18 @@ const GuestsSection = () => {
   if (guestsData.length === 0) return null;
 
   return (
-    <section className="py-16 px-6 lg:px-8 relative bg-gradient-to-b from-gray-50 to-white">
+    <section className="py-16 px-6 lg:px-8 relative">
       <div className="max-w-[1600px] mx-auto">
         {/* Section Header */}
         <div className="text-center mb-10">
-          <span className="inline-block bg-orange-100 text-orange-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
+          <span className="inline-block bg-white/10 backdrop-blur-sm text-orange-400 px-4 py-2 rounded-full text-sm font-medium mb-4 border border-white/10">
             <Users size={14} className="inline ml-1" />
             ضيوف الحلقات
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
             تعرف على <span className="text-orange-500">ضيوفنا</span>
           </h2>
-          <p className="text-gray-600 max-w-xl mx-auto">
+          <p className="text-gray-400 max-w-xl mx-auto">
             نخبة من المفكرين والخبراء شاركوا معنا في الحلقات
           </p>
         </div>

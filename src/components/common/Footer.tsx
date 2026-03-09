@@ -40,17 +40,6 @@ const Footer = () => {
           <p className="text-gray-400">
             © {new Date().getFullYear()} حان الآن. جميع الحقوق محفوظة.
           </p>
-          <p className="text-gray-500 text-sm mt-2">
-            site by{' '}
-            <a
-              href="https://www.mokamaleldin.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline hover:text-white"
-            >
-              Mohamed Kamaleldin
-            </a>
-          </p>
         </div>
       </div>
     </footer>

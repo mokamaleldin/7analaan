@@ -40,24 +40,18 @@ const IntroSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-gray-50 relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute top-0 left-0 w-full h-full">
-        <div className="absolute top-20 right-20 w-64 h-64 bg-orange-100 rounded-full blur-3xl opacity-50" />
-        <div className="absolute bottom-20 left-20 w-96 h-96 bg-blue-100 rounded-full blur-3xl opacity-30" />
-      </div>
-
+    <section className="py-24 relative overflow-hidden">
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-orange-100 text-orange-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
+          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-orange-400 px-4 py-2 rounded-full text-sm font-medium mb-4 border border-white/10">
             <Sparkles size={16} />
             <span>ما يميزنا</span>
           </div>
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
             لماذا <span className="text-orange-500">حان الآن</span>؟
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
             نحن منصة للتفكير النقدي والحوار البناء، نسعى لتقديم منظور جديد حول القضايا التي تهم مجتمعنا
           </p>
         </div>
@@ -67,15 +61,15 @@ const IntroSection = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 text-center transform hover:-translate-y-2 border border-gray-100"
+              className="group bg-white/5 backdrop-blur-sm p-8 rounded-2xl shadow-lg hover:shadow-2xl hover:shadow-orange-500/10 transition-all duration-500 text-center transform hover:-translate-y-2 border border-white/10 hover:border-orange-500/30"
             >
               <div className="w-14 h-14 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-bold font-primary text-gray-900 mb-3">
+              <h3 className="text-xl font-bold font-primary text-white mb-3">
                 {feature.title}
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-400 leading-relaxed">
                 {feature.description}
               </p>
             </div>
@@ -85,14 +79,14 @@ const IntroSection = () => {
         {/* Featured Episodes Section */}
         <div className="mb-20">
           <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 bg-orange-100 text-orange-600 px-4 py-2 rounded-full text-sm font-medium font-arabic mb-4">
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-orange-400 px-4 py-2 rounded-full text-sm font-medium font-arabic mb-4 border border-white/10">
               <Star size={16} />
               <span>حلقات مميزة</span>
             </div>
-            <h3 className="text-3xl lg:text-4xl font-bold font-primary text-gray-900 mb-4">
+            <h3 className="text-3xl lg:text-4xl font-bold font-primary text-white mb-4">
               أبرز <span className="text-orange-500">الحلقات</span>
             </h3>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-400 max-w-2xl mx-auto">
               اكتشف أفضل حلقاتنا المختارة لك
             </p>
           </div>
@@ -116,7 +110,7 @@ const IntroSection = () => {
         </div>
 
         {/* Topics Section */}
-        <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl p-8 lg:p-12 shadow-2xl">
+        <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 lg:p-12 shadow-2xl border border-white/10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h3 className="text-3xl lg:text-4xl font-bold text-white mb-6">

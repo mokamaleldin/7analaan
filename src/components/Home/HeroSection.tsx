@@ -14,16 +14,6 @@ const HeroSection = () => {
   const latestVideoId = getVideoId(latestEpisodeUrl);
   return (
     <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white min-h-screen flex items-center overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(249,115,22,0.15),transparent_50%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(249,115,22,0.1),transparent_50%)]" />
-      </div>
-      
-      {/* Floating shapes */}
-      <div className="absolute top-20 left-10 w-72 h-72 bg-orange-500/10 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-orange-500/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
-
       <div className="relative max-w-[1600px] mx-auto px-6 lg:px-12 py-20">
         <div className="grid lg:grid-cols-3 gap-8 lg:gap-16 items-center">
           {/* Left Content - 1/3 */}
@@ -63,7 +53,7 @@ const HeroSection = () => {
                 to="https://youtube.com/@7analaan"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-4 rounded-full text-lg font-semibold font-arabic transition-all duration-300 flex items-center shadow-lg shadow-orange-500/20"
+                className="group bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-4 rounded-full text-lg font-semibold font-arabic transition-all duration-300 flex items-center shadow-lg hover:shadow-orange-500/25 hover:shadow-2xl transform hover:-translate-y-1"
               >
                 <Youtube size={32} className="ml-2" />
                 اشترك في القناة

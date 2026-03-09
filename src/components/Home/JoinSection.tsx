@@ -12,17 +12,6 @@ const JoinSection = () => {
 
   return (
     <section className="py-24 bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white relative overflow-hidden">
-      {/* Animated Background Effects */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-orange-500/5 rounded-full blur-3xl" />
-      </div>
-
-      {/* Floating Elements */}
-      <div className="absolute top-20 right-20 text-6xl animate-bounce" style={{ animationDuration: '3s' }}>🎧</div>
-      <div className="absolute bottom-40 left-20 text-5xl animate-bounce" style={{ animationDuration: '4s', animationDelay: '1s' }}>🎙️</div>
-
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">

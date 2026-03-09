@@ -1,6 +1,6 @@
 import { Play, Sparkles } from 'lucide-react';
 import { EpisodeCard } from '../../components/Podcast';
-import { PageBackground, SectionDivider, SEO, createBreadcrumbSchema } from '../../components/common';
+import { SectionDivider, SEO, createBreadcrumbSchema } from '../../components/common';
 import { youtubeEpisodes, getEpisodeObjects } from '../../data/types/youtubeEpisodes';
 
 const PodcastPage = () => {
@@ -33,8 +33,6 @@ const PodcastPage = () => {
         structuredData={podcastStructuredData}
       />
       <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
-        <PageBackground floatingEmojis={['🎧', '🎙️', '🎵']} />
-
         {/* Hero Header */}
         <div className="relative pt-16 pb-12">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">

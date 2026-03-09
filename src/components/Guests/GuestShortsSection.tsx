@@ -83,7 +83,7 @@ const GuestShortsSection: React.FC<GuestShortsSectionProps> = ({ shorts, guestNa
           <div className="h-px flex-1 bg-gradient-to-r from-transparent via-white/20 to-transparent" />
           <div className="flex items-center gap-2 text-gray-400">
             <Film size={16} className="text-red-400" />
-            <span>شورتس مع {guestName}</span>
+            <span>مقتطفات مع {guestName}</span>
           </div>
           <div className="h-px flex-1 bg-gradient-to-r from-transparent via-white/20 to-transparent" />
         </div>
