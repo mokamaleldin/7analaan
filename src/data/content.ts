@@ -285,6 +285,8 @@ export const guestsInput: GuestInput[] = [
       'https://youtu.be/X-H4PLqdGiE',
     ],
     shorts: [
+      'https://youtube.com/shorts/IlL7wvCpS20',
+      'https://youtube.com/shorts/TPtco1yKrio',
       'https://youtube.com/shorts/-G-ng6k-lXo',
       'https://youtube.com/shorts/sitzd_y6CmM',
       'https://youtube.com/shorts/Y72Zu3ieph0',
