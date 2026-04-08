@@ -44,6 +44,18 @@ export const soundcloudTracks = [
 export const guestsInput: GuestInput[] = [
   // ✨ ضيف جديد - د. حسام الحملاوي (أضف المحتوى الجديد هنا!)
   {
+    name: 'د. سعد خليفة',
+    title: 'ضيف بودكاست حان الآن',
+    specialty: 'الحوار والتجارب الإنسانية',
+    imageUrl: '/guests/سعيد خليفة.png',
+    bio: 'ضيف في بودكاست حان الآن.',
+    socialLinks: [],
+    episodes: [
+      'https://youtu.be/SwgQlLbjz_U?si=OMRkCGAiVpsyR4fG',
+    ],
+    shorts: [],
+  },
+  {
     name: 'أ. بسام صلاح ',
     title: 'خبير في التربية',
     specialty: 'تربية الأطفال والتطوير التربوي',
@@ -121,6 +133,7 @@ export const guestsInput: GuestInput[] = [
       { platform: 'facebook', url: 'https://www.facebook.com/share/16yNjv8Q4t/' },
     ],
     episodes: [
+      'https://youtu.be/ijujp1XQVBY?si=jmcrFNDTcgRFHTPv',
       'https://youtu.be/NhhzZfWA9fA',
     ],
     shorts: [
@@ -330,13 +343,18 @@ export const guestsInput: GuestInput[] = [
 
 // 🎬 توليد قائمة حلقات اليوتيوب تلقائياً (الأحدث أولاً)
 export const youtubeEpisodes = [
-  // أحدث حلقة من د. خالد الحداد في المقدمة
-  'https://www.youtube.com/watch?v=JlYl1q-cDSQ',
+  // أحدث الحلقات في المقدمة
+  'https://youtu.be/SwgQlLbjz_U?si=OMRkCGAiVpsyR4fG',
+  'https://youtu.be/ijujp1XQVBY?si=jmcrFNDTcgRFHTPv',
   // باقي الحلقات
   ...guestsInput
     .flatMap(guest => guest.episodes || [])
     .filter(Boolean)
-    .filter(episode => episode !== 'https://www.youtube.com/watch?v=JlYl1q-cDSQ') // تجنب التكرار
+    .filter(
+      episode =>
+        episode !== 'https://youtu.be/SwgQlLbjz_U?si=OMRkCGAiVpsyR4fG' &&
+        episode !== 'https://youtu.be/ijujp1XQVBY?si=jmcrFNDTcgRFHTPv'
+    ) // تجنب التكرار
 ];
 
 // 📱 توليد قائمة الشورتس تلقائياً (الأحدث أولاً)  
