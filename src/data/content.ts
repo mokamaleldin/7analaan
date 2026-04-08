@@ -53,7 +53,14 @@ export const guestsInput: GuestInput[] = [
     episodes: [
       'https://youtu.be/SwgQlLbjz_U?si=OMRkCGAiVpsyR4fG',
     ],
-    shorts: [],
+    shorts: [
+      'https://youtube.com/shorts/4m9-JzaqVmw?si=sTqzr3cPn_L1u1Ay',
+      'https://youtube.com/shorts/DBbXwZ-LLGs?si=vQK9v_8Pd6VliJ4K',
+      'https://youtube.com/shorts/fHD6Y5IGoAM?si=iIPrC4MyC_pMU6-_',
+      'https://youtube.com/shorts/Zui9LijoSwU?si=iAXopIvfGXMHgNcK',
+      'https://youtube.com/shorts/wmrIcA4MQa8?si=5QjyoCQ__1AYSdjF',
+      'https://youtube.com/shorts/YKg9qBNYKLs?si=p6jx4B2hFmKpJK23',
+    ],
   },
   {
     name: 'أ. بسام صلاح ',
@@ -137,6 +144,11 @@ export const guestsInput: GuestInput[] = [
       'https://youtu.be/NhhzZfWA9fA',
     ],
     shorts: [
+      'https://youtube.com/shorts/FLVImR8kvwo?si=HJ2T4CaBn0i73HhH',
+      'https://youtube.com/shorts/YG8e--lB3vU?si=skKh0hWoj9FIMIsD',
+      'https://youtube.com/shorts/NGZO-cKOHfQ?si=eUP9rwplxmYfhUay',
+      'https://youtube.com/shorts/tHfVQf1gW_I?si=g70rLKKsYELKGy3M',
+      'https://youtube.com/shorts/Y2zu8OBLnnM?si=KmKin3inHILcE0SR',
       'https://youtube.com/shorts/y7o3PCX4N50',
       'https://youtube.com/shorts/MX-mLbIIuOY',
       'https://youtube.com/shorts/jlavR7u4P5U',
