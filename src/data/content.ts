@@ -44,6 +44,22 @@ export const soundcloudTracks = [
 export const guestsInput: GuestInput[] = [
   // ✨ ضيف جديد - د. حسام الحملاوي (أضف المحتوى الجديد هنا!)
   {
+    name: 'م. مؤمن أشرف',
+    title: 'متخصص في سياسات وتعاقدات الدفاع',
+    specialty: 'سياسات وتعاقدات الدفاع والصناعات العسكرية',
+    imageUrl: '/guests/مؤمن أشرف.png',
+    bio: 'مؤمن أشرف متخصص في سياسات وتعاقدات الدفاع، يناقش واقع الصناعات العسكرية وأسباب ابتعاد كثير من الشباب عنها في العالم العربي رغم أهميتها.',
+    socialLinks: [],
+    episodes: [
+      'https://youtu.be/Bn1nAKLuffY?si=EJSe-er84V80Xsyz',
+    ],
+    shorts: [
+      'https://youtube.com/shorts/j39Zc2Conh4?si=qqR1N4DVnBHo83eg',
+      'https://youtube.com/shorts/hq41Mp4s_qc?si=hUqEcQcei4GdWzSu',
+      'https://youtube.com/shorts/lZ2xlJaNTh8?si=62OGIIk9qXRs6zsH',
+    ],
+  },
+  {
     name: 'د. سعد خليفة',
     title: 'ضيف بودكاست حان الآن',
     specialty: 'الحوار والتجارب الإنسانية',
@@ -356,6 +372,7 @@ export const guestsInput: GuestInput[] = [
 // 🎬 توليد قائمة حلقات اليوتيوب تلقائياً (الأحدث أولاً)
 export const youtubeEpisodes = [
   // أحدث الحلقات في المقدمة
+  'https://youtu.be/Bn1nAKLuffY?si=EJSe-er84V80Xsyz',
   'https://youtu.be/SwgQlLbjz_U?si=OMRkCGAiVpsyR4fG',
   'https://youtu.be/ijujp1XQVBY?si=jmcrFNDTcgRFHTPv',
   // باقي الحلقات
@@ -364,6 +381,7 @@ export const youtubeEpisodes = [
     .filter(Boolean)
     .filter(
       episode =>
+        episode !== 'https://youtu.be/Bn1nAKLuffY?si=EJSe-er84V80Xsyz' &&
         episode !== 'https://youtu.be/SwgQlLbjz_U?si=OMRkCGAiVpsyR4fG' &&
         episode !== 'https://youtu.be/ijujp1XQVBY?si=jmcrFNDTcgRFHTPv'
     ) // تجنب التكرار

@@ -58,6 +58,7 @@ const GuestDetailPage = () => {
           'حوار مع',
           'لقاء خاص'
         ]}
+        
         canonicalPath={`/guests/${guest.id}`}
         pageType="profile"
         ogImage={guest.imageUrl}
