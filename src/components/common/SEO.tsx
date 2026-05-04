@@ -126,3 +126,41 @@ export const createPersonSchema = (person: {
     name: 'حان الآن - 7analaan'
   }
 });
+
+// Export helper for creating PodcastSeries structured data
+export const createPodcastSeriesSchema = (podcast: {
+  name: string;
+  description: string;
+  url: string;
+  image?: string;
+  sameAs?: string[];
+}) => ({
+  '@context': 'https://schema.org',
+  '@type': 'PodcastSeries',
+  name: podcast.name,
+  description: podcast.description,
+  url: podcast.url,
+  image: podcast.image || DEFAULT_OG_IMAGE,
+  sameAs: podcast.sameAs,
+  publisher: {
+    '@type': 'Organization',
+    name: BRAND_NAME
+  }
+});
+
+// Export helper for creating WebSite structured data
+export const createWebsiteSchema = (site: {
+  name: string;
+  description: string;
+  url: string;
+}) => ({
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: site.name,
+  description: site.description,
+  url: site.url,
+  publisher: {
+    '@type': 'Organization',
+    name: BRAND_NAME
+  }
+});

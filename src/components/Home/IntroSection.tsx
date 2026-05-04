@@ -52,7 +52,7 @@ const IntroSection = () => {
             لماذا <span className="text-orange-500">حان الآن</span>؟
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-            نحن منصة للتفكير النقدي والحوار البناء، نسعى لتقديم منظور جديد حول القضايا التي تهم مجتمعنا
+            حان الآن منصة للتفكير النقدي والحوار البناء، نسعى لتقديم منظور جديد حول القضايا التي تهم مجتمعنا العربي
           </p>
         </div>
 
@@ -98,14 +98,23 @@ const IntroSection = () => {
           </div>
 
           <div className="text-center mt-10">
-            <Link
-              to="/podcast"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 shadow-xl shadow-orange-500/20 hover:shadow-orange-500/40 hover:scale-105"
-            >
-              <Play size={20} fill="currentColor" />
-              شاهد جميع الحلقات
-              <ArrowLeft size={18} />
-            </Link>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link
+                to="/podcast"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 shadow-xl shadow-orange-500/20 hover:shadow-orange-500/40 hover:scale-105"
+              >
+                <Play size={20} fill="currentColor" />
+                شاهد جميع الحلقات
+                <ArrowLeft size={18} />
+              </Link>
+              <Link
+                to="/guests"
+                className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 border border-white/10"
+              >
+                تعرف على ضيوف حان الآن
+                <ArrowLeft size={18} />
+              </Link>
+            </div>
           </div>
         </div>
 

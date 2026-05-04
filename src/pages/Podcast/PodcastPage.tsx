@@ -1,6 +1,7 @@
 import { Play, Sparkles } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { EpisodeCard } from '../../components/Podcast';
-import { SectionDivider, SEO, createBreadcrumbSchema } from '../../components/common';
+import { SectionDivider, SEO, createBreadcrumbSchema, createPodcastSeriesSchema } from '../../components/common';
 import { youtubeEpisodes, getEpisodeObjects } from '../../data/types/youtubeEpisodes';
 
 const PodcastPage = () => {
@@ -12,12 +13,26 @@ const PodcastPage = () => {
     { name: 'حلقات البودكاست', url: '/podcast' }
   ]);
 
+  const podcastDescription = 'حلقات بودكاست حان الآن الكاملة مرتبة بالأحدث، مع ضيوف مميزين يناقشون قضايا المجتمع والفكر والتنمية. تابع بودكاست حان الآن وشاهد أحدث الحلقات على يوتيوب.';
+
+  const podcastSeriesSchema = createPodcastSeriesSchema({
+    name: 'بودكاست حان الآن - 7analaan',
+    description: podcastDescription,
+    url: '/podcast',
+    sameAs: [
+      'https://youtube.com/@7analaan',
+      'https://soundcloud.com/7analaan'
+    ]
+  });
+
   return (
     <>
       <SEO
-        title="حلقات بودكاست حان الآن - 7analaan | شاهد جميع الحلقات على يوتيوب"
-        description="شاهد جميع حلقات بودكاست حان الآن (7analaan) على يوتيوب. حوارات معمقة مع ضيوف متميزين حول الدين والفكر والتطوير الشخصي والقضايا الاجتماعية المعاصرة. اشترك الآن ولا تفوت أي حلقة جديدة."
+        title="حلقات بودكاست حان الآن | أحدث الحلقات الكاملة على يوتيوب"
+        description={podcastDescription}
         keywords={[
+          'حان الآن',
+          'بودكاست حان الآن',
           'حلقات بودكاست',
           'فيديوهات بودكاست',
           'يوتيوب بودكاست عربي',
@@ -30,7 +45,7 @@ const PodcastPage = () => {
         ]}
         canonicalPath="/podcast"
         pageType="website"
-        structuredData={podcastStructuredData}
+        structuredData={[podcastStructuredData, podcastSeriesSchema]}
       />
       <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
         {/* Hero Header */}
@@ -51,8 +66,17 @@ const PodcastPage = () => {
 
               {/* Subtitle */}
               <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-8 leading-relaxed">
-                استكشف مكتبتنا الكاملة من الحلقات واختر ما يناسب اهتماماتك
+                استكشف مكتبتنا الكاملة من حلقات حان الآن واختر ما يناسب اهتماماتك
               </p>
+              <div className="text-center">
+                <Link
+                  to="/guests"
+                  className="inline-flex items-center gap-2 text-orange-400 hover:text-orange-300 transition-colors"
+                >
+                  تعرف على ضيوف حان الآن
+                  <span>→</span>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

@@ -78,7 +78,7 @@ const ShortsSection = () => {
             استراحة <span className="text-orange-500">سريعة</span>
           </h2>
           <p className="text-gray-400 max-w-xl mx-auto">
-            مقاطع قصيرة ومميزة من حلقاتنا
+            مقاطع قصيرة ومميزة من حلقات بودكاست حان الآن
           </p>
         </div>
 
