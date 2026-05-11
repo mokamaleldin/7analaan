@@ -44,6 +44,22 @@ export const soundcloudTracks = [
 export const guestsInput: GuestInput[] = [
   // ✨ ضيف جديد - د. حسام الحملاوي (أضف المحتوى الجديد هنا!)
   {
+    name: 'أ. سامي حسن',
+    title: 'رائد أعمال ومستشار في إدارة الأعمال',
+    specialty: 'الاقتصاد وإدارة الأعمال والتعامل مع الأزمات',
+    imageUrl: '/guests/سامي حسن.png',
+    bio: 'رائد أعمال ومستشار في إدارة الأعمال، يناقش ما يحدث اقتصاديًا الآن، وكيف يتعامل الأفراد والشركات مع الأزمات، وأين تكمن الفرص الحقيقية وسط الغموض.',
+    socialLinks: [],
+    episodes: [
+      'https://youtu.be/YdogxDkeMYM?si=zaYqcT9ckVvMwkZJ',
+    ],
+    shorts: [
+      'https://youtube.com/shorts/OnbbybJ1uY4?si=us3YmjJjBUC-8dCl',
+      'https://youtube.com/shorts/qPIYNA4E9JA?si=ecfrCr3lX9Lvfkkt',
+      'https://youtube.com/shorts/C7sCksIw1Oc?si=wLl8VrmDY4vn3qoJ',
+    ],
+  },
+  {
     name: 'م. مؤمن أشرف',
     title: 'متخصص في سياسات وتعاقدات الدفاع',
     specialty: 'سياسات وتعاقدات الدفاع والصناعات العسكرية',
@@ -372,6 +388,7 @@ export const guestsInput: GuestInput[] = [
 // 🎬 توليد قائمة حلقات اليوتيوب تلقائياً (الأحدث أولاً)
 export const youtubeEpisodes = [
   // أحدث الحلقات في المقدمة
+  'https://youtu.be/YdogxDkeMYM?si=zaYqcT9ckVvMwkZJ',
   'https://youtu.be/Bn1nAKLuffY?si=EJSe-er84V80Xsyz',
   'https://youtu.be/SwgQlLbjz_U?si=OMRkCGAiVpsyR4fG',
   'https://youtu.be/ijujp1XQVBY?si=jmcrFNDTcgRFHTPv',
@@ -381,6 +398,7 @@ export const youtubeEpisodes = [
     .filter(Boolean)
     .filter(
       episode =>
+        episode !== 'https://youtu.be/YdogxDkeMYM?si=zaYqcT9ckVvMwkZJ' &&
         episode !== 'https://youtu.be/Bn1nAKLuffY?si=EJSe-er84V80Xsyz' &&
         episode !== 'https://youtu.be/SwgQlLbjz_U?si=OMRkCGAiVpsyR4fG' &&
         episode !== 'https://youtu.be/ijujp1XQVBY?si=jmcrFNDTcgRFHTPv'
