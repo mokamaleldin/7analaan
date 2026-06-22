@@ -17,7 +17,12 @@ import type { GuestInput, SocialLink } from './types/types';
 // ═══════════════════════════════════════════════════════════════════════════
 
 export const soundcloudTracks = [
-  'https://soundcloud.com/7analaan/1a1?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing',
+  'https://soundcloud.com/7analaan/elhamalawy?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing',
+  'https://soundcloud.com/7analaan/bassamsalah?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing',
+  'https://soundcloud.com/7analaan/khaledelhaddad3?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing',
+  'https://soundcloud.com/7analaan/hossamabdelkariem?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing',
+  'https://soundcloud.com/7analaan/saadkhalifa?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing',
+  'https://soundcloud.com/7analaan/moamenashraf?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing',
   'https://soundcloud.com/7analaan/1a1?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing',
   'https://soundcloud.com/7analaan/khaledhamdy?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing',
   'https://soundcloud.com/7analaan/b4e0c51e-5f89-475e-8470-b1b1ec440be4',
