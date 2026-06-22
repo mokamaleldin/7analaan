@@ -42,7 +42,50 @@ export const soundcloudTracks = [
 // ═══════════════════════════════════════════════════════════════════════════
 
 export const guestsInput: GuestInput[] = [
-  // ✨ ضيف جديد - د. حسام الحملاوي (أضف المحتوى الجديد هنا!)
+  {
+    name: 'د. حسام الحملاوي',
+    title: 'صحفي وباحث أكاديمي وناشط اشتراكي',
+    specialty: 'الصحافة والبحث الأكاديمي والنضال الاجتماعي',
+    imageUrl: '/guests/حسام الحملاوي.jpg',
+    bio: 'صحفي مصري، ومدون، ومصور، وناشط اشتراكي، وباحث أكاديمي. تخرج من الجامعة الأمريكية بالقاهرة وحصل على دكتوراه في العلوم السياسية من جامعة برلين بألمانيا عن دور الأجهزة الأمنية في الثورة المضادة المصرية. يتميز بمسيرة مهنية ونضالية تركز على قضايا العدالة الاجتماعية، وحقوق العمال، وتحليل دور المؤسسات الأمنية والعسكرية في مصر والمنطقة. عمل كصحفي ومصور، واشتهر بتوثيقه للإضرابات العمالية والاحتجاجات في مصر منذ عام 2006. عضو في تنظيم الاشتراكيون الثوريون ومركز الدراسات الاشتراكية، وكان له دور بارز في الحراك السياسي المصري، بما في ذلك كونه من منظمي ثورة 25 يناير 2011. (مقيم في ألمانيا)',
+    socialLinks: [
+      { platform: 'facebook', url: 'https://www.facebook.com/share/1Mwh2tS44p/' },
+    ],
+    episodes: [
+      'https://youtu.be/kPAOS-er2nI?si=rQsbsz_n4nLkK7OR',
+      'https://youtu.be/XKR4eMzp0B4',
+    ],
+    shorts: [
+      'https://youtube.com/shorts/49CyXMKMJKo?si=HYDbnCMgybNryVQt',
+      'https://youtube.com/shorts/ZSK-AA06Pwo?si=CKQ4sF3frE7QFodN',
+      'https://youtube.com/shorts/Dxxw9rWLF5M?si=GPPqnGW86MQO6e75',
+      'https://youtube.com/shorts/TtFZCUqAaCc?si=O92LQvR2QJIqZY6q',
+      'https://youtube.com/shorts/QiJ8-CPTYlM?si=6YVa_pSrrts5mncd',
+      'https://youtube.com/shorts/1WMGeaneluY',
+      'https://youtube.com/shorts/fKwJ-u63QG8',
+    ],
+  },
+  // بعد إضافة حسام أولاً (الأحدث)، نُدرج بقية الضيوف كما كانوا
+  {
+    name: 'د. احمد محمود',
+    title: 'باحث ومحلل',
+    specialty: 'تحليل السياسات والقضايا الاجتماعية',
+    imageUrl: '/guests/احمد محمود.png',
+    bio: 'د. أحمد محمود باحث ومحلل متخصص في القضايا الاجتماعية والسياسات العامة. يناقش في هذه الحلقة التطورات الحديثة وتأثيرها على المجتمع والاقتصاد.',
+    socialLinks: [],
+    episodes: [
+      'https://youtu.be/nhmLDq-xTyM?si=gVlA3vxrscUJ7z-Z',
+    ],
+    shorts: [
+      'https://youtube.com/shorts/nV-cfoeDR2g?si=XfRHPxQbcOuj74ec',
+      'https://youtube.com/shorts/elgTgo-MNvE?si=p7dRaVIxKO8k-d74',
+      'https://youtube.com/shorts/p8LYlRz_HLI?si=3E0tWiD8FD5DkBHM',
+      'https://youtube.com/shorts/cQ1SiPja0kw?si=KHTTKVeRF2RLBp9W',
+      'https://youtube.com/shorts/PGCgqNHWx1I?si=mRVZjIWG-x0twCuy',
+      'https://youtube.com/shorts/d7HaUhzZhOw?si=DfxJWGPn1kmGwQ98',
+      'https://youtube.com/shorts/mvX1j4tYWNU?si=ocWP9riP1XYUzZTn',
+    ],
+  },
   {
     name: 'أ. سامي حسن',
     title: 'رائد أعمال ومستشار في إدارة الأعمال',
@@ -108,24 +151,6 @@ export const guestsInput: GuestInput[] = [
     ],
     shorts: [
       'https://youtube.com/shorts/P_hgaoPoLQ4?si=6K8ol4eT-IE79DLp', // 📱 أضف شورتس جديدة هنا
- 
-    ],
-  },
-  {
-    name: 'د. حسام الحملاوي',
-    title: 'صحفي وباحث أكاديمي وناشط اشتراكي',
-    specialty: 'الصحافة والبحث الأكاديمي والنضال الاجتماعي',
-    imageUrl: '/guests/حسام الحملاوي.jpg',
-    bio: 'صحفي مصري، ومدون، ومصور، وناشط اشتراكي، وباحث أكاديمي. تخرج من الجامعة الأمريكية بالقاهرة وحصل على دكتوراه في العلوم السياسية من جامعة برلين بألمانيا عن دور الأجهزة الأمنية في الثورة المضادة المصرية. يتميز بمسيرة مهنية ونضالية تركز على قضايا العدالة الاجتماعية، وحقوق العمال، وتحليل دور المؤسسات الأمنية والعسكرية في مصر والمنطقة. عمل كصحفي ومصور، واشتهر بتوثيقه للإضرابات العمالية والاحتجاجات في مصر منذ عام 2006. عضو في تنظيم الاشتراكيون الثوريون ومركز الدراسات الاشتراكية، وكان له دور بارز في الحراك السياسي المصري، بما في ذلك كونه من منظمي ثورة 25 يناير 2011. (مقيم في ألمانيا)',
-    socialLinks: [
-      { platform: 'facebook', url: 'https://www.facebook.com/share/1Mwh2tS44p/' },
-    ],
-    episodes: [
-      'https://youtu.be/XKR4eMzp0B4', // 🎬 أضف حلقات جديدة هنا
-    ],
-    shorts: [
-      'https://youtube.com/shorts/1WMGeaneluY', // 📱 أضف شورتس جديدة هنا
-      'https://youtube.com/shorts/fKwJ-u63QG8',
     ],
   },
 
@@ -386,24 +411,9 @@ export const guestsInput: GuestInput[] = [
 // ═══════════════════════════════════════════════════════════════════════════
 
 // 🎬 توليد قائمة حلقات اليوتيوب تلقائياً (الأحدث أولاً)
-export const youtubeEpisodes = [
-  // أحدث الحلقات في المقدمة
-  'https://youtu.be/YdogxDkeMYM?si=zaYqcT9ckVvMwkZJ',
-  'https://youtu.be/Bn1nAKLuffY?si=EJSe-er84V80Xsyz',
-  'https://youtu.be/SwgQlLbjz_U?si=OMRkCGAiVpsyR4fG',
-  'https://youtu.be/ijujp1XQVBY?si=jmcrFNDTcgRFHTPv',
-  // باقي الحلقات
-  ...guestsInput
-    .flatMap(guest => guest.episodes || [])
-    .filter(Boolean)
-    .filter(
-      episode =>
-        episode !== 'https://youtu.be/YdogxDkeMYM?si=zaYqcT9ckVvMwkZJ' &&
-        episode !== 'https://youtu.be/Bn1nAKLuffY?si=EJSe-er84V80Xsyz' &&
-        episode !== 'https://youtu.be/SwgQlLbjz_U?si=OMRkCGAiVpsyR4fG' &&
-        episode !== 'https://youtu.be/ijujp1XQVBY?si=jmcrFNDTcgRFHTPv'
-    ) // تجنب التكرار
-];
+export const youtubeEpisodes = guestsInput
+  .flatMap(guest => guest.episodes || [])
+  .filter(Boolean); // يعتمد الترتيب على ترتيب `guestsInput` (الضيف الأول = الأحدث)
 
 // 📱 توليد قائمة الشورتس تلقائياً (الأحدث أولاً)  
 export const shortsUrls = guestsInput
