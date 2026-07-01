@@ -48,6 +48,20 @@ export const soundcloudTracks = [
 
 export const guestsInput: GuestInput[] = [
   {
+    name: 'أ. حذيفة حمزة',
+    title: 'صحفي رياضي',
+    specialty: 'الصحافة الرياضية',
+    imageUrl: '/guests/حذيفة حمزة.png',
+    bio: 'صحفي رياضي يتحدث في هذه الحلقة عن تجاربه وتحليلاته في الرياضة ووسائل الإعلام الرياضية.',
+    socialLinks: [],
+    episodes: [
+      'https://youtu.be/tkrxLBnD2NU?si=rXM9mxsBRuS8HasG',
+    ],
+    shorts: [
+      'https://youtube.com/shorts/1wW07qxWg7E?si=d78Dg5Nfokc2YuEL',
+    ],
+  },
+  {
     name: 'د. حسام الحملاوي',
     title: 'صحفي وباحث أكاديمي وناشط اشتراكي',
     specialty: 'الصحافة والبحث الأكاديمي والنضال الاجتماعي',
