@@ -48,6 +48,37 @@ export const soundcloudTracks = [
 
 export const guestsInput: GuestInput[] = [
   {
+    name: '  د. أحمد زيادة',
+    title: " طبيب مختصص في الغذية و الصحة العامة",
+    specialty: 'التغذية و الصحة العامة',
+    imageUrl: '/guests/احمد زيادة.png',
+    bio: '',
+    socialLinks: [],
+    episodes: [
+      ' https://youtu.be/9kFBQXtG07A?si=tJIRKLuxBrY9jLS0'
+    ],
+    shorts: [
+      ' https://youtube.com/shorts/J_6mIE4_QBk?si=gnj_SjymCZGACLQs'
+    ],
+  },
+  {
+    name: ' البروفيسور سليمان صالح',
+    title: "بروفيسور و استاذ جامي",
+    specialty: 'التعليم و البحث العلمي',
+    imageUrl: '/guests/ البروفيسور سليمان صالح.png',
+    bio: '',
+    socialLinks: [],
+    episodes: [
+      ' https://youtu.be/CYSwQCwGez4?si=PMlxNBO4LexTtRId'
+    ],
+    shorts: [
+      'https://youtube.com/shorts/hoWEZYIr_gA?si=uNmEGrXiv_Qjd3gO',
+ 'https://youtube.com/shorts/xK9M-_R8ND4?si=GBuXM8xEaU1a3rTY',
+'https://youtube.com/shorts/GNStyEnntWE?si=BqchrAaW-QvgrB0L',
+'https://youtube.com/shorts/XWxTAg5u7JM?si=qp3kJWcR3sucXXUW',
+    ],
+  },
+  {
     name: 'د. خالد حمدي',
     title: 'داعية وخبير تربوي ومستشار أسري',
     specialty: 'الشؤون الأسرية والتربية',
