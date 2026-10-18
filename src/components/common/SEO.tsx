@@ -13,6 +13,7 @@ interface SEOProps {
 
 const DEFAULT_OG_IMAGE = '/og-image.jpg';
 const BRAND_NAME = 'حان الآن - 7analaan';
+const absoluteUrl = (path: string) => new URL(path, 'https://7analaan.com').href;
 
 // Core brand keywords that should appear on every page
 const BRAND_KEYWORDS = [
@@ -37,8 +38,8 @@ const SEO: React.FC<SEOProps> = ({
   noIndex = false,
   structuredData
 }) => {
-  const canonicalUrl = canonicalPath;
-  const fullOgImage = ogImage;
+  const canonicalUrl = absoluteUrl(canonicalPath);
+  const fullOgImage = absoluteUrl(ogImage);
   const allKeywords = [...BRAND_KEYWORDS, ...keywords].join(', ');
 
   return (
@@ -102,7 +103,7 @@ export const createBreadcrumbSchema = (items: { name: string; url: string }[]) =
     '@type': 'ListItem',
     position: index + 1,
     name: item.name,
-    item: item.url
+    item: absoluteUrl(item.url)
   }))
 });
 
@@ -118,9 +119,9 @@ export const createPersonSchema = (person: {
   '@type': 'Person',
   name: person.name,
   description: person.description,
-  image: person.image,
+  image: person.image ? absoluteUrl(person.image) : undefined,
   jobTitle: person.jobTitle,
-  url: person.url,
+  url: absoluteUrl(person.url),
   memberOf: {
     '@type': 'Organization',
     name: 'حان الآن - 7analaan'
@@ -139,8 +140,8 @@ export const createPodcastSeriesSchema = (podcast: {
   '@type': 'PodcastSeries',
   name: podcast.name,
   description: podcast.description,
-  url: podcast.url,
-  image: podcast.image || DEFAULT_OG_IMAGE,
+  url: absoluteUrl(podcast.url),
+  image: absoluteUrl(podcast.image || DEFAULT_OG_IMAGE),
   sameAs: podcast.sameAs,
   publisher: {
     '@type': 'Organization',
@@ -158,7 +159,7 @@ export const createWebsiteSchema = (site: {
   '@type': 'WebSite',
   name: site.name,
   description: site.description,
-  url: site.url,
+  url: absoluteUrl(site.url),
   publisher: {
     '@type': 'Organization',
     name: BRAND_NAME
