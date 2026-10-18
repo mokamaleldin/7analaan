@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Play, ArrowLeft, Youtube, Headphones } from 'lucide-react';
+import { Play, Youtube, Headphones } from 'lucide-react';
 import { youtubeEpisodes } from '../../data/content';
 
 // Helper: Extract video ID from YouTube URL

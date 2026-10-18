@@ -79,6 +79,7 @@ export const guestsInput: GuestInput[] = [
 
 ```typescript
 {
+  id: 23, // اختر رقماً غير مستخدم
   name: 'اسم الضيف',
   title: 'الوظيفة',
   specialty: 'التخصص',
@@ -90,11 +91,7 @@ export const guestsInput: GuestInput[] = [
     { platform: 'twitter', url: 'https://twitter.com/username' },
   ],
   episodes: [
-    {
-      title: 'عنوان الحلقة',
-      thumbnail: 'https://img.youtube.com/vi/VIDEO_ID/maxresdefault.jpg',
-      youtubeUrl: 'https://www.youtube.com/watch?v=VIDEO_ID',
-    },
+    'https://www.youtube.com/watch?v=VIDEO_ID',
   ],
 },
 ```
@@ -177,7 +174,7 @@ npm run build
 1. **لا تمسح الفاصلة** `,` بعد كل عنصر
 2. **لا تمسح الأقواس** `[]` أو `{}`
 3. **استخدم علامات التنصيص** `'` أو `"` حول الروابط والنصوص
-4. **الـ id يتم إنشاؤه تلقائياً** - لا تحتاج كتابته!
+4. **لكل ضيف `id` ثابت وفريد** - اختر رقماً جديداً للضيف الجديد، ولا تغيّر معرّفات الضيوف الموجودين عند إعادة ترتيبهم؛ لأنها جزء من روابط صفحاتهم.
 
 ---
 
@@ -185,6 +182,7 @@ npm run build
 
 ```typescript
 {
+  id: 23, // اختر رقماً غير مستخدم
   name: 'أحمد محمد',
   title: 'كاتب ومؤلف',
   specialty: 'الأدب العربي',
@@ -195,11 +193,7 @@ npm run build
     { platform: 'instagram', url: 'https://instagram.com/ahmed' },
   ],
   episodes: [
-    {
-      title: 'حوار مع الكاتب أحمد محمد',
-      thumbnail: 'https://img.youtube.com/vi/abc123xyz/maxresdefault.jpg',
-      youtubeUrl: 'https://www.youtube.com/watch?v=abc123xyz',
-    },
+    'https://www.youtube.com/watch?v=abc123xyz',
   ],
 },
 ```

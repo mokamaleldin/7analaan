@@ -1,9 +1,12 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Play, ExternalLink } from 'lucide-react';
+import { useEpisodeTitle } from '../../hooks/useEpisodeTitle';
 
 interface Episode {
   id: number;
   youtubeUrl: string;
+  title?: string;
+  description?: string;
 }
 
 interface EpisodeCardProps {
@@ -16,34 +19,14 @@ const getVideoId = (url: string): string => {
 };
 
 const EpisodeCard: React.FC<EpisodeCardProps> = ({ episode }) => {
-  const [title, setTitle] = useState<string>('');
-  const [loading, setLoading] = useState(true);
+  const { title, loading } = useEpisodeTitle(episode.youtubeUrl, episode.title);
   const [isPlaying, setIsPlaying] = useState(false);
 
   const videoId = getVideoId(episode.youtubeUrl);
   const thumbnail = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
 
-  // Fetch video title from noembed (works 100%)
-  useEffect(() => {
-    const fetchTitle = async () => {
-      try {
-        const response = await fetch(`https://noembed.com/embed?url=${episode.youtubeUrl}`);
-        const data = await response.json();
-        setTitle(data.title || 'حلقة من بودكاست حان الآن');
-      } catch {
-        setTitle('حلقة من بودكاست حان الآن');
-      }
-      setLoading(false);
-    };
-    fetchTitle();
-  }, [episode.youtubeUrl]);
-
   const handlePlayClick = () => {
     setIsPlaying(true);
-  };
-
-  const handleWatchOnYoutube = () => {
-    window.open(episode.youtubeUrl, '_blank');
   };
 
   return (
@@ -54,17 +37,23 @@ const EpisodeCard: React.FC<EpisodeCardProps> = ({ episode }) => {
           <div className="aspect-video">
             <iframe
               src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
+              title={title || 'مشاهدة حلقة بودكاست حان الآن'}
               className="w-full h-full"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             />
           </div>
         ) : (
-          <div className="cursor-pointer" onClick={handlePlayClick}>
+          <button
+            type="button"
+            className="block w-full aspect-video cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-orange-400 focus-visible:-outline-offset-2"
+            onClick={handlePlayClick}
+            aria-label={`تشغيل ${title || 'الحلقة'}`}
+          >
             <img
               src={thumbnail}
               alt={title || "Episode thumbnail"}
-              className="w-full h-52 object-cover transition-transform duration-700 group-hover:scale-110"
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
             />
             {/* Gradient Overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-60 pointer-events-none" />
@@ -75,7 +64,7 @@ const EpisodeCard: React.FC<EpisodeCardProps> = ({ episode }) => {
                 <Play className="text-white" size={32} fill="currentColor" />
               </div>
             </div>
-          </div>
+          </button>
         )}
       </div>
 
@@ -93,15 +82,21 @@ const EpisodeCard: React.FC<EpisodeCardProps> = ({ episode }) => {
           )}
         </h3>
 
+        {episode.description && (
+          <p className="text-sm text-gray-400 leading-relaxed mb-4">{episode.description}</p>
+        )}
+
         {/* Action Button - Opens YouTube */}
-        <button
-          onClick={handleWatchOnYoutube}
+        <a
+          href={episode.youtubeUrl}
+          target="_blank"
+          rel="noopener noreferrer"
           className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white py-3 px-4 rounded-xl font-medium transition-all duration-300 flex items-center justify-center gap-2 shadow-lg shadow-orange-500/20 hover:shadow-orange-500/40 hover:scale-[1.02]"
         >
           <Play size={18} fill="currentColor" />
           <span>مشاهدة الحلقة</span>
           <ExternalLink size={14} />
-        </button>
+        </a>
       </div>
     </div>
   );

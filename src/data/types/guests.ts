@@ -3,7 +3,8 @@
 // ═══════════════════════════════════════════════════════════════
 
 import { guestsInput } from '../content';
-import type { GuestEpisode, GuestShort } from './types';
+import type { GuestEpisode, GuestShort, GuestSocialLink } from './types';
+import { getEpisodeDetails } from './youtubeEpisodes';
 
 export type { Guest, GuestInput, GuestSocialLink, GuestEpisode, GuestShort } from './types';
 
@@ -25,7 +26,8 @@ const processEpisodes = (urls: string[]): GuestEpisode[] => {
     const videoId = getVideoId(url);
     return {
       id: index + 1,
-      title: '', // Will be fetched dynamically
+      title: getEpisodeDetails(url)?.title || '',
+      description: getEpisodeDetails(url)?.description,
       thumbnail: `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`,
       youtubeUrl: url,
     };
@@ -49,15 +51,15 @@ export interface GuestWithEpisodes {
   specialty: string;
   imageUrl: string;
   bio: string;
-  socialLinks: { platform: string; url: string }[];
+  socialLinks: GuestSocialLink[];
   episodes: GuestEpisode[];
   shorts: GuestShort[];
 }
 
-// إنشاء الـ id تلقائياً ومعالجة الحلقات
-export const guestsData: GuestWithEpisodes[] = guestsInput.map((guest, index) => ({
+// معالجة الحلقات مع الاحتفاظ بروابط الضيوف الثابتة
+export const guestsData: GuestWithEpisodes[] = guestsInput.map(guest => ({
   ...guest,
-  id: index + 1,
+  id: guest.id,
   episodes: processEpisodes(guest.episodes),
   shorts: processShorts(guest.shorts),
 }));

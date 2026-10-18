@@ -12,6 +12,7 @@ export interface GuestSocialLink {
 }
 
 export interface GuestEpisode {
+  description?: string;
   id: number;
   title: string;
   thumbnail: string;
@@ -26,6 +27,7 @@ export interface GuestShort {
 
 // Input type - just paste YouTube URLs!
 export interface GuestInput {
+  id: number; // Stable public profile ID; keep it when reordering guests.
   name: string;
   title: string;
   specialty: string;

@@ -39,15 +39,81 @@ export const soundcloudTracks = [
 // ═══════════════════════════════════════════════════════════════════════════
 // 🎯 لإضافة محتوى جديد:
 //  أضف الحلقة أو الشورت في بيانات الضيف المناسب أدناه
-// ✨ ترتيب الضيوف هنا يحدد ترتيب ظهور المحتوى في القوائم الرئيسية
-// (الضيف الأول = أحدث المحتوى)
+// ✨ ترتيب الضيوف هنا يحدد ترتيب صفحات الضيوف والمقاطع القصيرة
+// ⭐ أحدث الحلقات تظهر أولاً حسب ترتيب latestEpisodeContent أدناه
+// 🔒 لكل ضيف id ثابت: لا تغيّره عند إعادة الترتيب، واختر رقماً جديداً للضيف الجديد.
 //
 // 📁 ضع صورة الضيف في مجلد public/guests/
 // 🔗 المنصات المتاحة: youtube, instagram, twitter, facebook, tiktok, soundcloud
 // ═══════════════════════════════════════════════════════════════════════════
 
+// بيانات أحدث الحلقات، مرتبة من الأحدث إلى الأقدم.
+// تُستخدم الروابط نفسها في ملفات الضيوف، والعناوين والأوصاف في بطاقات الحلقات.
+export const latestEpisodeContent = {
+  ahmedMahmoud: {
+    youtubeUrl: 'https://youtu.be/Wx4JM5ABMMk',
+    title: 'أسماء الله الحسنى وأثرها في تربية الأبناء | د. أحمد محمود',
+    description: 'حوار عن أسماء الله الحسنى وأثر فهم معانيها في تربية الأبناء وبناء شخصياتهم.',
+  },
+  hatemAbdelAzim: {
+    youtubeUrl: 'https://youtu.be/bzEBexA8guk',
+    title: 'القرآن بوصلة لفهم الواقع | د. حاتم عبد العظيم',
+    description: 'حوار مع أستاذ الشريعة الإسلامية عن القرآن باعتباره بوصلة لفهم الواقع وبناء الوعي.',
+  },
+  ahmedZekrAllah: {
+    youtubeUrl: 'https://youtu.be/0uHJ596VF30',
+    title: '70 مليون مصري تحت خط الفقر! | د. أحمد ذكر الله',
+    description: 'حوار مع الأكاديمي والمتخصص في السياسات الاقتصادية عن الاقتصاد المصري وأثر السياسات الاقتصادية على حياة المواطنين.',
+  },
+};
+
 export const guestsInput: GuestInput[] = [
   {
+    id: 6,
+    name: 'د. أحمد محمود',
+    title: 'ضيف بودكاست حان الآن في حوار عن التربية والإيمان',
+    specialty: 'التربية الإيمانية وبناء شخصية الأبناء',
+    imageUrl: '/guests/ahmed-mahmoud.webp',
+    bio: 'يستضيف بودكاست حان الآن الدكتور أحمد محمود في حوار عن أسماء الله الحسنى، وأثر فهم معانيها في تربية الأبناء وبناء شخصياتهم. تتناول الحلقة كيف تتحول هذه المعاني إلى ممارسة تربوية في حياة الأسرة.',
+    socialLinks: [],
+    episodes: [
+      latestEpisodeContent.ahmedMahmoud.youtubeUrl,
+      'https://youtu.be/nhmLDq-xTyM?si=gVlA3vxrscUJ7z-Z',
+    ],
+    shorts: [
+      'https://youtube.com/shorts/nV-cfoeDR2g?si=XfRHPxQbcOuj74ec',
+      'https://youtube.com/shorts/elgTgo-MNvE?si=p7dRaVIxKO8k-d74',
+      'https://youtube.com/shorts/p8LYlRz_HLI?si=3E0tWiD8FD5DkBHM',
+      'https://youtube.com/shorts/cQ1SiPja0kw?si=KHTTKVeRF2RLBp9W',
+      'https://youtube.com/shorts/PGCgqNHWx1I?si=mRVZjIWG-x0twCuy',
+      'https://youtube.com/shorts/d7HaUhzZhOw?si=DfxJWGPn1kmGwQ98',
+      'https://youtube.com/shorts/mvX1j4tYWNU?si=ocWP9riP1XYUzZTn',
+    ],
+  },
+  {
+    id: 21,
+    name: 'د. حاتم عبد العظيم',
+    title: 'أستاذ الشريعة الإسلامية',
+    specialty: 'الشريعة الإسلامية وتدبر القرآن',
+    imageUrl: '/guests/hatem-abdel-azim.webp',
+    bio: 'أستاذ الشريعة الإسلامية، وضيف بودكاست حان الآن في حوار عن القرآن باعتباره بوصلة لفهم الواقع. يناقش اللقاء صلتنا بالقرآن وكيف نستعين بمعانيه في قراءة ما نعيشه وبناء الوعي.',
+    socialLinks: [],
+    episodes: [latestEpisodeContent.hatemAbdelAzim.youtubeUrl],
+    shorts: [],
+  },
+  {
+    id: 22,
+    name: 'د. أحمد ذكر الله',
+    title: 'أكاديمي ومتخصص في السياسات الاقتصادية',
+    specialty: 'الاقتصاد والسياسات الاقتصادية',
+    imageUrl: '/guests/ahmed-zekr-allah.webp',
+    bio: 'أكاديمي ومتخصص في السياسات الاقتصادية، يستضيفه بودكاست حان الآن في حوار عن الاقتصاد المصري والسياسات الاقتصادية وأثرها على حياة المواطنين، مع مناقشة الفقر وتحديات الأزمات الاقتصادية.',
+    socialLinks: [],
+    episodes: [latestEpisodeContent.ahmedZekrAllah.youtubeUrl],
+    shorts: [],
+  },
+  {
+    id: 1,
     name: '  د. أحمد زيادة',
     title: " طبيب مختصص في الغذية و الصحة العامة",
     specialty: 'التغذية و الصحة العامة',
@@ -62,6 +128,7 @@ export const guestsInput: GuestInput[] = [
     ],
   },
   {
+    id: 2,
     name: ' البروفيسور سليمان صالح',
     title: "بروفيسور و استاذ جامي",
     specialty: 'التعليم و البحث العلمي',
@@ -79,6 +146,7 @@ export const guestsInput: GuestInput[] = [
     ],
   },
   {
+    id: 3,
     name: 'د. خالد حمدي',
     title: 'داعية وخبير تربوي ومستشار أسري',
     specialty: 'الشؤون الأسرية والتربية',
@@ -96,6 +164,7 @@ export const guestsInput: GuestInput[] = [
     ],
   },
   {
+    id: 4,
     name: 'أ. حذيفة حمزة',
     title: 'صحفي رياضي',
     specialty: 'الصحافة الرياضية',
@@ -110,6 +179,7 @@ export const guestsInput: GuestInput[] = [
     ],
   },
   {
+    id: 5,
     name: 'د. حسام الحملاوي',
     title: 'صحفي وباحث أكاديمي وناشط اشتراكي',
     specialty: 'الصحافة والبحث الأكاديمي والنضال الاجتماعي',
@@ -132,28 +202,8 @@ export const guestsInput: GuestInput[] = [
       'https://youtube.com/shorts/fKwJ-u63QG8',
     ],
   },
-  // بعد إضافة حسام أولاً (الأحدث)، نُدرج بقية الضيوف كما كانوا
   {
-    name: 'د. احمد محمود',
-    title: 'باحث ومحلل',
-    specialty: 'تحليل السياسات والقضايا الاجتماعية',
-    imageUrl: '/guests/احمد محمود.png',
-    bio: 'د. أحمد محمود باحث ومحلل متخصص في القضايا الاجتماعية والسياسات العامة. يناقش في هذه الحلقة التطورات الحديثة وتأثيرها على المجتمع والاقتصاد.',
-    socialLinks: [],
-    episodes: [
-      'https://youtu.be/nhmLDq-xTyM?si=gVlA3vxrscUJ7z-Z',
-    ],
-    shorts: [
-      'https://youtube.com/shorts/nV-cfoeDR2g?si=XfRHPxQbcOuj74ec',
-      'https://youtube.com/shorts/elgTgo-MNvE?si=p7dRaVIxKO8k-d74',
-      'https://youtube.com/shorts/p8LYlRz_HLI?si=3E0tWiD8FD5DkBHM',
-      'https://youtube.com/shorts/cQ1SiPja0kw?si=KHTTKVeRF2RLBp9W',
-      'https://youtube.com/shorts/PGCgqNHWx1I?si=mRVZjIWG-x0twCuy',
-      'https://youtube.com/shorts/d7HaUhzZhOw?si=DfxJWGPn1kmGwQ98',
-      'https://youtube.com/shorts/mvX1j4tYWNU?si=ocWP9riP1XYUzZTn',
-    ],
-  },
-  {
+    id: 7,
     name: 'أ. سامي حسن',
     title: 'رائد أعمال ومستشار في إدارة الأعمال',
     specialty: 'الاقتصاد وإدارة الأعمال والتعامل مع الأزمات',
@@ -170,6 +220,7 @@ export const guestsInput: GuestInput[] = [
     ],
   },
   {
+    id: 8,
     name: 'م. مؤمن أشرف',
     title: 'متخصص في سياسات وتعاقدات الدفاع',
     specialty: 'سياسات وتعاقدات الدفاع والصناعات العسكرية',
@@ -186,6 +237,7 @@ export const guestsInput: GuestInput[] = [
     ],
   },
   {
+    id: 9,
     name: 'د. سعد خليفة',
     title: 'ضيف بودكاست حان الآن',
     specialty: 'الحوار والتجارب الإنسانية',
@@ -205,6 +257,7 @@ export const guestsInput: GuestInput[] = [
     ],
   },
   {
+    id: 10,
     name: 'أ. بسام صلاح ',
     title: 'خبير في التربية',
     specialty: 'تربية الأطفال والتطوير التربوي',
@@ -220,8 +273,8 @@ export const guestsInput: GuestInput[] = [
       'https://youtube.com/shorts/P_hgaoPoLQ4?si=6K8ol4eT-IE79DLp', // 📱 أضف شورتس جديدة هنا
     ],
   },
-
   {
+    id: 11,
     name: 'أيمن نور',
     title: 'سياسي وإعلامي',
     specialty: 'السياسة والشؤون العامة',
@@ -239,6 +292,7 @@ export const guestsInput: GuestInput[] = [
     ],
   },
     {
+    id: 12,
     name: 'م. حسام عبد الكريم',
     title: 'باحث ومحلل سياسي واستراتيجي',
     specialty: 'تحليل البيانات والتحليل السياسي',
@@ -262,8 +316,8 @@ export const guestsInput: GuestInput[] = [
       'https://youtube.com/shorts/jlavR7u4P5U',
     ],
   },
-
   {
+    id: 13,
     name: 'أ. محمد الغباشي',
     title: 'خبير علم النفس الإرشادي ومدير تنفيذي',
     specialty: 'علم النفس والعلاقات الأسرية',
@@ -283,6 +337,7 @@ export const guestsInput: GuestInput[] = [
     ],
   },
    {
+    id: 14,
     name: 'د. أحمد الجندي',
     title: 'أستاذ الدراسات اليهودية وباحث',
     specialty: 'الدراسات الإسرائيلية والشأن اليهودي',
@@ -302,6 +357,7 @@ export const guestsInput: GuestInput[] = [
     ],
   },
     {
+    id: 15,
     name: 'د. محمد عفان',
     title: 'دكتور وباحث وأكاديمي',
     specialty: 'العلوم السياسية والعلاقات الدولية',
@@ -322,6 +378,7 @@ export const guestsInput: GuestInput[] = [
     ],
   },
       {
+    id: 16,
     name: 'د. أحمد إبراهيم',
     title: 'طبيب وخبير إدارة أعمال',
     specialty: 'الطب والإدارة والاستشارات',
@@ -343,6 +400,7 @@ export const guestsInput: GuestInput[] = [
     ],
   },
   {
+    id: 17,
     name: 'د. مصطفى شاهين',
     title: 'خبير اقتصادي ومحاضر أكاديمي',
     specialty: 'الاقتصاد والتحليل المالي',
@@ -362,6 +420,7 @@ export const guestsInput: GuestInput[] = [
     ],
   },
   {
+    id: 18,
     name: 'الشيخ طه عامر',
     title: 'داعية ومفكر إسلامي',
     specialty: 'الدعوة والفكر الإسلامي',
@@ -382,6 +441,7 @@ export const guestsInput: GuestInput[] = [
     ],
   },
     {
+    id: 19,
     name: 'د. عمار فايد',
     title: 'باحث في العلوم السياسية والعلاقات الدولية',
     specialty: 'الشؤون الاستراتيجية وتحليل الشرق الأوسط',
@@ -404,6 +464,7 @@ export const guestsInput: GuestInput[] = [
     ],
   },
     {
+    id: 20,
     name: 'د. خالد الحداد',
     title: 'طبيب نفسي ومدرب ومستشار تطوير مؤسسي ',
     specialty: 'الطب النفسي والتدريب والاستشارات',
@@ -439,16 +500,6 @@ export const guestsInput: GuestInput[] = [
       'https://youtube.com/shorts/zJbPNM1u9R4',
     ],
   },
-  // {
-  //   name: 'د. حاتم عبد العظيم',
-  //   title: 'أستاذ الفقه الإسلامي وأصوله',
-  //   specialty: 'الشريعة الإسلامية والعمل البرلماني',
-  //   imageUrl: '/guests/حاتم عبد العظيم.jpg',
-  //   bio: 'أستاذ الفقه الإسلامي وأصوله، حصل على دكتوراه في الشريعة الإسلامية (2008) من دار العلوم، جامعة الفيوم. كان عضواً في مجلس الشعب المصري عام 2012 وعضواً في اللجنة التشريعية بمجلس الشعب 2012، كما شارك في الجمعية التأسيسية التي قامت بصياغة دستور 2012. يُعتبر فاعلاً بارزاً في الإعلام والدعوة، ويقدم محاضرات ودروس دينية بانتظام. له مساهمات مهمة في الربط بين الفقه الإسلامي والواقع المعاصر.',
-  //   socialLinks: [],
-  //   episodes: [],
-  //   shorts: [],
-  // },
 ];
 
 
@@ -462,9 +513,10 @@ export const guestsInput: GuestInput[] = [
 // ═══════════════════════════════════════════════════════════════════════════
 
 // 🎬 توليد قائمة حلقات اليوتيوب تلقائياً (الأحدث أولاً)
-export const youtubeEpisodes = guestsInput
-  .flatMap(guest => guest.episodes || [])
-  .filter(Boolean); // يعتمد الترتيب على ترتيب `guestsInput` (الضيف الأول = الأحدث)
+export const youtubeEpisodes = [...new Set([
+  ...Object.values(latestEpisodeContent).map(episode => episode.youtubeUrl),
+  ...guestsInput.flatMap(guest => guest.episodes || []),
+].map(url => url.trim()).filter(Boolean))];
 
 // 📱 توليد قائمة الشورتس تلقائياً (الأحدث أولاً)  
 export const shortsUrls = guestsInput

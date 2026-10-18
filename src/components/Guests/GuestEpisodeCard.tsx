@@ -1,32 +1,13 @@
-import { useState, useEffect } from 'react';
 import { Play } from 'lucide-react';
+import type { GuestEpisode } from '../../data/types/types';
+import { useEpisodeTitle } from '../../hooks/useEpisodeTitle';
 
 interface GuestEpisodeCardProps {
-  episode: {
-    id: number;
-    thumbnail: string;
-    youtubeUrl: string;
-  };
+  episode: GuestEpisode;
 }
 
 const GuestEpisodeCard: React.FC<GuestEpisodeCardProps> = ({ episode }) => {
-  const [title, setTitle] = useState<string>('');
-  const [loading, setLoading] = useState(true);
-
-  // Fetch video title from noembed API
-  useEffect(() => {
-    const fetchTitle = async () => {
-      try {
-        const response = await fetch(`https://noembed.com/embed?url=${episode.youtubeUrl}`);
-        const data = await response.json();
-        setTitle(data.title || 'حلقة من بودكاست حان الآن');
-      } catch {
-        setTitle('حلقة من بودكاست حان الآن');
-      }
-      setLoading(false);
-    };
-    fetchTitle();
-  }, [episode.youtubeUrl]);
+  const { title, loading } = useEpisodeTitle(episode.youtubeUrl, episode.title);
 
   return (
     <a
@@ -64,6 +45,9 @@ const GuestEpisodeCard: React.FC<GuestEpisodeCardProps> = ({ episode }) => {
             title
           )}
         </h3>
+        {episode.description && (
+          <p className="text-sm text-gray-400 leading-relaxed mt-3">{episode.description}</p>
+        )}
       </div>
     </a>
   );

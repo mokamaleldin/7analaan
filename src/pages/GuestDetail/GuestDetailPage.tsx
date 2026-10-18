@@ -113,10 +113,10 @@ const GuestDetailPage = () => {
                         href={link.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-3 rounded-xl text-gray-300 transition-all duration-300 border border-white/10 ${getSocialColor(link.platform as any)}`}
+                        className={`flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-3 rounded-xl text-gray-300 transition-all duration-300 border border-white/10 ${getSocialColor(link.platform)}`}
                       >
-                        {getSocialIcon(link.platform as any)}
-                        <span className="text-sm font-medium font-arabic">{getSocialLabel(link.platform as any)}</span>
+                        {getSocialIcon(link.platform)}
+                        <span className="text-sm font-medium font-arabic">{getSocialLabel(link.platform)}</span>
                       </a>
                     ))}
                   </div>
