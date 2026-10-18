@@ -32,19 +32,13 @@ export const youtubeEpisodes = [
 
 ## 📱 2. إضافة شورت جديد
 
-ابحث عن هذا القسم:
+أضف المقطع في أول `youtubeShortsInput` داخل `src/data/content.ts`:
+
 ```typescript
-export const shortsUrls = [
+{ videoId: 'VIDEO_ID_11', guestIds: [5] },
 ```
 
-أضف رابط الشورت في **أول** القائمة:
-```typescript
-export const shortsUrls = [
-  'https://youtube.com/shorts/الشورت_الجديد',    // ← أضف هنا
-  'https://youtube.com/shorts/kO0rxiKzYWw',
-  // ... باقي الشورتس
-];
-```
+`videoId` هو الجزء بعد `/shorts/` في رابط يوتيوب، و`guestIds` هي معرّفات الضيوف الثابتة. استخدم أكثر من معرّف للمقطع المشترك، أو قائمة فارغة `[]` للإعلان العام للقناة. أبقِ `shorts: getGuestShorts(id)` في بيانات الضيف؛ ستظهر مقاطعه تلقائياً في صفحته دون تكرار المقطع المشترك في الرئيسية. راجع [دليل إضافة المحتوى](ADD_CONTENT_GUIDE.md) للأمثلة الكاملة.
 
 ---
 

@@ -38,8 +38,8 @@ export const soundcloudTracks = [
 // 👤 بيانات الضيوف - المصدر الوحيد للمحتوى!
 // ═══════════════════════════════════════════════════════════════════════════
 // 🎯 لإضافة محتوى جديد:
-//  أضف الحلقة أو الشورت في بيانات الضيف المناسب أدناه
-// ✨ ترتيب الضيوف هنا يحدد ترتيب صفحات الضيوف والمقاطع القصيرة
+//  أضف الحلقة في بيانات الضيف، والشورت في youtubeShortsInput مع معرّف الضيف
+// ✨ ترتيب الضيوف هنا يحدد ترتيب صفحات الضيوف؛ ترتيب الشورتس تحدده youtubeShortsInput
 // ⭐ أحدث الحلقات تظهر أولاً حسب ترتيب latestEpisodeContent أدناه
 // 🔒 لكل ضيف id ثابت: لا تغيّره عند إعادة الترتيب، واختر رقماً جديداً للضيف الجديد.
 //
@@ -67,6 +67,208 @@ export const latestEpisodeContent = {
   },
 };
 
+// 📱 شورتس القناة مرتبة من الأحدث إلى الأقدم (تمت المراجعة في 2026-10-18).
+// guestIds تستخدم معرّفات الضيوف الثابتة أدناه. يمكن للمقطع المشترك أن يرتبط بأكثر من ضيف.
+// القائمة الفارغة تعني إعلاناً عاماً للقناة يظهر في الرئيسية فقط.
+export const youtubeShortsInput: { videoId: string; guestIds: number[] }[] = [
+  { videoId: '2tpAMdkyVic', guestIds: [6] }, // انتظرونا مع د. أحمد محمود في بودكاست #حان_الآن
+  { videoId: '7q1IlYKsNSA', guestIds: [21] }, // أعظم متع الدنيا!
+  { videoId: '57J8lkfvwls', guestIds: [21] }, // لماذا لم تتغير حروف هذا الكتاب رغم مرور تلك القرون؟
+  { videoId: '7cjf6nvUlJc', guestIds: [21] }, // قصة الصحابي الذي أبكى سيدنا عمر بن الخطاب كلما رأى ظهره
+  { videoId: 'n5QK-s7pDwk', guestIds: [21] }, // لماذا لا نمل من قراءة سورة الفاتحة يوميا؟
+  { videoId: 'RuvYj4t0RKM', guestIds: [21] }, // لماذا لا يحسم الله الصراع مع الظالمين في لحظة؟
+  { videoId: 'X1tCiFrJ1jo', guestIds: [22] }, // لماذا نجحت المغرب في صناعة السيارات وفشلت مصر؟
+  { videoId: 'lRaaKi1RUOQ', guestIds: [22] }, // فضيحة الـ 100 مليار جنيه.. مين نهب مبادرة دعم الشباب؟
+  { videoId: 'DIGCoBDm92E', guestIds: [22] }, // حوالي 12 ألف مصنع مغلق من عهد مبارك.. إيه اللي حصل لهم؟!
+  { videoId: 'jUUCRpzllvc', guestIds: [22] }, // لماذا تتأثر مصر بالأزمات أكثر من أصحاب الأزمة أنفسهم؟
+  { videoId: 'aVK6jqblf5Q', guestIds: [22] }, // لماذا لا تحل القروض مشاكل مصر الاقتصادية؟
+  { videoId: 'yIS6T3oNrNw', guestIds: [5] }, // كواليس دورات الأمن القومي للموظفين والأئمة في الكليات العسكرية
+  { videoId: '_3Xa91Qbf6k', guestIds: [22] }, // انتظرونا مع د. أحمد ذكر الله الأكاديمي المتخصص في السياسات الإقتصادية في بودكاست #حان_الآن
+  { videoId: 'hir-9zKdPcU', guestIds: [1] }, // الخدعة التسويقية خلف اسم نظام الطيبات!
+  { videoId: '279zXTwaqcg', guestIds: [1] }, // ليه الصيام المتقطع بينجح؟
+  { videoId: 'fS0fvfQj0wM', guestIds: [1] }, // هل الرجيم ممكن يسبب اكتئاب؟
+  { videoId: '4DxvtAXPQMo', guestIds: [1] }, // كتاب من عام 1986 تنبأ بفيروس كورونا!
+  { videoId: '9SsBYW3iK88', guestIds: [1] }, // هل قص المعدة يعالج السكري فوراً؟!
+  { videoId: 'frwzLipVxBI', guestIds: [1] }, // هل العالم يواجه مؤامرة حقيقية الآن؟
+  { videoId: 'yO9Wxqxy8yg', guestIds: [1] }, // هل البيض هو أنقى أنواع البروتين؟
+  { videoId: 'J_6mIE4_QBk', guestIds: [1] }, // Why does the Tayyibat diet forbid white chicken?
+  { videoId: 'hoWEZYIr_gA', guestIds: [2] }, // Souleymane Saleh: Security Agencies Are the Ones Ruling Universities
+  { videoId: 'xK9M-_R8ND4', guestIds: [2] }, // الخطر الحقيقي على مستقبل مصر مش اللي في بالك
+  { videoId: 'GNStyEnntWE', guestIds: [2] }, // الموهبة لوحدها مش كفاية في مصر.. محتاج فيتامين واو
+  { videoId: 'XWxTAg5u7JM', guestIds: [2] }, // أستاذ جامعي لم يطلب الحرية.. طلب كفنا
+  { videoId: 'yrfNkDW8ZgM', guestIds: [2] }, // الذكاء الاصطناعي الذي يبهرك اليوم.. هل سيصبح من مخلفات الماضي!
+  { videoId: 'cETAtD4kpug', guestIds: [2] }, // سر المعجزة اليابانية والألمانية للنهضة بعد الدمار!
+  { videoId: 'jIke_3RMu20', guestIds: [2] }, // انتظرونا مع د. سليمان صالح "أستاذ الصحافة والإعلام الدولي" في بودكاست #حان_الآن
+  { videoId: 'bFAe2QfitG0', guestIds: [3] }, // ليه الناس في الغرب بطلت تتجوز؟
+  { videoId: '3kGl3LtbiDE', guestIds: [3] }, // مفيش حياة زوجية من غير تعب... بس إيه اللي يصبرنا؟!
+  { videoId: 'H12eVQrQ-u4', guestIds: [3] }, // يهودي يعلم المسلمين دينهم!#حان_الآن #خالد_حمدي
+  { videoId: 'Dv3FDPXvmEw', guestIds: [3] }, // مش هتصدقوا بس.. اختلافكم ممكن ينقذ الجواز
+  { videoId: '_Ebu4BKyY0E', guestIds: [3] }, // كيف تختار زوجا لابنتك؟
+  { videoId: 'Si_bpZ6ShsY', guestIds: [3] }, // القاعدة الذهبية لنجاح أي بيت مسلم!
+  { videoId: 'zE3jqBuvy8g', guestIds: [3] }, // كيف يسرق الشيطان سعادتنا بالتركيز على المفقود؟
+  { videoId: 'LeQyz2t_r0I', guestIds: [3] }, // كيف تؤسس ميثاق الرضا من فترة الخطوبة؟
+  { videoId: 'MkYp06xe6Zg', guestIds: [4] }, // كيف استمرت الفيفا رغم الحروب العالمية والباردة؟
+  { videoId: 'ciNa5YT3uGk', guestIds: [4] }, // سر استحداث جائزة سلام خاصة لدونالد ترامب!
+  { videoId: 'CIp1djco8KA', guestIds: [4] }, // مونديال الأرجنتين.. أبشع صور استغلال الكرة لتغطية جرائم الديكتاتورية
+  { videoId: 'AyuUg1SQK_U', guestIds: [4] }, // كيف تتحول المدرجات من تشجيع الكرة إلى ثورة على النظام؟!
+  { videoId: 'Rdz1RdORqu4', guestIds: [4] }, // هل الكورة أفيون الشعوب؟
+  { videoId: 'RYAG_TRPcVI', guestIds: [4] }, // هل تعلم أن كرة القدم بدأت من الصراعات
+  { videoId: '7qm9-otht6Q', guestIds: [4] }, // كيف استغل مبارك الكرة سياسيا؟
+  { videoId: 'GhYj2hDTX3E', guestIds: [4] }, // سر حصانة أمير القلوب.. من يقترب من أبوتريكة يخسر!
+  { videoId: 'BuBlhne0Woc', guestIds: [4] }, // مقارنة صادمة بين راتب المدرب الوطني حسام حسن والأجنبي روي فيتوريا
+  { videoId: 'HSawsXTFjr8', guestIds: [4] }, // ليه أبوتريكة هو أهم لاعب في التاريخ؟
+  { videoId: '_VoKxrSvbW8', guestIds: [4] }, // السر الذي عجز عنه مدربو أوروبا ونجح فيه حسام حسن
+  { videoId: 'Qi_wPuBtTu4', guestIds: [4] }, // كيف عالج حسام حسن شروخات المنتخب والجماهير؟
+  { videoId: '1wW07qxWg7E', guestIds: [4] }, // انتظرونا مع حذيفة حمزة الصحفي الرياضي
+  { videoId: 'tYtNieKjb_Y', guestIds: [5] }, // كيف تتغير توجهات الأجهزة الأمنية بتغير الحاكم؟
+  { videoId: 'PhTt_QiKWcY', guestIds: [5] }, // من الزراعة للتعليم.. كيف تدار الملفات المدنية بعقلية عسكرية؟
+  { videoId: '1hS0sF4c6-E', guestIds: [5] }, // هل هناك فعلاً "دولة مصرية" منفصلة عن "النظام"؟
+  { videoId: '49CyXMKMJKo', guestIds: [5] }, // هل الدولة المصرية الحالية امتداد مباشر للحضارة القديمة؟ أم كيان حديث عمره 200 سنة؟
+  { videoId: 'ZSK-AA06Pwo', guestIds: [5] }, // كواليس دورات الأمن القومي للموظفين والأئمة في الكليات العسكرية
+  { videoId: 'Dxxw9rWLF5M', guestIds: [5] }, // هل كانت حركة 23 يوليو 1952 ثورة أم انقلابًا؟
+  { videoId: 'TtFZCUqAaCc', guestIds: [5] }, // هل مصر هي النظام أم المواطن؟
+  { videoId: 'QiJ8-CPTYlM', guestIds: [5] }, // هل كان مؤسس الدولة المصرية الحديثة يحتقر الشعب؟
+  { videoId: 'nV-cfoeDR2g', guestIds: [6] }, // أكبر وهم في التربية!
+  { videoId: 'elgTgo-MNvE', guestIds: [6] }, // كيف تربي ابنا يتحمل المسؤولية؟ تعرف على السر من والدة الزبير بن العوام
+  { videoId: 'p8LYlRz_HLI', guestIds: [6] }, // سر ارتباط المسلم الجديد بالإسلام
+  { videoId: 'cQ1SiPja0kw', guestIds: [6] }, // الفرق بين عبادة الملائكة وعبادة الإنسان
+  { videoId: 'PGCgqNHWx1I', guestIds: [6] }, // تعرف على خطورة الخطأ في العقيدة عند الأطفال
+  { videoId: 'd7HaUhzZhOw', guestIds: [6] }, // كيف تتعامل مع الأسئلة الوجودية الصادمة لأطفالك؟
+  { videoId: 'pIT9wUbqjFs', guestIds: [7] }, // كيف تحولت Airbnb من فكرة بسيطة إلى إمبراطورية؟
+  { videoId: 'mvX1j4tYWNU', guestIds: [6] }, // انتظرونا مع د. أحمد محمود الأستاذ بكلية اللغة العربية والتفسير بـ "سيدني - أستراليا"
+  { videoId: 'S2MTloj9Z2E', guestIds: [7] }, // لغز ارتفاع الأسعار وتكلفة الاستبدال
+  { videoId: 'EpmtxJ4UWwg', guestIds: [7] }, // كيف تحفز ابنك على المذاكرة الأونلاين؟
+  { videoId: 'OnbbybJ1uY4', guestIds: [7] }, // لماذا تفشل الشركات الناشئة؟
+  { videoId: 'qPIYNA4E9JA', guestIds: [7] }, // هل الوظيفة استعباد للموظف حقاً؟
+  { videoId: 'jwKdWwtgjsg', guestIds: [8] }, // الطيران المصري بين تعدد المصادر وتحديات الدمج
+  { videoId: 'C7sCksIw1Oc', guestIds: [7] }, // انتظرونا مع رائد الأعمال الأستاذ سامي حسن في بودكاست حان الآن
+  { videoId: 'ugOfxBU4Wq4', guestIds: [8] }, // كيف تساهم تكنولوجيا الألعاب في تطوير الحروب الحديثة؟
+  { videoId: '0rN91pYDxGM', guestIds: [8] }, // لماذا تختلف أرقام ميزانية الدفاع بين القاهرة والرياض؟
+  { videoId: 'x7GQEc90Ndw', guestIds: [8] }, // موهبة مصرية ضائعة.. قصة الشاب المصري ودرون تنظيف المباني
+  { videoId: 'j39Zc2Conh4', guestIds: [8] }, // حقيقة امتلاك مصر لسلاح سري!
+  { videoId: 'hq41Mp4s_qc', guestIds: [8] }, // ليه بنسيب مجال بيجيب فلوس ويبني بلد؟
+  { videoId: 'lZ2xlJaNTh8', guestIds: [8] }, // انتظرونا مع المهندس مؤمن أشرف في بودكاست حان الآن
+  { videoId: 'Kswjjdpf95I', guestIds: [10] }, // أعظم قاعدة في التربية محدش بيقولها!!
+  { videoId: 'Rg0sn6n3r50', guestIds: [10] }, // هل تريد توفيقاً عجيباً في أولادك دون مجهود خرافي؟
+  { videoId: '4m9-JzaqVmw', guestIds: [9] }, // د. سعد خليفة: الإنسان بلا قرآن… جسد بلا روح
+  { videoId: 'DBbXwZ-LLGs', guestIds: [9] }, // كيف يصبح القرآن نورا لحياتك؟
+  { videoId: 'fHD6Y5IGoAM', guestIds: [9] }, // هل يمكن فهم القرآن بدون تفسير؟
+  { videoId: 'Zui9LijoSwU', guestIds: [9] }, // لماذا لا نشعر ببركة القرآن؟
+  { videoId: 'wmrIcA4MQa8', guestIds: [9] }, // وقال الرسول يا رب إن قومي اتخذوا هذا القرآن مهجورا
+  { videoId: 'YKg9qBNYKLs', guestIds: [9] }, // مفاتيح تدبر القرآن الكريم
+  { videoId: 'YG8e--lB3vU', guestIds: [12] }, // هل يقع ترامب في فخ تهديداته؟
+  { videoId: 'NV869rIcKH8', guestIds: [9] }, // لماذا كان الصحابة يتعلمون 10 آيات فقط؟
+  { videoId: 'taO7dx6qIko', guestIds: [9] }, // صُحبة القرآن طريقك للتغيير والنجاح
+  { videoId: 'FLVImR8kvwo', guestIds: [12] }, // سر الصواريخ التي لا تتنازل عنها إيران.. لماذا هي "الرئة"؟
+  { videoId: 'NGZO-cKOHfQ', guestIds: [12] }, // كيف تهزم مسيرة رخيصة بآلاف الدولارات تكنولوجيا المليارات؟
+  { videoId: 'tHfVQf1gW_I', guestIds: [12] }, // المفتاح بيد العرب: كيف يمكن لدول الخليج إيقاف هذه الحرب فوراً
+  { videoId: 'Y2zu8OBLnnM', guestIds: [12] }, // الحقيقة التي يخفيها الإعلام: لماذا لا تخاف أمريكا من إيران؟
+  { videoId: 'IlL7wvCpS20', guestIds: [20] }, // أهم قرار في حياتك.. هل فكرت فيه؟
+  { videoId: 'TPtco1yKrio', guestIds: [20] }, // كارثة بدأت بجملة "قلبي ارتاح له"
+  { videoId: 'cgjIBSCThSc', guestIds: [20] }, // القصة التي لم يتمالك الدكتور خالد نفسه وهو يحكيها
+  { videoId: 'JKeYojEw930', guestIds: [20] }, // كيف تكون النسخة الأفضل من نفسك؟
+  { videoId: 'P_hgaoPoLQ4', guestIds: [10] }, // احترس من فخ المثالية في التربية!
+  { videoId: 'hOBM4382L9w', guestIds: [20, 10, 9] }, // بودكاست #حان_الآن في سلسلة حلقات خاصة جدا
+  { videoId: 'ht_4zE2irto', guestIds: [12] }, // أخطر حاجة بتواجه مصر دلوقتي!
+  { videoId: 'fKwJ-u63QG8', guestIds: [5] }, // كان في مصر.. قصة أول إضراب في التاريخ
+  { videoId: '1WMGeaneluY', guestIds: [5] }, // إيه الفرق بين مصر وإيجيبت؟!
+  { videoId: 'BJkX5279P9o', guestIds: [5] }, // انتظرونا مع الصحفي والباحث حسام الحملاوي في بودكاست حان الآن
+  { videoId: '7uS3AfOKTAY', guestIds: [11] }, // حكاية السلطان والباذنجان.. هكذا يبرر مصطفى بكري
+  { videoId: '8Jc3ftF-QIc', guestIds: [11] }, // د. أيمن نور: مبارك لم يكن رجل دولة ولكن ...
+  { videoId: 'SV6F8x-GYxs', guestIds: [11] }, // صندوق بلا معنى.. لماذا غاب الشعب عن الانتخابات؟
+  { videoId: 'K_Es8odQtRg', guestIds: [11] }, // انتظرونا مع الدكتور أيمن نور
+  { videoId: 'YsTnha03RAk', guestIds: [3] }, // كيف أصبح الهاتف ينافس الخشوع وحلاوة الأنس بالله حتى داخل الصلاة؟
+  { videoId: 'dHPi1WbImOE', guestIds: [3] }, // هل السوشيال ميديا سبب بعدنا عن ربنا؟
+  { videoId: '1UX6L26GM_A', guestIds: [3] }, // هل سرق الدوبامين خشوعنا؟ كيف نجد الله في ضجيج العالم الرقمي؟
+  { videoId: 'y7o3PCX4N50', guestIds: [12] }, // ليه مصر عندها دبابات 3 أضعاف اللي عند إسرائيل؟
+  { videoId: 'MX-mLbIIuOY', guestIds: [12] }, // لماذا رفض مبارك تعمير سيناء؟
+  { videoId: 'jlavR7u4P5U', guestIds: [12] }, // اللاعب الرئيسي في علاقة مصر بالفصائل… واللي ماسك المشهد كله
+  { videoId: '-G-ng6k-lXo', guestIds: [20] }, // السر في قوله تعالى "ولكن الله ألف بينهم".. شاهد مع الدكتور خالد الحداد
+  { videoId: 'sitzd_y6CmM', guestIds: [20] }, // السكوت.. كيف يدمر الحب والعلاقات؟!
+  { videoId: 's5JqY5YhWQ0', guestIds: [13] }, // القابلية للاستهواء.. احترس من تأثير السوشيال ميديا على الأطفال والمراهقين
+  { videoId: '17vrgc-x8pY', guestIds: [13] }, // ليه لازم الولد يعيط زي البنت؟
+  { videoId: 'lU42PoP9pXQ', guestIds: [13] }, // هل فعلا المرأة “ناقصة عقل” والرجل “ناقص عاطفة”؟
+  { videoId: 'Pw4_T6jMLL0', guestIds: [13] }, // ليه الأم تخجل من كلمة "ربة بيت"؟
+  { videoId: 'ndfAQKm5c4k', guestIds: [13] }, // لماذا أصبح البيت بلا عاطفة؟ وكيف وصل اكتئاب الأطفال إلى 72%؟ وما الذي تريده النسوية
+  { videoId: 'Hdjv2L1kdxo', guestIds: [13] }, // كيف استبدل النظام الرأسمالي القيم بالعوائد؟ قريبا مع الأستاذ محمد غباشي
+  { videoId: 'vw_3SmRG3YY', guestIds: [14] }, // تعرف على تفاصيل مشروع الشرق الأوسط الجديد لخدمة إسرائيل
+  { videoId: 'BfFO-PwxjcU', guestIds: [14] }, // يهود ضد الصهيونية! ✡️ الحقيقة اللي الإعلام مش عايزك تعرفها
+  { videoId: 't0_W8HSsBnc', guestIds: [14] }, // الخطة الإسرائيلية لحماية دول الخليج!
+  { videoId: 'ixi-F1Ydt94', guestIds: [14] }, // مين اللي بيحرك التاني! واشنطن ولا تل أبيب؟
+  { videoId: 'AuUi1OmeHv0', guestIds: [14] }, // السينما من أول يوم كانت جزء من خطتهم فما علاقة هوليوود بالمشروع الصهيوني؟
+  { videoId: 'y_S3XtPlB48', guestIds: [14] }, // ليه الإسرائيلي دلوقتي يشعر بالخزي والعار؟
+  { videoId: '27iACJwT3ng', guestIds: [16] }, // لو نفسك تبقى قائد حقيقي.. ابعد عن الخطأ دا !
+  { videoId: 'WF41b21dmlk', guestIds: [14] }, // هل بدأت نهاية إسرائيل؟انتظرونا مع الدكتور أحمد الجندي
+  { videoId: '7qtgeOa_PnM', guestIds: [15] }, // ليه مصر هي الدولة العربية الأقوى دائما؟
+  { videoId: 'fWqTFh2a-70', guestIds: [15] }, // سايكس بيكو تتهاوى.. من يرسم حدودنا اليوم؟
+  { videoId: 'ybMfwiElDZU', guestIds: [15] }, // إذا كان الشعب المصري محصن ضد التطبيع.. من الذي اخترقته كامب ديفيد؟
+  { videoId: '4ZE0Ar5r_Mk', guestIds: [15] }, // 7 أكتوبر.. النسخة الإسرائيلية من 11 سبتمبر؟ #حان_الآن #محمد_عفان
+  { videoId: 'BVz_x_7NiCM', guestIds: [15] }, // من الطوفان إلى ضرب قطر.. إسرائيل تعيد رسم قواعد المنطقة!
+  { videoId: 'mZur4KsP1X4', guestIds: [15] }, // كل اغتيال كان بداية جديدة.. إسرائيل تفشل والمقاومة لا تنتهي
+  { videoId: 'mI0fMMa9PYk', guestIds: [15] }, // لماذا فلسطين هي سر قوة مصر؟
+  { videoId: 'kO0rxiKzYWw', guestIds: [16] }, // من ماجستير حقوق لبياع سبح.. إزاي دا حصل؟
+  { videoId: '4nqC1ouzyew', guestIds: [16] }, // سر القائد الناجح.. كيف علمنا الصحابة معنى القيادة من خلال الإتباع؟
+  { videoId: 'MkEdeKfxXxU', guestIds: [16] }, // 3%انت تستخدم 3% فقط من قدراتك.. كيف تستغل الـ 97% الباقية؟
+  { videoId: '5kSEGlWI9nU', guestIds: [16] }, // القائد الحقيقي يرى ما لا يراه غيره.. كيف تحولت بائعة ورد إلى قيادية؟
+  { videoId: 'tzT9b8yNYVQ', guestIds: [16] }, // كلمة.. غيرت مسار الإمام أبوحنيفه من تاجر إلى أحد آئمة الفقه
+  { videoId: 'pDebFSDyGtE', guestIds: [16] }, // من هنا يبدأ الانهيار.. كيف تسقط الأمم بخطوة واحدة؟!
+  { videoId: 'texVRMlWNws', guestIds: [16] }, // انتظرونا مع الدكتور أحمد إبراهيم في بودكاست حان الآن
+  { videoId: '2Z5qP_vJDno', guestIds: [16] }, // ليه الأب هو أول قائد في حياتنا؟!انتظرونا مع الدكتور أحمد إبراهيم في بودكاست حان الآن
+  { videoId: 'Y72Zu3ieph0', guestIds: [20] }, // أصعب مهارة إنسانية في العلاقات.. هل جربتها من قبل؟
+  { videoId: 'JOrCoGLAiuk', guestIds: [20] }, // من الضغط إلى الراحة.. مفاتيح حل العلاقات الضاغطة
+  { videoId: 'F7obt044_P8', guestIds: [20] }, // إزاي زوجين يبقوا صحاب.. النصيحة الذهبية من الدكتور خالد الحداد
+  { videoId: 'kvHoGD9CSjQ', guestIds: [20] }, // سر العلاقات السليمة.. تعرف على فن الانتقاد الإيجابي مع الدكتور
+  { videoId: 'raaufIHamaM', guestIds: [20] }, // ليه نص شباب العالم جعانين.. ومش الأكل السبب؟
+  { videoId: 'AV4dl9Qt1k0', guestIds: [20] }, // ليه علاقاتنا بتضغطنا؟ 😮 تعرف على أسرار العلاقات الناجحة مع د. خالد الحداد 🎙️
+  { videoId: 'yKOAuNhbPMA', guestIds: [17] }, // إزاي الفقير يقدر يواجه الأزمة الاقتصادية؟ أفكار بسيطة مع الدكتور مصطفى شاهين
+  { videoId: 'RYyqr3MYz5g', guestIds: [20] }, // عندنا مشكلة في الحوار.. نعمل إيه؟!
+  { videoId: 'ofpzi7THDNM', guestIds: [17] }, // قبل أن تبدأ مشروعك.. شاهد أهم نصيحة من الخبير الاقتصادي د. مصطفى شاهين
+  { videoId: 'WGaaj305p9I', guestIds: [17] }, // مش كل واحد معاه فلوس يروح يشتري شقة وخلاص! د. مصطفى شاهين بيشرحلك إمتى تشتري ذهب؟ وإمتى تشتري عقار؟
+  { videoId: 'fNd31iBg-r4', guestIds: [17] }, // السؤال اللي بيحير أي حد: تشتري شقة ولا تسكن في إيجار؟
+  { videoId: 'Le5PC00qXGE', guestIds: [17] }, // خطة إنقاذ مرتبك وأبسط شرح للاقتصاد المصري مع عامر المالكي و الدكتور مصطفى شاهين
+  { videoId: 'tQgP4SVc4kw', guestIds: [17] }, // خطة إنقاذ مرتبك.. وإزاي تدير فلوسك صح؟
+  { videoId: '15twQ0Ga4-A', guestIds: [18] }, // احترس.. الكل بقى بيشاركك في أبنائك وأنت السبب! #حان_الآن
+  { videoId: 'm3Qa2XgArqI', guestIds: [17] }, // قريبا مع الخبير الاقتصادي د. مصطفى شاهين.. انتظرونا
+  { videoId: 'NOuLQ87iv_w', guestIds: [18] }, // ماذا تعني علمنة الإسلام؟ وهل تفيد المجتمع المسلم؟
+  { videoId: '86s-Yv0aNkI', guestIds: [18] }, // ارفع رأسك.. أنت تملك ما لا يملكه الغرب!
+  { videoId: '-H8ZpbN65gI', guestIds: [18] }, // لحظة كسرت قلبي.. ابني رفض الإسلام! أعمل إيه؟! #حان_الآن #بودكاست
+  { videoId: 'dwGL2Bq9TOE', guestIds: [18] }, // هل قهرت المرأة باسم الدين؟ #بودكاست_حان_الآن #طه_عامر
+  { videoId: '3_RW-GOMSh4', guestIds: [18] }, // المسلم ممكن يتعب نفسيا في الدنيا؟! وإيه العلاج؟!
+  { videoId: 'f67w1z4FGBA', guestIds: [18] }, // ماذا نفعل لو أردنا كعرب العودة مجددا لسيادة العالم؟!
+  { videoId: '_lGa2Fz7K1s', guestIds: [18] }, // حصنك في زمن الذوبان.. الهوية الإسلامية تحت المجهر
+  { videoId: 'yS9MAqmRGCU', guestIds: [19] }, // ليه مصطفى كامل كان شايف إن الطلاب هم الحل؟! #حان_الآن #بودكاست_حان_الآن #عمار_فايد #عامر_المالكي
+  { videoId: 'AMl7IGkG-kM', guestIds: [19] }, // من 18 لـ21 .. كيف يتشكل الوعي ينهار؟! #بودكاست_حان_الآن #حان_الآن #عمار_فايد
+  { videoId: 'q57Q4Byps7I', guestIds: [19] }, // كيف أصبح نشطاء الحركة الطلابية قادة ورموز للعمل السياسي؟! #حان_الآن #عمار_فايد
+  { videoId: 'jE0Aqszz_Sw', guestIds: [19] }, // كيف نجح الطلاب في إجبار الاحتلال البريطاني على إعادة العمل بالدستور
+  { videoId: 's_npj7DFPEs', guestIds: [19] }, // ليه مجتمع الطلبة هو الأكثر خطورة؟! #حان_الآن #بودكاست_حان_الآن #عمار_فايد #عامر_المالكي
+  { videoId: 'qZU8SwS-ZlM', guestIds: [19] }, // ميزة في الجامعات المصرية مش موجودة في مكان تاني #حان_الآن #بودكاست_حان_الآن #عمار_فايد #عامر_المالكي
+  { videoId: 'NXAB20vwUlI', guestIds: [19] }, // ليه مجتمع الطلبة أكثر نشاطا من غيره؟! #حان_الآن #بودكاست_حان_الآن #عمار_فايد #عامر_المالكي
+  { videoId: 'jA2qFX-lCY4', guestIds: [19] }, // اللقاء الأول بين الطالب والسلطة.. إيه اللي يحصل في أول يوم جامعة؟
+  { videoId: '7yfY2w98U84', guestIds: [19] }, // قصة الصراع الدائم بين الطلاب والسلطة..انتظرونا في #بودكاست #حان_الآن مع الدكتور #عمار_فايد
+  { videoId: 'eve7QrTImYc', guestIds: [20] }, // عمرك سألت نفسك ليه ما لجأتش لطبيب نفسي قبل كده؟
+  { videoId: '202m7wLaH70', guestIds: [20] }, // الحب من أول نظرة.. ممكن يغرقنا؟! #بودكاست #حان_الآن #خالد_الحدا
+  { videoId: '40R0WGHEcq8', guestIds: [20] }, // هل القرب من ربنا ممكن يساعد في الخروج من الاكتئاب؟ #بودكاست #حان_الآن #خالد_الحداد
+  { videoId: 'FG74i0NtcGw', guestIds: [20] }, // عنده 3 موظفين ومسمي نفسه "سي إي أو" #بودكاست #حان_الآن #خالد_الحداد
+  { videoId: 'XnHW6RYhFmU', guestIds: [20] }, // إزاي نلاحظ علامات الاكتئاب عند اللي حوالينا؟ #بودكاست #حان_الآن #خالد_الحداد
+  { videoId: 'g9TnoUSlT2I', guestIds: [20] }, // حتى لو قطة.. إياك تضرب أي أنثى!! #بودكاست #حان_الآن #خالد_الحداد
+  { videoId: '1Z-fPoOSLAU', guestIds: [20] }, // احترس.. انت الفريسة! مع كل سكرول.. إزاي السوشيال ميديا بتبتلعك حتة حتة بسبب نفسيتك!
+  { videoId: 'CrDcjsyXJ5Y', guestIds: [20] }, // هل ممكن البنت تتجوز عشان تهرب من البيت؟! #بودكاست #حان_الآن #خالد_الحداد
+  { videoId: 'V1lMfj76nrU', guestIds: [20] }, // إزاي ممكن تعجب بأكونت؟! هتتجوز أكونت؟! #بودكاست #حان_الآن #خالد_الحداد
+  { videoId: 'uGH-E-9Rf9I', guestIds: [20] }, // الألم ممكن يعلم وممكن يمـ ـوت.. لكن القرار بإيد مين؟ #خالد_الحداد #حان_الآن #بودكاست
+  { videoId: 'zJbPNM1u9R4', guestIds: [20] }, // ليه الراجل ممنوع يعيط؟ #حان_الآن #خالد_الحداد #بودكاست #podcast #علم_النفس
+  { videoId: 'nB2Ra0QSRvw', guestIds: [20] }, // الخوف من الفضيحة!! #حان_الآن #خالد_الحداد
+  { videoId: 'F4EiFFU72Jw', guestIds: [20] }, // الزواج الهانيء قرار عقلي يرضى عنه القلب.. ولو معملتش كدا هيحصل إيه؟! #حان_الآن #خالد_الحداد
+  { videoId: 'PUmDQHy3ICs', guestIds: [20] }, // الفهم سهل الإحساس صعب.. ليه الطب النفسي محتاج حد كان عنده آلام قبل كده؟ #حان_الآن #خالد_الحداد
+  { videoId: 'ikKdwbRMD9Y', guestIds: [20] }, // قبل أن تبتلعك.. تعلم كيف تواجه الضغوط مع الدكتور #خالد_الحداد في #بودكاست #حان_الآن انتظرونا
+  { videoId: 'x3qJ1Gep2qo', guestIds: [] }, // #حان_الآن #انتظروناااا
+];
+
+const getShortUrl = (videoId: string) => `https://youtube.com/shorts/${videoId}`;
+
+const getGuestShorts = (guestId: number): string[] => youtubeShortsInput
+  .filter(short => short.guestIds.includes(guestId))
+  .map(short => getShortUrl(short.videoId));
+
 export const guestsInput: GuestInput[] = [
   {
     id: 6,
@@ -80,15 +282,7 @@ export const guestsInput: GuestInput[] = [
       latestEpisodeContent.ahmedMahmoud.youtubeUrl,
       'https://youtu.be/nhmLDq-xTyM?si=gVlA3vxrscUJ7z-Z',
     ],
-    shorts: [
-      'https://youtube.com/shorts/nV-cfoeDR2g?si=XfRHPxQbcOuj74ec',
-      'https://youtube.com/shorts/elgTgo-MNvE?si=p7dRaVIxKO8k-d74',
-      'https://youtube.com/shorts/p8LYlRz_HLI?si=3E0tWiD8FD5DkBHM',
-      'https://youtube.com/shorts/cQ1SiPja0kw?si=KHTTKVeRF2RLBp9W',
-      'https://youtube.com/shorts/PGCgqNHWx1I?si=mRVZjIWG-x0twCuy',
-      'https://youtube.com/shorts/d7HaUhzZhOw?si=DfxJWGPn1kmGwQ98',
-      'https://youtube.com/shorts/mvX1j4tYWNU?si=ocWP9riP1XYUzZTn',
-    ],
+    shorts: getGuestShorts(6),
   },
   {
     id: 21,
@@ -99,7 +293,7 @@ export const guestsInput: GuestInput[] = [
     bio: 'أستاذ الشريعة الإسلامية، وضيف بودكاست حان الآن في حوار عن القرآن باعتباره بوصلة لفهم الواقع. يناقش اللقاء صلتنا بالقرآن وكيف نستعين بمعانيه في قراءة ما نعيشه وبناء الوعي.',
     socialLinks: [],
     episodes: [latestEpisodeContent.hatemAbdelAzim.youtubeUrl],
-    shorts: [],
+    shorts: getGuestShorts(21),
   },
   {
     id: 22,
@@ -110,7 +304,7 @@ export const guestsInput: GuestInput[] = [
     bio: 'أكاديمي ومتخصص في السياسات الاقتصادية، يستضيفه بودكاست حان الآن في حوار عن الاقتصاد المصري والسياسات الاقتصادية وأثرها على حياة المواطنين، مع مناقشة الفقر وتحديات الأزمات الاقتصادية.',
     socialLinks: [],
     episodes: [latestEpisodeContent.ahmedZekrAllah.youtubeUrl],
-    shorts: [],
+    shorts: getGuestShorts(22),
   },
   {
     id: 1,
@@ -123,9 +317,7 @@ export const guestsInput: GuestInput[] = [
     episodes: [
       ' https://youtu.be/9kFBQXtG07A?si=tJIRKLuxBrY9jLS0'
     ],
-    shorts: [
-      ' https://youtube.com/shorts/J_6mIE4_QBk?si=gnj_SjymCZGACLQs'
-    ],
+    shorts: getGuestShorts(1),
   },
   {
     id: 2,
@@ -138,12 +330,7 @@ export const guestsInput: GuestInput[] = [
     episodes: [
       ' https://youtu.be/CYSwQCwGez4?si=PMlxNBO4LexTtRId'
     ],
-    shorts: [
-      'https://youtube.com/shorts/hoWEZYIr_gA?si=uNmEGrXiv_Qjd3gO',
- 'https://youtube.com/shorts/xK9M-_R8ND4?si=GBuXM8xEaU1a3rTY',
-'https://youtube.com/shorts/GNStyEnntWE?si=BqchrAaW-QvgrB0L',
-'https://youtube.com/shorts/XWxTAg5u7JM?si=qp3kJWcR3sucXXUW',
-    ],
+    shorts: getGuestShorts(2),
   },
   {
     id: 3,
@@ -157,11 +344,7 @@ export const guestsInput: GuestInput[] = [
       'https://youtu.be/fGeDpVGjQkc?si=Jdkx3SVi1HJmTHiq',
       'https://www.youtube.com/watch?v=_zejgocD4i8',
     ],
-    shorts: [
-      'https://youtube.com/shorts/YsTnha03RAk',
-      'https://youtube.com/shorts/dHPi1WbImOE',
-      'https://youtube.com/shorts/1UX6L26GM_A',
-    ],
+    shorts: getGuestShorts(3),
   },
   {
     id: 4,
@@ -174,9 +357,7 @@ export const guestsInput: GuestInput[] = [
     episodes: [
       'https://youtu.be/tkrxLBnD2NU?si=rXM9mxsBRuS8HasG',
     ],
-    shorts: [
-      'https://youtube.com/shorts/1wW07qxWg7E?si=d78Dg5Nfokc2YuEL',
-    ],
+    shorts: getGuestShorts(4),
   },
   {
     id: 5,
@@ -192,15 +373,7 @@ export const guestsInput: GuestInput[] = [
       'https://youtu.be/kPAOS-er2nI?si=rQsbsz_n4nLkK7OR',
       'https://youtu.be/XKR4eMzp0B4',
     ],
-    shorts: [
-      'https://youtube.com/shorts/49CyXMKMJKo?si=HYDbnCMgybNryVQt',
-      'https://youtube.com/shorts/ZSK-AA06Pwo?si=CKQ4sF3frE7QFodN',
-      'https://youtube.com/shorts/Dxxw9rWLF5M?si=GPPqnGW86MQO6e75',
-      'https://youtube.com/shorts/TtFZCUqAaCc?si=O92LQvR2QJIqZY6q',
-      'https://youtube.com/shorts/QiJ8-CPTYlM?si=6YVa_pSrrts5mncd',
-      'https://youtube.com/shorts/1WMGeaneluY',
-      'https://youtube.com/shorts/fKwJ-u63QG8',
-    ],
+    shorts: getGuestShorts(5),
   },
   {
     id: 7,
@@ -213,11 +386,7 @@ export const guestsInput: GuestInput[] = [
     episodes: [
       'https://youtu.be/YdogxDkeMYM?si=zaYqcT9ckVvMwkZJ',
     ],
-    shorts: [
-      'https://youtube.com/shorts/OnbbybJ1uY4?si=us3YmjJjBUC-8dCl',
-      'https://youtube.com/shorts/qPIYNA4E9JA?si=ecfrCr3lX9Lvfkkt',
-      'https://youtube.com/shorts/C7sCksIw1Oc?si=wLl8VrmDY4vn3qoJ',
-    ],
+    shorts: getGuestShorts(7),
   },
   {
     id: 8,
@@ -230,11 +399,7 @@ export const guestsInput: GuestInput[] = [
     episodes: [
       'https://youtu.be/Bn1nAKLuffY?si=EJSe-er84V80Xsyz',
     ],
-    shorts: [
-      'https://youtube.com/shorts/j39Zc2Conh4?si=qqR1N4DVnBHo83eg',
-      'https://youtube.com/shorts/hq41Mp4s_qc?si=hUqEcQcei4GdWzSu',
-      'https://youtube.com/shorts/lZ2xlJaNTh8?si=62OGIIk9qXRs6zsH',
-    ],
+    shorts: getGuestShorts(8),
   },
   {
     id: 9,
@@ -247,14 +412,7 @@ export const guestsInput: GuestInput[] = [
     episodes: [
       'https://youtu.be/SwgQlLbjz_U?si=OMRkCGAiVpsyR4fG',
     ],
-    shorts: [
-      'https://youtube.com/shorts/4m9-JzaqVmw?si=sTqzr3cPn_L1u1Ay',
-      'https://youtube.com/shorts/DBbXwZ-LLGs?si=vQK9v_8Pd6VliJ4K',
-      'https://youtube.com/shorts/fHD6Y5IGoAM?si=iIPrC4MyC_pMU6-_',
-      'https://youtube.com/shorts/Zui9LijoSwU?si=iAXopIvfGXMHgNcK',
-      'https://youtube.com/shorts/wmrIcA4MQa8?si=5QjyoCQ__1AYSdjF',
-      'https://youtube.com/shorts/YKg9qBNYKLs?si=p6jx4B2hFmKpJK23',
-    ],
+    shorts: getGuestShorts(9),
   },
   {
     id: 10,
@@ -269,9 +427,7 @@ export const guestsInput: GuestInput[] = [
     episodes: [
       'https://youtu.be/GLt3KxGDOIQ?si=ODb1ma3uoSc-7Ixb', // 🎬 أضف حلقات جديدة هنا
     ],
-    shorts: [
-      'https://youtube.com/shorts/P_hgaoPoLQ4?si=6K8ol4eT-IE79DLp', // 📱 أضف شورتس جديدة هنا
-    ],
+    shorts: getGuestShorts(10),
   },
   {
     id: 11,
@@ -284,12 +440,7 @@ export const guestsInput: GuestInput[] = [
     episodes: [
       'https://youtu.be/OnR06Uc8dgE',
     ],
-    shorts: [
-      'https://youtube.com/shorts/7uS3AfOKTAY',
-      'https://youtube.com/shorts/8Jc3ftF-QIc',
-      'https://youtube.com/shorts/SV6F8x-GYxs',
-      'https://youtube.com/shorts/K_Es8odQtRg',
-    ],
+    shorts: getGuestShorts(11),
   },
     {
     id: 12,
@@ -305,16 +456,7 @@ export const guestsInput: GuestInput[] = [
       'https://youtu.be/ijujp1XQVBY?si=jmcrFNDTcgRFHTPv',
       'https://youtu.be/NhhzZfWA9fA',
     ],
-    shorts: [
-      'https://youtube.com/shorts/FLVImR8kvwo?si=HJ2T4CaBn0i73HhH',
-      'https://youtube.com/shorts/YG8e--lB3vU?si=skKh0hWoj9FIMIsD',
-      'https://youtube.com/shorts/NGZO-cKOHfQ?si=eUP9rwplxmYfhUay',
-      'https://youtube.com/shorts/tHfVQf1gW_I?si=g70rLKKsYELKGy3M',
-      'https://youtube.com/shorts/Y2zu8OBLnnM?si=KmKin3inHILcE0SR',
-      'https://youtube.com/shorts/y7o3PCX4N50',
-      'https://youtube.com/shorts/MX-mLbIIuOY',
-      'https://youtube.com/shorts/jlavR7u4P5U',
-    ],
+    shorts: getGuestShorts(12),
   },
   {
     id: 13,
@@ -327,14 +469,7 @@ export const guestsInput: GuestInput[] = [
     episodes: [
       'https://youtu.be/4q4X-xGjioI',
     ],
-    shorts: [
-      'https://youtube.com/shorts/s5JqY5YhWQ0',
-      'https://youtube.com/shorts/17vrgc-x8pY',
-      'https://youtube.com/shorts/lU42PoP9pXQ',
-      'https://youtube.com/shorts/Pw4_T6jMLL0',
-      'https://youtube.com/shorts/ndfAQKm5c4k',
-      'https://youtube.com/shorts/Hdjv2L1kdxo',
-    ],
+    shorts: getGuestShorts(13),
   },
    {
     id: 14,
@@ -347,14 +482,7 @@ export const guestsInput: GuestInput[] = [
     episodes: [
       'https://youtu.be/ADEkLdkAMro',
     ],
-    shorts: [
-      'https://youtube.com/shorts/vw_3SmRG3YY',
-      'https://youtube.com/shorts/BfFO-PwxjcU',
-      'https://youtube.com/shorts/ixi-F1Ydt94',
-      'https://youtube.com/shorts/AuUi1OmeHv0',
-      'https://youtube.com/shorts/y_S3XtPlB48',
-      'https://youtube.com/shorts/t0_W8HSsBnc',
-    ],
+    shorts: getGuestShorts(14),
   },
     {
     id: 15,
@@ -367,15 +495,7 @@ export const guestsInput: GuestInput[] = [
     episodes: [
       'https://youtu.be/FLZk4la6xtU',
     ],
-    shorts: [
-      'https://youtube.com/shorts/7qtgeOa_PnM',
-      'https://youtube.com/shorts/fWqTFh2a-70',
-      'https://youtube.com/shorts/ybMfwiElDZU',
-      'https://youtube.com/shorts/4ZE0Ar5r_Mk',
-      'https://youtube.com/shorts/BVz_x_7NiCM',
-      'https://youtube.com/shorts/mZur4KsP1X4',
-      'https://youtube.com/shorts/mI0fMMa9PYk',
-    ],
+    shorts: getGuestShorts(15),
   },
       {
     id: 16,
@@ -388,16 +508,7 @@ export const guestsInput: GuestInput[] = [
     episodes: [
       'https://youtu.be/GahNBf0JLTI',
     ],
-    shorts: [
-      'https://youtube.com/shorts/27iACJwT3ng',
-      'https://youtube.com/shorts/kO0rxiKzYWw',
-      'https://youtube.com/shorts/4nqC1ouzyew',
-      'https://youtube.com/shorts/MkEdeKfxXxU',
-      'https://youtube.com/shorts/5kSEGlWI9nU',
-      'https://youtube.com/shorts/tzT9b8yNYVQ',
-      'https://youtube.com/shorts/pDebFSDyGtE',
-      'https://youtube.com/shorts/texVRMlWNws',
-    ],
+    shorts: getGuestShorts(16),
   },
   {
     id: 17,
@@ -410,14 +521,7 @@ export const guestsInput: GuestInput[] = [
     episodes: [
       'https://youtu.be/y0vnEBlSKBE',
     ],
-    shorts: [
-      'https://youtube.com/shorts/yKOAuNhbPMA',
-      'https://youtube.com/shorts/ofpzi7THDNM',
-      'https://youtube.com/shorts/WGaaj305p9I',
-      'https://youtube.com/shorts/fNd31iBg-r4',
-      'https://youtube.com/shorts/Le5PC00qXGE',
-      'https://youtube.com/shorts/m3Qa2XgArqI',
-    ],
+    shorts: getGuestShorts(17),
   },
   {
     id: 18,
@@ -430,15 +534,7 @@ export const guestsInput: GuestInput[] = [
     episodes: [
       'https://youtu.be/3AEtcsZeMwY',
     ],
-    shorts: [
-      'https://youtube.com/shorts/15twQ0Ga4-A',
-      'https://youtube.com/shorts/NOuLQ87iv_w',
-      'https://youtube.com/shorts/86s-Yv0aNkI',
-      'https://youtube.com/shorts/-H8ZpbN65gI',
-      'https://youtube.com/shorts/dwGL2Bq9TOE',
-      'https://youtube.com/shorts/_lGa2Fz7K1s',
-      'https://youtube.com/shorts/f67w1z4FGBA',
-    ],
+    shorts: getGuestShorts(18),
   },
     {
     id: 19,
@@ -451,17 +547,7 @@ export const guestsInput: GuestInput[] = [
     episodes: [
       'https://youtu.be/AdeaOEhj-dY',
     ],
-    shorts: [
-      'https://youtube.com/shorts/yS9MAqmRGCU',
-      'https://youtube.com/shorts/AMl7IGkG-kM',
-      'https://youtube.com/shorts/q57Q4Byps7I',
-      'https://youtube.com/shorts/jE0Aqszz_Sw',
-      'https://youtube.com/shorts/s_npj7DFPEs',
-      'https://youtube.com/shorts/qZU8SwS-ZlM',
-      'https://youtube.com/shorts/NXAB20vwUlI',
-      'https://youtube.com/shorts/7yfY2w98U84',
-      'https://youtube.com/shorts/jA2qFX-lCY4',
-    ],
+    shorts: getGuestShorts(19),
   },
     {
     id: 20,
@@ -478,27 +564,7 @@ export const guestsInput: GuestInput[] = [
       'https://youtu.be/DM_8VWC13ME',
       'https://youtu.be/X-H4PLqdGiE',
     ],
-    shorts: [
-      'https://youtube.com/shorts/IlL7wvCpS20',
-      'https://youtube.com/shorts/TPtco1yKrio',
-      'https://youtube.com/shorts/-G-ng6k-lXo',
-      'https://youtube.com/shorts/sitzd_y6CmM',
-      'https://youtube.com/shorts/Y72Zu3ieph0',
-      'https://youtube.com/shorts/JOrCoGLAiuk',
-      'https://youtube.com/shorts/F7obt044_P8',
-      'https://youtube.com/shorts/AV4dl9Qt1k0',
-      'https://youtube.com/shorts/RYyqr3MYz5g',
-      'https://youtube.com/shorts/eve7QrTImYc',
-      'https://youtube.com/shorts/202m7wLaH70',
-      'https://youtube.com/shorts/40R0WGHEcq8',
-      'https://youtube.com/shorts/FG74i0NtcGw',
-      'https://youtube.com/shorts/g9TnoUSlT2I',
-      'https://youtube.com/shorts/1Z-fPoOSLAU',
-      'https://youtube.com/shorts/CrDcjsyXJ5Y',
-      'https://youtube.com/shorts/V1lMfj76nrU',
-      'https://youtube.com/shorts/uGH-E-9Rf9I',
-      'https://youtube.com/shorts/zJbPNM1u9R4',
-    ],
+    shorts: getGuestShorts(20),
   },
 ];
 
@@ -518,10 +584,11 @@ export const youtubeEpisodes = [...new Set([
   ...guestsInput.flatMap(guest => guest.episodes || []),
 ].map(url => url.trim()).filter(Boolean))];
 
-// 📱 توليد قائمة الشورتس تلقائياً (الأحدث أولاً)  
-export const shortsUrls = guestsInput
-  .flatMap(guest => guest.shorts || [])
-  .filter(Boolean);
+// 📱 قائمة الشورتس حسب ترتيب القناة؛ يظهر المقطع المشترك مرة واحدة في الرئيسية.
+export const shortsUrls = [...new Set([
+  ...youtubeShortsInput.map(short => getShortUrl(short.videoId)),
+  ...guestsInput.flatMap(guest => guest.shorts || []),
+].map(url => url.trim()).filter(Boolean))];
 
 
 // ═══════════════════════════════════════════════════════════════════════════
