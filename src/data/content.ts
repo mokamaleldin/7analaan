@@ -67,10 +67,11 @@ export const latestEpisodeContent = {
   },
 };
 
-// 📱 شورتس القناة مرتبة من الأحدث إلى الأقدم (تمت المراجعة في 2026-11-03).
+// 📱 شورتس القناة مرتبة من الأحدث إلى الأقدم (تمت المراجعة في 2026-11-05).
 // guestIds تستخدم معرّفات الضيوف الثابتة أدناه. يمكن للمقطع المشترك أن يرتبط بأكثر من ضيف.
 // القائمة الفارغة تعني إعلاناً عاماً للقناة يظهر في الرئيسية فقط.
 export const youtubeShortsInput: { videoId: string; guestIds: number[] }[] = [
+  { videoId: '9nZO0fXOw2o', guestIds: [23] }, // انتظرونا مع د. محمد هشام راغب المفكر والداعية الإسلامي في بودكاست حان الآن
   { videoId: 'qnhtLp43aEQ', guestIds: [21] }, // الكلمات الخالدة لسعد بن معاذ التي أشرق بها وجه النبي
   { videoId: 'hAsYXO1Fs7s', guestIds: [6] }, // أول نصيحة من سيدنا لقمان لابنه وهو يعلمه؟
   { videoId: 'rzMn3nNlc6Q', guestIds: [6] }, // ابنك ليس صديقك!
@@ -279,6 +280,17 @@ const getGuestShorts = (guestId: number): string[] => youtubeShortsInput
   .map(short => getShortUrl(short.videoId));
 
 export const guestsInput: GuestInput[] = [
+  {
+    id: 23,
+    name: 'د. محمد هشام راغب',
+    title: 'مفكر وداعية إسلامي',
+    specialty: 'الفكر الإسلامي وقضايا الدعوة والمجتمع',
+    imageUrl: '/guests/mohamed-hesham-ragheb.webp',
+    bio: 'يقدّم بودكاست حان الآن الدكتور محمد هشام راغب، المفكر والداعية الإسلامي، في إعلان لقاء يناقش مكانة العلماء والمنابر الدينية وعلاقة الموالد بالسياسة. تستند هذه النبذة إلى تقديم القناة للقاء.',
+    socialLinks: [],
+    episodes: [],
+    shorts: getGuestShorts(23),
+  },
   {
     id: 6,
     name: 'د. أحمد محمود',
