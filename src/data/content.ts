@@ -50,6 +50,11 @@ export const soundcloudTracks = [
 // بيانات أحدث الحلقات، مرتبة من الأحدث إلى الأقدم.
 // تُستخدم الروابط نفسها في ملفات الضيوف، والعناوين والأوصاف في بطاقات الحلقات.
 export const latestEpisodeContent = {
+  mohamedHeshamRagheb: {
+    youtubeUrl: 'https://youtu.be/USVfI3H-rFQ', // نُشرت في 2026-11-04
+    title: 'الموالد في مصر.. تدين شعبي أم مشروع ترعاه الدولة؟ | د. محمد هشام راغب',
+    description: 'حوار عن الموالد والأضرحة في مصر، والعلاقة بين الدولة والتصوف، ودور المؤسسات الدينية والعلماء في تشكيل الوعي الديني.',
+  },
   ahmedMahmoud: {
     youtubeUrl: 'https://youtu.be/Wx4JM5ABMMk',
     title: 'أسماء الله الحسنى وأثرها في تربية الأبناء | د. أحمد محمود',
@@ -286,9 +291,9 @@ export const guestsInput: GuestInput[] = [
     title: 'مفكر وداعية إسلامي',
     specialty: 'الفكر الإسلامي وقضايا الدعوة والمجتمع',
     imageUrl: '/guests/mohamed-hesham-ragheb.webp',
-    bio: 'يقدّم بودكاست حان الآن الدكتور محمد هشام راغب، المفكر والداعية الإسلامي، في إعلان لقاء يناقش مكانة العلماء والمنابر الدينية وعلاقة الموالد بالسياسة. تستند هذه النبذة إلى تقديم القناة للقاء.',
+    bio: 'محمد هشام راغب مفكر وداعية إسلامي، يستضيفه بودكاست حان الآن في حوار عن الموالد والأضرحة في مصر، والعلاقة بين الدولة والتصوف، ودور المؤسسات الدينية والعلماء في تشكيل الوعي الديني.',
     socialLinks: [],
-    episodes: [],
+    episodes: [latestEpisodeContent.mohamedHeshamRagheb.youtubeUrl],
     shorts: getGuestShorts(23),
   },
   {
