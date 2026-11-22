@@ -72,10 +72,11 @@ export const latestEpisodeContent = {
   },
 };
 
-// 📱 شورتس القناة مرتبة من الأحدث إلى الأقدم (تمت المراجعة في 2026-11-21).
+// 📱 شورتس القناة مرتبة من الأحدث إلى الأقدم (تمت المراجعة في 2026-11-22).
 // guestIds تستخدم معرّفات الضيوف الثابتة أدناه. يمكن للمقطع المشترك أن يرتبط بأكثر من ضيف.
 // القائمة الفارغة تعني إعلاناً عاماً للقناة يظهر في الرئيسية فقط.
 export const youtubeShortsInput: { videoId: string; guestIds: number[] }[] = [
+  { videoId: 'CHoZS93etuQ', guestIds: [24] }, // انتظرونا مع الأستاذة #منار_محمود المستشارة التربوية في #بودكاست_حان_الآن
   { videoId: 'kmZVXwQBvDQ', guestIds: [23] }, // مطرب مشهور يسأل: هل الخمر حلال بعد الإفطار؟!
   { videoId: 'Ayk6-Ip9J-w', guestIds: [23] }, // هل الدعوة السلفية تمثل كل السلفيين في مصر؟
   { videoId: 'vvgEDOrUZRc', guestIds: [23] }, // هل خرجت بعض الموالد عن إطارها الديني؟
@@ -290,6 +291,17 @@ const getGuestShorts = (guestId: number): string[] => youtubeShortsInput
   .map(short => getShortUrl(short.videoId));
 
 export const guestsInput: GuestInput[] = [
+  {
+    id: 24,
+    name: 'أ. منار محمود',
+    title: 'مستشارة تربوية',
+    specialty: 'التربية والعلاقة بين الفتيات وأسرهن',
+    imageUrl: '/guests/manar-mahmoud.webp',
+    bio: 'منار محمود مستشارة تربوية، يقدّمها بودكاست حان الآن ضيفةً في حوار عن العلاقة بين الفتيات وأسرهن، وحدود طاعة الوالدين وبناء الشخصية، وأسئلة الفتيات عن الدين والحب والحجاب، والتمييز بين الدين والعادات والتقاليد.',
+    socialLinks: [],
+    episodes: [],
+    shorts: getGuestShorts(24),
+  },
   {
     id: 23,
     name: 'د. محمد هشام راغب',
