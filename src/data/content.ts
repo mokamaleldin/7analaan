@@ -50,6 +50,11 @@ export const soundcloudTracks = [
 // بيانات أحدث الحلقات، مرتبة من الأحدث إلى الأقدم.
 // تُستخدم الروابط نفسها في ملفات الضيوف، والعناوين والأوصاف في بطاقات الحلقات.
 export const latestEpisodeContent = {
+  manarMahmoud: {
+    youtubeUrl: 'https://youtu.be/HcvjB7kFjg8', // نُشرت في 2026-11-23
+    title: 'أسئلة تخجل البنات من طرحها.. عن الأهل والحب والحجاب',
+    description: 'حوار مع الأستاذة منار محمود عن حدود طاعة الوالدين واستقلال الفتيات، والتمييز بين الدين والعادات، وأسئلة الحب والحجاب والخصوصية والثقة بالنفس.',
+  },
   mohamedHeshamRagheb: {
     youtubeUrl: 'https://youtu.be/USVfI3H-rFQ', // نُشرت في 2026-11-04
     title: 'الموالد في مصر.. تدين شعبي أم مشروع ترعاه الدولة؟ | د. محمد هشام راغب',
@@ -300,7 +305,7 @@ export const guestsInput: GuestInput[] = [
     imageUrl: '/guests/manar-mahmoud.webp',
     bio: 'منار محمود مستشارة تربوية، يقدّمها بودكاست حان الآن ضيفةً في حوار عن العلاقة بين الفتيات وأسرهن، وحدود طاعة الوالدين وبناء الشخصية، وأسئلة الفتيات عن الدين والحب والحجاب، والتمييز بين الدين والعادات والتقاليد.',
     socialLinks: [],
-    episodes: [],
+    episodes: [latestEpisodeContent.manarMahmoud.youtubeUrl],
     shorts: getGuestShorts(24),
   },
   {
